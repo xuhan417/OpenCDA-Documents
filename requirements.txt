@@ -1,4 +1,3 @@
-carla
 matplotlib==3.4.2
 networkx==2.5.1
 numpy
