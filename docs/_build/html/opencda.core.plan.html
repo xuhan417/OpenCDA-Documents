@@ -1,0 +1,1171 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.core.plan package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.core.sensing package" href="opencda.core.sensing.html" />
+    <link rel="prev" title="opencda.core.common package" href="opencda.core.common.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.html">opencda.core package</a> &raquo;</li>
+        
+      <li>opencda.core.plan package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.core.plan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-core-plan-package">
+<h1>opencda.core.plan package<a class="headerlink" href="#opencda-core-plan-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.core.plan.behavior_agent">
+<span id="opencda-core-plan-behavior-agent-module"></span><h2>opencda.core.plan.behavior_agent module<a class="headerlink" href="#module-opencda.core.plan.behavior_agent" title="Permalink to this headline">¶</a></h2>
+<p>This module implements an agent that roams around a track following random
+waypoints and avoiding other vehicles. The agent also responds to traffic lights,
+traffic signs, and has different possible configurations.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.behavior_agent.</span></span><span class="sig-name descname"><span class="pre">BehaviorAgent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A modulized version of carla BehaviorAgent.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn our gnss and imu sensor.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-carla_map<span class="classifier">carla.map</span></dt><dd><p>The carla HD map for simulation world.</p>
+</dd>
+<dt>-config<span class="classifier">dict</span></dt><dd><p>The configuration dictionary of the localization module.</p>
+</dd>
+</dl>
+<p>Attributes
+-_ego_pos : carla.position</p>
+<blockquote>
+<div><p>Posiion of the ego vehicle.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-_ego_speed<span class="classifier">float</span></dt><dd><p>Speed of the ego vehicle.</p>
+</dd>
+<dt>-_map<span class="classifier">carla.map</span></dt><dd><p>The HD map of the current simulation world.</p>
+</dd>
+<dt>-max_speed<span class="classifier">float</span></dt><dd><p>The current speed limit of the ego vehicles.</p>
+</dd>
+<dt>-break_distance<span class="classifier">float</span></dt><dd><p>The current distance needed for ego vehicle to reach a steady stop.</p>
+</dd>
+<dt>-_collision_check<span class="classifier">collisionchecker</span></dt><dd><p>A collision check class to estimate the collision with front obstacle.</p>
+</dd>
+<dt>-ignore_traffic_light<span class="classifier">boolean</span></dt><dd><p>Boolean indicator of whether to ignore traffic light.</p>
+</dd>
+<dt>-overtake_allowed<span class="classifier">boolean</span></dt><dd><p>Boolean indicator of whether to allow overtake.</p>
+</dd>
+<dt>-_local_planner<span class="classifier">LocalPlanner</span></dt><dd><p>A carla local planner class for behavior planning.</p>
+</dd>
+<dt>-lane_change_allowed<span class="classifier">boolean</span></dt><dd><p>Boolean indicator of whether the lane change is allowed.</p>
+</dd>
+<dt>-white_list<span class="classifier">list</span></dt><dd><p>The white list contains all position of target platoon member for joining.</p>
+</dd>
+<dt>-debug_helper<span class="classifier">PlanDebugHelper</span></dt><dd><p>The helper class that help with the debug functions.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.add_white_list">
+<span class="sig-name descname"><span class="pre">add_white_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.add_white_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add vehicle manager to white list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.car_following_manager">
+<span class="sig-name descname"><span class="pre">car_following_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.car_following_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Module in charge of car-following behaviors when there’s
+someone in front of us.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-target_speed</strong> (<em>float</em>) – The target car following speed.</p></li>
+<li><p><strong>-vehicle</strong> (<em>carla.vehicle</em>) – Leading vehicle to follow.</p></li>
+<li><p><strong>-distance</strong> (<em>float</em>) – distance from leading vehicle.</p></li>
+<li><p><strong>-control</strong> (<em>carla.VehicleControl</em>) – Vehicle control of the next step.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The target speed for the next step.
+-target_loc (carla.location): The target location for the next step.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-target_speed (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.collision_manager">
+<span class="sig-name descname"><span class="pre">collision_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ryaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjacent_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.collision_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>This module is in charge of warning in case of a collision.</p>
+<p>Args:
+-adjacent_check (boolean): whether it is a check for adjacent lane.
+-rx (float): x coordinates of plan path.
+-ry (float): y coordinates of plan path.
+-ryaw (float): yaw angle.
+-waypoint (carla.waypoint): current waypoint of the agent.
+-vehicle_state (string): True if there is a vehicle nearby, False if not.
+-vehicle (carla.vehicle): nearby vehicle.
+Returns:
+-distance (float): distance to nearby vehicle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.get_local_planner">
+<span class="sig-name descname"><span class="pre">get_local_planner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.get_local_planner" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the local planner</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.lane_change_management">
+<span class="sig-name descname"><span class="pre">lane_change_management</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.lane_change_management" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identify whether a potential hazard exits if operating lane change.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>whether the lane change is dangerous</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>vehicle_state (boolean)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.overtake_management">
+<span class="sig-name descname"><span class="pre">overtake_management</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obstacle_vehicle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.overtake_management" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overtake behavior.</p>
+<p>Args:
+-obstacle_vehicle (carla.vehicle): The obstacle vehicle.
+Return:
+-vehicle_state (boolean): Flag indicating whether the vehicle is in dangerous state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.reroute">
+<span class="sig-name descname"><span class="pre">reroute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spawn_points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.reroute" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method implements re-routing for vehicles approaching its destination.
+It finds a new target and computes another path to reach it.</p>
+<p>Args:
+-spawn_points (list): list of possible destinations for the agent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_detector_enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lane_change_allowed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute one step of navigation</p>
+<p>Args:
+-collision_detector_enabled (boolean): whether to enable collision detection.
+-target_speed (float):  a manual order to achieve certain speed.
+-lane_change_allowed (boolean): whether lane change is allowed. This is passed from platoon behavior agent.
+Returns:
+-control (carla.VehicleControl): Vehicle control of the next step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.set_destination">
+<span class="sig-name descname"><span class="pre">set_destination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean_history</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.set_destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method creates a list of waypoints from agent’s position to destination location
+based on the route returned by the global router.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-end_reset</strong> (<em>boolean</em>) – Flag to reset the waypoint queue.</p></li>
+<li><p><strong>-start_location</strong> (<em>carla.location</em>) – initial position.</p></li>
+<li><p><strong>-end_location</strong> (<em>carla.location</em>) – final position.</p></li>
+<li><p><strong>-clean</strong> (<em>boolean</em>) – Flag to clean the waypoint queue.</p></li>
+<li><p><strong>-clean_history</strong> (<em>boolean</em>) – Flag to clean the waypoint history.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.traffic_light_manager">
+<span class="sig-name descname"><span class="pre">traffic_light_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.traffic_light_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is in charge of behaviors for red lights and stops.
+WARNING: What follows is a proxy to avoid having a car brake after running a yellow light.
+This happens because the car is still under the influence of the semaphore,
+even after passing it. So, the semaphore id is temporarely saved to
+ignore it and go around this issue, until the car is near a new one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-waypoint</strong> (<em>carla.waypoint</em>) – current waypoint of the agent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.update_information">
+<span class="sig-name descname"><span class="pre">update_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.update_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the perception and localization information to the behavior agent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-ego_pos</strong> (<em>carla.Transform</em>) – ego position from localization module.</p></li>
+<li><p><strong>-ego_speed</strong> (<em>float</em>) – km/h, ego speed.</p></li>
+<li><p><strong>-objects</strong> (<em>dictionary</em>) – Objects detection results from perception module.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.behavior_agent.BehaviorAgent.white_list_match">
+<span class="sig-name descname"><span class="pre">white_list_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obstacles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.behavior_agent.BehaviorAgent.white_list_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match the detected obstacles with the white list. Remove the obstacles that are in white list.
+The white list contains all position of target platoon member for joining.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-obstacles</strong> (<em>list</em>) – a list of carla.Vehicle or ObstacleVehicle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the new list of obstacles.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-new_obstacle_list (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.collision_check">
+<span id="opencda-core-plan-collision-check-module"></span><h2>opencda.core.plan.collision_check module<a class="headerlink" href="#module-opencda.core.plan.collision_check" title="Permalink to this headline">¶</a></h2>
+<p>This module is used to check collision possibility</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.collision_check.CollisionChecker">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.collision_check.</span></span><span class="sig-name descname"><span class="pre">CollisionChecker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_ahead</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circle_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circle_offsets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.collision_check.CollisionChecker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The default collision checker module.</p>
+<p>Parameters
+-time_ahead : float</p>
+<blockquote>
+<div><p>how many seconds we look ahead in advance for collision check.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-circle_radius<span class="classifier">float</span></dt><dd><p>The radius of the collision checking circle.</p>
+</dd>
+<dt>-circle_offsets<span class="classifier">float</span></dt><dd><p>The offset between collision checking circle and the trajectory point.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.collision_check.CollisionChecker.adjacent_lane_collision_check">
+<span class="sig-name descname"><span class="pre">adjacent_lane_collision_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_loc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_wpt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overtake</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">world</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.collision_check.CollisionChecker.adjacent_lane_collision_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a straight line in the adjacent lane for collision detection during
+overtake/lane change. Todo: current version may not work well on curved lane</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-ego_loc</strong> (<em>carla.Location</em>) – Ego Location.</p></li>
+<li><p><strong>-target_wpt</strong> (<em>carla.Waypoint</em>) – the check point in the adjacent at a far distance.</p></li>
+<li><p><strong>-overtake</strong> (<em>bool</em>) – indicate whether this is an overtake or normal lane change behavior.</p></li>
+<li><p><strong>-world</strong> (<em>carla.World</em>) – CARLA Simulation world, used to draw debug lines.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the x coordinates of the collision check line in the adjacent lane
+-ry (list): the y coordinates of the collision check line in the adjacent lane
+-ryaw (list): the yaw angle of the the collision check line in the adjacent lane</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-rx (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.collision_check.CollisionChecker.collision_circle_check">
+<span class="sig-name descname"><span class="pre">collision_circle_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obstacle_vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjacent_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.collision_check.CollisionChecker.collision_circle_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use circled collision check to see whether potential hazard on the forwarding path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-adjacent_check</strong> (<em>boolean</em>) – Indicator of whether do adjacent check. Note: always give full path for adjacent lane check.</p></li>
+<li><p><strong>-speed</strong> (<em>float</em>) – ego vehicle speed in m/s.</p></li>
+<li><p><strong>-path_yaw</strong> (<em>float</em>) – a list of yaw angles</p></li>
+<li><p><strong>-path_x</strong> (<em>list</em>) – a list of x coordinates</p></li>
+<li><p><strong>-path_y</strong> (<em>list</em>) – a list of y coordinates</p></li>
+<li><p><strong>-obstacle_vehicle</strong> (<em>carla.vehicle</em>) – potention hazard vehicle on the way</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Flag indicate whether the current range is collision free.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-collision_free (boolean)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.collision_check.CollisionChecker.is_in_range">
+<span class="sig-name descname"><span class="pre">is_in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">candidate_vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.collision_check.CollisionChecker.is_in_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether there is a obstacle vehicle between target_vehicle and ego_vehicle during back_joining.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-carla_map</strong> (<em>carla.map</em>) – carla map  of the current simulation world.</p></li>
+<li><p><strong>-ego_pos</strong> (<em>carla.transform</em>) – Ego vehicle position.</p></li>
+<li><p><strong>-target_vehicle</strong> (<em>carla.vehicle</em>) – The vehicle that is suppose to be catched.</p></li>
+<li><p><strong>-candidate_vehicle</strong> (<em>carla.vehicle</em>) – The possible obstacle vehicle blocking the ego vehicle and target vehicle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Indicator of whther the target vehicle is in range.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-detection result (boolean)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.drive_profile_plotting">
+<span id="opencda-core-plan-drive-profile-plotting-module"></span><h2>opencda.core.plan.drive_profile_plotting module<a class="headerlink" href="#module-opencda.core.plan.drive_profile_plotting" title="Permalink to this headline">¶</a></h2>
+<p>Tools to plot velocity, acceleration, and curvation.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.drive_profile_plotting.draw_acceleration_profile_single_plot">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.drive_profile_plotting.</span></span><span class="sig-name descname"><span class="pre">draw_acceleration_profile_single_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acceleration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.drive_profile_plotting.draw_acceleration_profile_single_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw velocity profiles in a single plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-acceleration</strong> (<em>list</em>) – The vehicle acceleration profile saved in a list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.drive_profile_plotting.draw_dist_gap_profile_singel_plot">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.drive_profile_plotting.</span></span><span class="sig-name descname"><span class="pre">draw_dist_gap_profile_singel_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gap_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.drive_profile_plotting.draw_dist_gap_profile_singel_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw distance gap profiles in a single plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-gap_list</strong> (<em>list</em>) – The vehicle front distance gap profile saved in a list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.drive_profile_plotting.draw_sub_plot">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.drive_profile_plotting.</span></span><span class="sig-name descname"><span class="pre">draw_sub_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">velocity_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_gap_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_gap_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ttc_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.drive_profile_plotting.draw_sub_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a specific function that draws 4 in 1 images for trajectory following task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-velocity_list</strong> (<em>list</em>) – The vehicle velocity profile saved in a list.</p></li>
+<li><p><strong>-distance_gap_list</strong> (<em>list</em>) – The vehicle distance gap profile saved in a list.</p></li>
+<li><p><strong>-time_gap_list</strong> (<em>list</em>) – The vehicle time gap profile saved in a list.</p></li>
+<li><p><strong>-acceleration_list</strong> (<em>list</em>) – The vehicle acceleration profile saved in a list.</p></li>
+<li><p><strong>-ttc_list</strong> (<em>list</em>) – The ttc list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.drive_profile_plotting.draw_time_gap_profile_singel_plot">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.drive_profile_plotting.</span></span><span class="sig-name descname"><span class="pre">draw_time_gap_profile_singel_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gap_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.drive_profile_plotting.draw_time_gap_profile_singel_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw inter gap profiles in a single plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-gap_list</strong> (<em>list</em>) – The vehicle front time gap profile saved in a list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.drive_profile_plotting.draw_ttc_profile_single_plot">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.drive_profile_plotting.</span></span><span class="sig-name descname"><span class="pre">draw_ttc_profile_single_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ttc_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.drive_profile_plotting.draw_ttc_profile_single_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw ttc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-ttc_list</strong> (<em>list</em>) – The vehicle time to collision profile saved in a list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.drive_profile_plotting.draw_velocity_profile_single_plot">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.drive_profile_plotting.</span></span><span class="sig-name descname"><span class="pre">draw_velocity_profile_single_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">velocity_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.drive_profile_plotting.draw_velocity_profile_single_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw velocity profiles in a single plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-velocity_list</strong> (<em>list</em>) – The vehicle velocity profile saved in a list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.global_route_planner">
+<span id="opencda-core-plan-global-route-planner-module"></span><h2>opencda.core.plan.global_route_planner module<a class="headerlink" href="#module-opencda.core.plan.global_route_planner" title="Permalink to this headline">¶</a></h2>
+<p>This module provides GlobalRoutePlanner implementation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner.GlobalRoutePlanner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.global_route_planner.</span></span><span class="sig-name descname"><span class="pre">GlobalRoutePlanner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dao</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner.GlobalRoutePlanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provides a very high level route plan.
+Instantiate the class by passing a reference to
+A GlobalRoutePlannerDAO object.</p>
+<p>Parameters
+-dao : carla.dao</p>
+<blockquote>
+<div><p>A global plan that contains routes from start to end.</p>
+</div></blockquote>
+<p>Attributes
+-_topology : carla.topology</p>
+<blockquote>
+<div><p>The topology graph of the current routes.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-_graph<span class="classifier">nx.DiGraph</span></dt><dd><p>The node-edge graph of the current routes.</p>
+</dd>
+<dt>-_id_map<span class="classifier">dict</span></dt><dd><p>A map constructed with road segment IDs.</p>
+</dd>
+<dt>-_road_id_to_edge<span class="classifier">list</span></dt><dd><p>A mapping that reference road it to edge in the graph.</p>
+</dd>
+<dt>-_intersection_end_node<span class="classifier">int</span></dt><dd><p>The node ID of at the end of the intersection.</p>
+</dd>
+<dt>-_previous_decision<span class="classifier">carla.RoadOption</span></dt><dd><p>The previous behavioral option of the ego vehicle.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner.GlobalRoutePlanner.abstract_route_plan">
+<span class="sig-name descname"><span class="pre">abstract_route_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner.GlobalRoutePlanner.abstract_route_plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function that generates the route plan based on origin and destination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-origin</strong> (<em>carla.Location</em>) – object of the route’s start position.</p></li>
+<li><p><strong>-destination</strong> (<em>carla.Location</em>) – object of the route’s end position.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of turn by turn navigation decisions as agents.navigation.local_planner.RoadOption.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>plan (list)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner.GlobalRoutePlanner.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner.GlobalRoutePlanner.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs initial server data lookup for detailed topology
+and builds graph representation of the world map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner.GlobalRoutePlanner.trace_route">
+<span class="sig-name descname"><span class="pre">trace_route</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner.GlobalRoutePlanner.trace_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns list of (carla.Waypoint, RoadOption)
+from origin to destination.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.global_route_planner_dao">
+<span id="opencda-core-plan-global-route-planner-dao-module"></span><h2>opencda.core.plan.global_route_planner_dao module<a class="headerlink" href="#module-opencda.core.plan.global_route_planner_dao" title="Permalink to this headline">¶</a></h2>
+<p>This module provides implementation for GlobalRoutePlannerDAO</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.global_route_planner_dao.</span></span><span class="sig-name descname"><span class="pre">GlobalRoutePlannerDAO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is the data access layer for fetching data from the carla server instance for GlobalRoutePlanner.</p>
+<p>Parameters
+-wmap : carla.world</p>
+<blockquote>
+<div><p>The current carla simulation world.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-sampling_resolution<span class="classifier">float</span></dt><dd><p>sampling distance between waypoints.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO.get_resolution">
+<span class="sig-name descname"><span class="pre">get_resolution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO.get_resolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the sampling resolution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO.get_topology">
+<span class="sig-name descname"><span class="pre">get_topology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO.get_topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor for topology.
+This function retrieves topology from the server as a list of
+road segments as pairs of waypoint objects, and processes the
+topology into a list of dictionary objects.</p>
+<blockquote>
+<div><dl class="field-list">
+<dt class="field-odd">return topology</dt>
+<dd class="field-odd"><p>list of dictionary objects with the following attributes
+entry   -   waypoint of entry point of road segment
+entryxyz-   (x,y,z) of entry point of road segment
+exit    -   waypoint of exit point of road segment
+exitxyz -   (x,y,z) of exit point of road segment
+path    -   list of waypoints separated by 1m from entry</p>
+<blockquote>
+<div><p>to exit</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO.get_waypoint">
+<span class="sig-name descname"><span class="pre">get_waypoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.global_route_planner_dao.GlobalRoutePlannerDAO.get_waypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method returns waypoint at given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-location</strong> (<em>carla.lcoation</em>) – Vehicle location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Newly generated waypoint close to location.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-waypoint (carla.waypoint)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.local_planner_behavior">
+<span id="opencda-core-plan-local-planner-behavior-module"></span><h2>opencda.core.plan.local_planner_behavior module<a class="headerlink" href="#module-opencda.core.plan.local_planner_behavior" title="Permalink to this headline">¶</a></h2>
+<p>This module contains a local planner to perform
+low-level waypoint following based on PID controllers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.local_planner_behavior.</span></span><span class="sig-name descname"><span class="pre">LocalPlanner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>LocalPlanner implements the basic behavior of following a trajectory of waypoints that is generated on-the-fly.
+The low-level motion of the vehicle is computed by using lateral and longitudinal PID controllers.
+When multiple paths are available (intersections) this local planner makes a random choice.</p>
+<p>Parameters
+-agent : carla.agent</p>
+<blockquote>
+<div><p>The carla.agent that applying vehicle contorl.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-carla_map<span class="classifier">carla.map</span></dt><dd><p>The HD map of the current simulation world.</p>
+</dd>
+<dt>-config<span class="classifier">dict</span></dt><dd><p>The configuration dictionary of the trajectory planning module.</p>
+</dd>
+</dl>
+<p>Attributes
+-_vehicle : carla.vehicle</p>
+<blockquote>
+<div><p>The caral vehicle objcet.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-_ego_pos<span class="classifier">carla.position</span></dt><dd><p>The current position of the ego vehicle.</p>
+</dd>
+<dt>-_ego_speed<span class="classifier">float</span></dt><dd><p>The current speed of the ego vehicle.</p>
+</dd>
+<dt>-waypoints_queue<span class="classifier">deque</span></dt><dd><p>The waypoint deque of the current plan.</p>
+</dd>
+<dt>-_waypoint_buffer<span class="classifier">deque</span></dt><dd><p>A buffer deque to store waypoints of the next steps.</p>
+</dd>
+<dt>-_long_plan_debug<span class="classifier">list</span></dt><dd><p>A list that stores the waypoints of global plan for debug purposes.</p>
+</dd>
+<dt>-_trajectory_buffer<span class="classifier">deque</span></dt><dd><p>A deque buffer that stores the current trajectory.</p>
+</dd>
+<dt>-_history_buffer<span class="classifier">deque</span></dt><dd><p>A deque buffer that stores the trajectory history of the ego vehicle.</p>
+</dd>
+<dt>-lane_change<span class="classifier">boolean</span></dt><dd><p>A indicator used to identify whether lane change is operated</p>
+</dd>
+<dt>-lane_id_change<span class="classifier">boolean</span></dt><dd><p>In some corner cases, the id is not changed but we regard it as lane change due to large lateral diff.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.generate_path">
+<span class="sig-name descname"><span class="pre">generate_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.generate_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the smooth path using cubic spline.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of planned path points’ x coordinates.
+-ry (list): List of planned path points’ y coordinates.
+-ryaw (list): List of planned path points’ yaw angles.
+-rk (list): List of planned path points’ curvatures.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-rx (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.generate_trajectory">
+<span class="sig-name descname"><span class="pre">generate_trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.generate_trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampling the generated path and assign speed to each point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-rx</strong> (<em>list</em>) – List of planned path points’ x coordinates.</p></li>
+<li><p><strong>-ry</strong> (<em>list</em>) – List of planned path points’ y coordinates.</p></li>
+<li><p><strong>-rk</strong> (<em>list</em>) – List of planned path points’ curvatures.</p></li>
+<li><p><strong>-debug</strong> (<em>boolean</em>) – whether to draw the whole plan path</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.get_trajetory">
+<span class="sig-name descname"><span class="pre">get_trajetory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.get_trajetory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the trajetory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.pop_buffer">
+<span class="sig-name descname"><span class="pre">pop_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.pop_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove waypoints the ego vehicle has achieved.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">following</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute one step of local planning which involves
+running the longitudinal and lateral PID controllers to
+follow the smooth waypoints trajectory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-rx</strong> (<em>list</em>) – List of planned path points’ x coordinates.</p></li>
+<li><p><strong>-ry</strong> (<em>list</em>) – List of planned path points’ y coordinates.</p></li>
+<li><p><strong>-ryaw</strong> (<em>list</em>) – List of planned path points’ yaw angles.</p></li>
+<li><p><strong>-rk</strong> (<em>list</em>) – List of planned path points’ curvatures.</p></li>
+<li><p><strong>-following</strong> (<em>boolean</em>) – Indicator of whether the vehicle is under following status.</p></li>
+<li><p><strong>-trajectory</strong> (<em>list</em>) – Pre-generated car-following trajectory only for platoon members.</p></li>
+<li><p><strong>-target_speed</strong> (<em>float</em>) – The ego vehicle’s desired speed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Next trajectory point’s target speed
+-waypoint (carla.waypoint): Next trajectory point’s waypoint.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-speed (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.set_global_plan">
+<span class="sig-name descname"><span class="pre">set_global_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_plan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.set_global_plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets new global plan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-clean</strong> (<em>boolean</em>) – Indicator of whether to clear the global plan.</p></li>
+<li><p><strong>-current_plan</strong> (<em>list</em>) – list of waypoints in the actual plan.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.LocalPlanner.update_information">
+<span class="sig-name descname"><span class="pre">update_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.LocalPlanner.update_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the ego position and speed for trajectory planner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-ego_pos</strong> (<em>carla.Transform</em>) – Ego position from localization module.</p></li>
+<li><p><strong>-ego_speed</strong> (<em>float</em>) – Ego speed(km/h) from localization module.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.local_planner_behavior.</span></span><span class="sig-name descname"><span class="pre">RoadOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>RoadOption represents the possible topological configurations when moving from a segment of lane to other.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.CHANGELANELEFT">
+<span class="sig-name descname"><span class="pre">CHANGELANELEFT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.CHANGELANELEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.CHANGELANERIGHT">
+<span class="sig-name descname"><span class="pre">CHANGELANERIGHT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.CHANGELANERIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.LANEFOLLOW">
+<span class="sig-name descname"><span class="pre">LANEFOLLOW</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.LANEFOLLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.LEFT">
+<span class="sig-name descname"><span class="pre">LEFT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.RIGHT">
+<span class="sig-name descname"><span class="pre">RIGHT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.STRAIGHT">
+<span class="sig-name descname"><span class="pre">STRAIGHT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.STRAIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.plan.local_planner_behavior.RoadOption.VOID">
+<span class="sig-name descname"><span class="pre">VOID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">-1</span></em><a class="headerlink" href="#opencda.core.plan.local_planner_behavior.RoadOption.VOID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.planer_debug_helper">
+<span id="opencda-core-plan-planer-debug-helper-module"></span><h2>opencda.core.plan.planer_debug_helper module<a class="headerlink" href="#module-opencda.core.plan.planer_debug_helper" title="Permalink to this headline">¶</a></h2>
+<p>Analysis + Visualization functions for planning</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.planer_debug_helper.PlanDebugHelper">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.planer_debug_helper.</span></span><span class="sig-name descname"><span class="pre">PlanDebugHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actor_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.planer_debug_helper.PlanDebugHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class aims to save statistics for planner behaviour.</p>
+<p>Parameters:
+-actor_id : int</p>
+<blockquote>
+<div><p>The actor ID of the target vehicle for bebuging.</p>
+</div></blockquote>
+<p>Attributes
+-speed_list : list</p>
+<blockquote>
+<div><p>The list containing speed info(m/s) of all time-steps.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-acc_list<span class="classifier">list</span></dt><dd><p>The list containing acceleration info(m^2/s) of all time-steps.</p>
+</dd>
+<dt>-ttc_list<span class="classifier">list</span></dt><dd><p>The list containing ttc info(s) for all time-steps.</p>
+</dd>
+<dt>-count<span class="classifier">int</span></dt><dd><p>Used to count how many simulation steps have been executed.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.planer_debug_helper.PlanDebugHelper.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.planer_debug_helper.PlanDebugHelper.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the target vehicle and visulize the plot.
+:returns: The target vehicle’s planning profile (velocity, acceleration, and ttc).</p>
+<blockquote>
+<div><p>-perform_txt (txt file): The target vehicle’s planning profile as text files.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-figure (matplotlib.pyplot.figure)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.planer_debug_helper.PlanDebugHelper.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ttc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.planer_debug_helper.PlanDebugHelper.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the speed info.
+:param -ego_speed: Ego speed in km/h.
+:type -ego_speed: float
+:param -ttc: Time to collision in seconds.
+:type -ttc: flot</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan.spline">
+<span id="opencda-core-plan-spline-module"></span><h2>opencda.core.plan.spline module<a class="headerlink" href="#module-opencda.core.plan.spline" title="Permalink to this headline">¶</a></h2>
+<p>Cubic spline planner</p>
+<p>Author: Atsushi Sakai(&#64;Atsushi_twi)</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.spline.</span></span><span class="sig-name descname"><span class="pre">Spline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cubic Spline class for calculte curvature (Author: Atsushi Sakai(&#64;Atsushi_twi)).</p>
+<p>Parameters
+-x : float</p>
+<blockquote>
+<div><p>The x coordinate.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-y<span class="classifier">float</span></dt><dd><p>The y coordinate.</p>
+</dd>
+</dl>
+<p>Attributes
+-b : float</p>
+<blockquote>
+<div><p>The spline coefficient b.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-c<span class="classifier">float</span></dt><dd><p>The spline coefficient c.</p>
+</dd>
+<dt>-d<span class="classifier">float</span></dt><dd><p>The spline coefficient d.</p>
+</dd>
+<dt>-w<span class="classifier">float</span></dt><dd><p>The spline coefficient w.</p>
+</dd>
+<dt>-nx<span class="classifier">float</span></dt><dd><p>The dimension of x.</p>
+</dd>
+<dt>-h<span class="classifier">float</span></dt><dd><p>The n-th discrete difference along the x-axis.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline.calc">
+<span class="sig-name descname"><span class="pre">calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calc position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>-</em>) – if t is outside of the input x, return None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The calcualtion result of position. If t is outside the range of x, return None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>result (float)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline.calcd">
+<span class="sig-name descname"><span class="pre">calcd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline.calcd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calc first derivative. If t is outside of the input x, return None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline.calcdd">
+<span class="sig-name descname"><span class="pre">calcdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline.calcdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calc second derivative, If t is outside of the input x, return None.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline2D">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.plan.spline.</span></span><span class="sig-name descname"><span class="pre">Spline2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>2D Cubic Spline class for calculte curvature (Author: Atsushi Sakai(&#64;Atsushi_twi)).</p>
+<p>Parameters
+-x : float</p>
+<blockquote>
+<div><p>The x coordinate.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-y<span class="classifier">float</span></dt><dd><p>The y coordinate.</p>
+</dd>
+</dl>
+<p>Attributes
+-b : float</p>
+<blockquote>
+<div><p>The spline coefficient b.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-c<span class="classifier">float</span></dt><dd><p>The spline coefficient c.</p>
+</dd>
+<dt>-d<span class="classifier">float</span></dt><dd><p>The spline coefficient d.</p>
+</dd>
+<dt>-w<span class="classifier">float</span></dt><dd><p>The spline coefficient w.</p>
+</dd>
+<dt>-nx<span class="classifier">float</span></dt><dd><p>The dimension of x.</p>
+</dd>
+<dt>-h<span class="classifier">float</span></dt><dd><p>The n-th discrete difference along the x-axis.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline2D.calc_curvature">
+<span class="sig-name descname"><span class="pre">calc_curvature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline2D.calc_curvature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate curvature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline2D.calc_position">
+<span class="sig-name descname"><span class="pre">calc_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline2D.calc_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.Spline2D.calc_yaw">
+<span class="sig-name descname"><span class="pre">calc_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.Spline2D.calc_yaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate yaw.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.calc_spline_course">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.spline.</span></span><span class="sig-name descname"><span class="pre">calc_spline_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.calc_spline_course" title="Permalink to this definition">¶</a></dt>
+<dd><p>Caculate 2D splice course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-x</strong> (<em>float</em>) – The x coordinate of the input point.</p></li>
+<li><p><strong>-y</strong> (<em>float</em>) – The y coordinate of the input point.</p></li>
+<li><p><strong>-ds</strong> (<em>flost</em>) – The s step value. Default value equals to 0.1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of spline course points’ x coordinates.
+-ry (list): List of spline course points’ y coordinates.
+-ryaw (list): List of spline course points’ yaw angles.
+-rk (list): List of spline course points’ curvatures.
+-s (list): List of spline course points’ s values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-rx (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.plan.spline.main">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.plan.spline.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.plan.spline.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to calculate spline and visulize the results.</p>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.plan">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.core.plan" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.core.sensing.html" class="btn btn-neutral float-right" title="opencda.core.sensing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.core.common.html" class="btn btn-neutral float-left" title="opencda.core.common package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

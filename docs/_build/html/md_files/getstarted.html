@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Quick start &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenCDA Tutorial" href="tutorial.html" />
+    <link rel="prev" title="OpenCDA Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#single-vehicle-testing-w-o-perception">1. Single vehicle testing(w/o perception)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-vehicle-testing-w-perception">2. Single vehicle testing(w/ perception)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#platooning-w-o-perception">3. Platooning(w/o perception)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cooperative-merge-and-join-a-platoon-w-o-perception">4. Cooperative merge and join a platoon(w/o perception)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#platoon-back-join-w-perception">5. Platoon back-join(w perception)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Quick start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/md_files/getstarted.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="quick-start">
+<h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>OpenCDA provides  a default scenario database for users to get a quick start. A  scenario testing contains two components:
+A python script and a yaml file. The yaml file will define CAVs’ parameters, the traffic flow and the
+driving task of each CAV(where to start and where is the destination). The python script will load the yaml file
+and pass it to corresponding api to construct the scenario.<br></p>
+<p>Running a scenario testing can be done by just one line of command.</p>
+<section id="single-vehicle-testing-w-o-perception">
+<h2>1. Single vehicle testing(w/o perception)<a class="headerlink" href="#single-vehicle-testing-w-o-perception" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda activate opencda
+<span class="nb">cd</span> ~/OpenCDA
+<span class="s2">&quot;&quot;&quot; comments, do not input these to your terminal</span>
+<span class="s2">single-&gt;single vehicle testing, </span>
+<span class="s2">2lanefree-&gt;testing map name, </span>
+<span class="s2">carla-&gt;only carla is involved(no sumo and ns3)</span>
+<span class="s2">&quot;&quot;&quot;</span>
+python opencda.py -t single_2lanefree_carla
+</pre></div>
+</div>
+<p>In this scenario testing, a single connected automated vehicle will be spawn at a 2-lane highway customized map.  This
+CAV will try to reach the assigned destination with a desired speed of 100km/h and manage to safely and efficiently interact
+with the surrounding traffic flow. The CAV’s localization, planning, and control modules will be activated, and the perception module will be deactivated
+by default, thus <strong> pytorch is NOT required in this testing </strong>. <br></p>
+<p>If you want to activate the perception module, please check <a class="reference external" href="Opencda_yaml">Yaml Defining Rules</a> to see details.</p>
+<p><img alt="teaser" src="../_images/single_2lanefree_carla.gif" /></p>
+<p>** Note: The bounding boxes draw on the camera and lidar are projected from the true 3d poses from the server directly.</p>
+</section>
+<section id="single-vehicle-testing-w-perception">
+<h2>2. Single vehicle testing(w/ perception)<a class="headerlink" href="#single-vehicle-testing-w-perception" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python opencda.py -t single_town06_carla --apply_ml
+</pre></div>
+</div>
+<p>The apply_ml flag will import the pytorch library and load Yolov5 model(<strong>Thus Pytorch is required</strong>) for object detection. Thus, in this
+scenario, the <strong>perception</strong>, localization, planning and control modules will all be activated.</p>
+<p><img alt="teaser" src="../_images/single_town06_carla_2.gif" /></p>
+</section>
+<section id="platooning-w-o-perception">
+<h2>3. Platooning(w/o perception)<a class="headerlink" href="#platooning-w-o-perception" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python opencda.py -t platoon_stability_2lanefree_carla.py
+</pre></div>
+</div>
+<p>In this scenario, a platoon with 4 members will be placed at the 2-lane highway map. The platoon leader will dramatically increases
+and decreases its speed to test whether the members can still keep the desired time gap. In this way, the platoon
+stability is verified.</p>
+</section>
+<section id="cooperative-merge-and-join-a-platoon-w-o-perception">
+<h2>4. Cooperative merge and join a platoon(w/o perception)<a class="headerlink" href="#cooperative-merge-and-join-a-platoon-w-o-perception" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python opencda.py -t platoon_stability_2lanefree_carla.py
+</pre></div>
+</div>
+<p>In this scenario, a platoon will drive on the mainline together with a mixed traffic flow. A single CAV will come from the
+merging lane, communicate with the platoon to cooperatively merge into the mainline, and simultaneously join the platoon.</p>
+<p><img alt="teaser" src="../_images/platoon_joining_2lanefree.gif" /></p>
+</section>
+<section id="platoon-back-join-w-perception">
+<h2>5. Platoon back-join(w perception)<a class="headerlink" href="#platoon-back-join-w-perception" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python opencda.py -t platoon_town06_carla.py
+</pre></div>
+</div>
+<p>A single CAV will try to overtake several human-drive vehicles to join the platoon from the back side.
+<img alt="teaser" src="../_images/platoon_joining_town06.gif" /></p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="OpenCDA Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="OpenCDA Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

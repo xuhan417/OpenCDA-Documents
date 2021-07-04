@@ -1,0 +1,2040 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OpenCDA Python API Reference &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>OpenCDA Python API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/md_files/PythonAPI.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-python-api-reference">
+<h1>OpenCDA Python API Reference<a class="headerlink" href="#opencda-python-api-reference" title="Permalink to this headline">¶</a></h1>
+<p>This reference contains all the details of the OpenCDA Python API.</p>
+<section id="opencda-module-co-simulation">
+<h2>OpenCDA Module: co_simulation<a class="headerlink" href="#opencda-module-co-simulation" title="Permalink to this headline">¶</a></h2>
+<p>Co-simulation with SUMO, will be released in v0.2.</p>
+</section>
+<section id="opencda-module-core">
+<h2>OpenCDA Module: core<a class="headerlink" href="#opencda-module-core" title="Permalink to this headline">¶</a></h2>
+<p>This is the core module of the OpenCDA framework that regulates the motion relatetd controls.</p>
+<section id="opencda-core-actuation">
+<h3>opencda.core.actuation<a class="headerlink" href="#opencda-core-actuation" title="Permalink to this headline">¶</a></h3>
+<p>This is the actuation function stack that controls CARLA ego vehicle.</p>
+<section id="opencda-core-actuation-control-manager">
+<h4>opencda.core.actuation.control_manager<a class="headerlink" href="#opencda-core-actuation-control-manager" title="Permalink to this headline">¶</a></h4>
+<p>Controller interface.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">ControlManager(control_config)</span></code>
+:   Interface to select different types of controller.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+Args:
+    control_config(dict): Controller params.
+
+### Methods
+
+`run_step(self, target_speed, waypoint)`
+:
+
+`update_info(self, ego_pos, ego_speed)`
+:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-actuation-pid-controller">
+<h4>opencda.core.actuation.pid_controller<a class="headerlink" href="#opencda-core-actuation-pid-controller" title="Permalink to this headline">¶</a></h4>
+<p>PID Control Class.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Controller(args)</span></code>
+:   VehiclePIDController is the combination of two PID controllers
+(lateral and longitudinal) to perform the
+low level control a vehicle from client side</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param args: the parameters for pid controller
+
+### Methods
+
+`dynamic_pid(self)`
+:   Compute kp, kd, ki based on current speed
+    :return:
+
+`lat_run_step(self, target_location)`
+:   Generate the throttle command based on current speed and target speed
+    :param target_location: target waypoint
+    :return: steering scalar
+
+`lon_run_step(self, target_speed)`
+:   Generate the throttle command based on current speed and target speed
+    :param target_speed: target speed in km/h
+    :return: throttle scalar
+
+`run_step(self, target_speed, waypoint)`
+:   Execute one step of control invoking both lateral and longitudinal
+    PID controllers to reach a target waypoint
+    at a given target_speed.
+    
+        :param target_speed: desired vehicle speed
+        :param waypoint: target location encoded as a waypoint
+        :return: control command
+
+`update_info(self, ego_pos, ego_spd)`
+:   Update ego position and speed to controller.
+    :param ego_pos: ego position, carla.transform
+    :param ego_spd: ego speed, km/h
+    :return:
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opencda-core-application">
+<h3>opencda.core.application<a class="headerlink" href="#opencda-core-application" title="Permalink to this headline">¶</a></h3>
+<p>V2V, V2I application are all managed with this class.</p>
+<section id="opencda-core-application-platooning">
+<h4>opencda.core.application - Platooning<a class="headerlink" href="#opencda-core-application-platooning" title="Permalink to this headline">¶</a></h4>
+<p>Here, we provide an implementation of Autonomous vehicle platooning based on finite state machine.</p>
+<section id="opencda-core-application-platooning-fsm">
+<h5>opencda.core.application.platooning.fsm<a class="headerlink" href="#opencda-core-application-platooning-fsm" title="Permalink to this headline">¶</a></h5>
+<p>Finite State Machine</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">FSM(value,</span> <span class="pre">names=None,</span> <span class="pre">*,</span> <span class="pre">module=None,</span> <span class="pre">qualname=None,</span> <span class="pre">type=None,</span> <span class="pre">start=1)</span></code>
+:   An enumeration.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Ancestors (in MRO)
+
+* enum.Enum
+
+### Class variables
+
+`ABONDON`
+:
+
+`BACK_JOINING`
+:
+
+`CUT_IN_TO_BACK`
+:
+
+`DISABLE`
+:
+
+`FRONT_JOINING`
+:
+
+`JOINING`
+:
+
+`JOINING_FINISHED`
+:
+
+`LEADING_MODE`
+:
+
+`MAINTINING`
+:
+
+`MOVE_TO_POINT`
+:
+
+`OPEN_GAP`
+:
+
+`SEARCHING`
+:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-application-platooning-platoon-behavior-agent">
+<h5>opencda.core.application.platooning.platoon_behavior_agent<a class="headerlink" href="#opencda-core-application-platooning-platoon-behavior-agent" title="Permalink to this headline">¶</a></h5>
+<p>Behavior manager for platooning specifically</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">PlatooningBehaviorAgent(vehicle,</span> <span class="pre">vehicle_manager,</span> <span class="pre">v2x_manager,</span> <span class="pre">behavior_yaml,</span> <span class="pre">platoon_yaml,</span> <span class="pre">carla_map)</span></code>
+:   The behavior agent for platooning</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param vehicle: carla actor todo:remove this later
+:param vehicle_manager: vehicle manager of this agent.
+:param v2x_manager: communication manager
+:param behavior_yaml: configure yaml file for normal behavior agent
+:param platoon_yaml:  configure yaml file for platoon behavior agent
+:param carla_map: Carla HD Map
+:return
+
+### Ancestors (in MRO)
+
+* opencda.core.plan.behavior_agent.BehaviorAgent
+
+### Methods
+
+`calculate_gap(self, distance)`
+:   Calculate the current vehicle and frontal vehicle&#39;s time/distance gap
+    :param distance:  distance between the ego vehicle and frontal vehicle
+    :return:
+
+`joining_finish_manager(self, insert_vehicle=&#39;front&#39;)`
+:   Called when a joining is finish to update the platoon manager list.
+    :param insert_vehicle: indicate use the front or rear vehicle index to update the platoon manager list.
+    :return:
+
+`platooning_following_manager(self, inter_gap)`
+:   Car following behavior in platooning with gap regulation
+    :param inter_gap: the gap designed for platooning
+    :return:
+
+`platooning_merge_management(self, frontal_vehicle_vm)`
+:   Merge the vehicle into the platooning
+    :param frontal_vehicle_vm:
+    :return:
+
+`run_step(self, target_speed=None, collision_detector_enabled=True, lane_change_allowed=True)`
+:   Run a single step for navigation under platooning agent. Finite state machine is used to switch between
+    different platooning states.
+    Args:
+        target_speed (float): Target speed in km/h
+        collision_detector_enabled (bool): Whether collision detection enabled.
+        lane_change_allowed (bool): Whether lane change is allowed.
+    
+    Returns:
+
+`run_step_back_joining(self)`
+:   Back-joining Algorithm
+    :return: control command and whether back joining finished
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-application-platooning-platoon-debug-helper">
+<h5>opencda.core.application.platooning.platoon_debug_helper<a class="headerlink" href="#opencda-core-application-platooning-platoon-debug-helper" title="Permalink to this headline">¶</a></h5>
+<p>Analysis + visualization functions for platooning.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">PlatoonDebugHelper(actor_id)</span></code>
+:   This class aims to save statistics for platoon behaviour
+Attributes:
+time_gap_list (list): The list containing intra-time-gap(s) of all time-steps
+dist_gap_list(list): The list containing distance gap(s) of all time-steps</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### Ancestors (in MRO)</span>
+
+<span class="o">*</span> <span class="n">opencda</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">plan</span><span class="o">.</span><span class="n">planer_debug_helper</span><span class="o">.</span><span class="n">PlanDebugHelper</span>
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-application-platooning-platooning-manager">
+<h5>opencda.core.application.platooning.platooning_manager<a class="headerlink" href="#opencda-core-application-platooning-platooning-manager" title="Permalink to this headline">¶</a></h5>
+<p>Platooning Manager.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">PlatooningManager(config_yaml,</span> <span class="pre">cav_world)</span></code>
+:   Platooning manager for vehicle managers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param config_yaml:
+:param cav_world: CAV world object
+
+### Methods
+
+`add_member(self, vehicle_manager, leader=False)`
+:   Add memeber to the current platooning
+    :param leader: whether this cav is a leader
+    :param vehicle_manager:
+    :return:
+
+`cal_center_loc(self)`
+:   Calculate center location of the platoon
+    :return:
+
+`destroy(self)`
+:   Destroy vehicles
+    :return:
+
+`evaluate(self)`
+:
+
+`reset_speed(self)`
+:   After joining request accepted for certain steps, the platoon will return to the origin speed.
+    :return:
+
+`response_joining_request(self, request_loc)`
+:   Identify whether to accept the joining request based on capacity.
+    Args:
+        request_loc (carla.Location): request vehicle location.
+    
+    Returns:
+
+`run_step(self)`
+:   Run a step for each vehicles.
+    :return:
+
+`set_destination(self, destination)`
+:   Set desination of the vehicle managers in the platoon.
+    TODO: Currently we assume all vehicles in a platoon will have the same destination
+    :return:
+
+`set_lead(self, vehicle_manager)`
+:   Set the leader of the platooning
+    :param vehicle_manager:
+    :return:
+
+`set_member(self, vehicle_manager, index, lead=False)`
+:   Set member at specific index
+    :param lead:
+    :param vehicle_manager:
+    :param index:
+    :return:
+
+`update_information(self)`
+:   Update CAV world information for every member in the list.
+    :return:
+
+`update_member_order(self)`
+:   Update the members&#39; front and rear vehicle.
+    This should be called whenever new member added to the platoon list
+    :return:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-application-platooning-platooning-plugin">
+<h5>opencda.core.application.platooning.platooning_plugin<a class="headerlink" href="#opencda-core-application-platooning-platooning-plugin" title="Permalink to this headline">¶</a></h5>
+<p>Platooning plugin for communication and track FSM.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">PlatooningPlugin(search_range,</span> <span class="pre">cda_enabled)</span></code>
+:   Platooning Plugin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param search_range:
+:param cda_enabled:
+
+### Methods
+
+`match_platoon(self, cav_world)`
+:   A naive way to find the best position to join a platoon
+    :param cav_world: an object containing all existing platoons
+    :return: platoon found or not, closest platoon member team id, and a list containing the vehicle managers
+
+`reset(self)`
+:   Reset to the origin status
+    :return:
+
+`search_platoon(self, ego_pos, cav_world)`
+:   Search platoon candidate in the range
+    :param ego_pos:
+    :param cav_world:
+    :return: the uuid of platoon member, platoon object
+
+`set_platoon(self, in_id, platooning_object=None, platooning_id=None, leader=False)`
+:   Set platooning status
+    :param platooning_object: platooning manager todo: remove this later
+    :param platooning_id: platoon id the cav belongs to
+    :param in_id: the position in the platoon, etc. 0 represents leader and 1 represents the second position
+    :param leader: indicate whether this cav is a leader in platoon
+    :return:
+
+`set_status(self, status)`
+:   Set FSM status
+    :param status:
+    :return:
+
+`update_info(self, ego_pos, ego_spd)`
+:   Update the ego position and speed
+    :param ego_pos: ego position, carla.Transform
+    :param ego_spd: ego speed, km/h
+    :return:
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="opencda-core-common">
+<h3>opencda.core.common<a class="headerlink" href="#opencda-core-common" title="Permalink to this headline">¶</a></h3>
+<p>This module regulates simulation related objects in the CARLA simulation world.</p>
+<section id="opencda-core-common-cav-world">
+<h4>opencda.core.common.cav_world<a class="headerlink" href="#opencda-core-common-cav-world" title="Permalink to this headline">¶</a></h4>
+<p>Class that regulates the CARLA simulation world.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">CavWorld(apply_ml=False)</span></code>
+:   A customized world object to save all CDA vehicle information and shared ML models
+:return:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class.
+Args:
+    apply_ml (bool): whether apply ml/dl models in this simulation, please make sure
+                     you have install torch/sklearn before setting this to True.
+
+### Methods
+
+`get_platoon_dict(self)`
+:   Return existing platoons
+    :return:
+
+`get_vehicle_managers(self)`
+:   Return vehicle manager dictionary
+    :return:
+
+`locate_vehicle_manager(self, loc)`
+:   Locate the vehicle manager based on the given location.
+    Args:
+    loc (carla.Location): vehicle location.
+    
+    Returns:
+    (VehicleManager): The vehicle manager at the give location.
+
+`update_platooning(self, platooning_manger)`
+:   Add created platooning
+    :param platooning_manger:
+    :return:
+
+`update_vehicle_manager(self, vehicle_manager)`
+:   Update created CAV manager to the world
+    :param vehicle_manager:
+    :return:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-common-misc">
+<h4>opencda.core.common.misc<a class="headerlink" href="#opencda-core-common-misc" title="Permalink to this headline">¶</a></h4>
+<p>Module with auxiliary functions.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">cal_distance_angle(target_location,</span> <span class="pre">current_location,</span> <span class="pre">orientation)</span></code>
+:   Calculate the vehicle current relative distance to target location
+:param target_location:
+:param current_location:
+:param orientation:
+:return: distance and angle</p>
+<p><code class="docutils literal notranslate"><span class="pre">compute_distance(location_1,</span> <span class="pre">location_2)</span></code>
+:   Euclidean distance between 3D points</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">location_1</span><span class="p">:</span> <span class="mi">3</span><span class="n">D</span> <span class="n">points</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">location_2</span><span class="p">:</span> <span class="mi">3</span><span class="n">D</span> <span class="n">points</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">compute_magnitude_angle(target_location,</span> <span class="pre">current_location,</span> <span class="pre">orientation)</span></code>
+:   Compute relative angle and distance between a target_location and a current_location</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">target_location</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">target</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">current_location</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">orientation</span><span class="p">:</span> <span class="n">orientation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">a</span> <span class="nb">tuple</span> <span class="n">composed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">the</span> <span class="nb">object</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">angle</span> <span class="n">between</span> <span class="n">both</span> <span class="n">objects</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">distance_vehicle(waypoint,</span> <span class="pre">vehicle_transform)</span></code>
+:   Returns the 2D distance from a waypoint to a vehicle</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">waypoint</span><span class="p">:</span> <span class="n">actual</span> <span class="n">waypoint</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">vehicle_transform</span><span class="p">:</span> <span class="n">transform</span> <span class="n">of</span> <span class="n">the</span> <span class="n">target</span> <span class="n">vehicle</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">draw_trajetory_points(world,</span> <span class="pre">waypoints,</span> <span class="pre">z=0.25,</span> <span class="pre">color=&lt;carla.libcarla.Color</span> <span class="pre">object&gt;,</span> <span class="pre">lt=5,</span> <span class="pre">size=0.1)</span></code>
+:   Draw a list of trajetory points
+:param size:
+:param lt:
+:param color:
+:param world:
+:param waypoints:
+:param z:
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw_waypoints(world,</span> <span class="pre">waypoints,</span> <span class="pre">z=0.5)</span></code>
+:   Draw a list of waypoints at a certain height given in z.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">world</span><span class="p">:</span> <span class="n">carla</span><span class="o">.</span><span class="n">world</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">waypoints</span><span class="p">:</span> <span class="nb">list</span> <span class="ow">or</span> <span class="n">iterable</span> <span class="n">container</span> <span class="k">with</span> <span class="n">the</span> <span class="n">waypoints</span> <span class="n">to</span> <span class="n">draw</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">z</span><span class="p">:</span> <span class="n">height</span> <span class="ow">in</span> <span class="n">meters</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">get_acc(vehicle,</span> <span class="pre">meters=False)</span></code>
+:   Compute speed of a vehicle in Km/h.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">meters</span><span class="p">:</span> <span class="n">use</span> <span class="n">m</span><span class="o">/</span><span class="n">s</span> <span class="ow">or</span> <span class="n">km</span><span class="o">/</span><span class="n">h</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">vehicle</span><span class="p">:</span> <span class="n">the</span> <span class="n">vehicle</span> <span class="k">for</span> <span class="n">which</span> <span class="n">speed</span> <span class="ow">is</span> <span class="n">calculated</span>
+    <span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">speed</span> <span class="k">as</span> <span class="n">a</span> <span class="nb">float</span> <span class="ow">in</span> <span class="n">Km</span><span class="o">/</span><span class="n">h</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">get_speed(vehicle,</span> <span class="pre">meters=False)</span></code>
+:   Compute speed of a vehicle in Km/h.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">meters</span><span class="p">:</span> <span class="n">use</span> <span class="n">m</span><span class="o">/</span><span class="n">s</span> <span class="ow">or</span> <span class="n">km</span><span class="o">/</span><span class="n">h</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">vehicle</span><span class="p">:</span> <span class="n">the</span> <span class="n">vehicle</span> <span class="k">for</span> <span class="n">which</span> <span class="n">speed</span> <span class="ow">is</span> <span class="n">calculated</span>
+    <span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">speed</span> <span class="k">as</span> <span class="n">a</span> <span class="nb">float</span> <span class="ow">in</span> <span class="n">Km</span><span class="o">/</span><span class="n">h</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">is_within_distance(target_location,</span> <span class="pre">current_location,</span> <span class="pre">orientation,</span> <span class="pre">max_distance,</span> <span class="pre">d_angle_th_up,</span> <span class="pre">d_angle_th_low=0)</span></code>
+:   Check if a target object is within a certain distance from a reference object.
+A vehicle in front would be something around 0 deg, while one behind around 180 deg.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">target_location</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">target</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">current_location</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">orientation</span><span class="p">:</span> <span class="n">orientation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">max_distance</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">allowed</span> <span class="n">distance</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">d_angle_th_up</span><span class="p">:</span> <span class="n">upper</span> <span class="n">thereshold</span> <span class="k">for</span> <span class="n">angle</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">d_angle_th_low</span><span class="p">:</span> <span class="n">low</span> <span class="n">thereshold</span> <span class="k">for</span> <span class="n">angle</span> <span class="p">(</span><span class="n">optional</span><span class="p">,</span> <span class="n">default</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">target</span> <span class="nb">object</span> <span class="ow">is</span> <span class="n">within</span> <span class="n">max_distance</span> <span class="n">ahead</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">is_within_distance_ahead(target_transform,</span> <span class="pre">current_transform,</span> <span class="pre">max_distance)</span></code>
+:   Check if a target object is within a certain distance in front of a reference object.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">param</span> <span class="n">target_transform</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">target</span> <span class="nb">object</span>
+<span class="p">:</span><span class="n">param</span> <span class="n">current_transform</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+<span class="p">:</span><span class="n">param</span> <span class="n">orientation</span><span class="p">:</span> <span class="n">orientation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+<span class="p">:</span><span class="n">param</span> <span class="n">max_distance</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">allowed</span> <span class="n">distance</span>
+<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">target</span> <span class="nb">object</span> <span class="ow">is</span> <span class="n">within</span> <span class="n">max_distance</span> <span class="n">ahead</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reference</span> <span class="nb">object</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">positive(num)</span></code>
+:   Return the given number if positive, else 0</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">num</span><span class="p">:</span> <span class="n">value</span> <span class="n">to</span> <span class="n">check</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">vector(location_1,</span> <span class="pre">location_2)</span></code>
+:   Returns the unit vector from location_1 to location_2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">:</span><span class="n">param</span> <span class="n">location_1</span><span class="p">,</span> <span class="n">location_2</span><span class="p">:</span> <span class="n">carla</span><span class="o">.</span><span class="n">Location</span> <span class="n">objects</span>
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-common-v2x-manager">
+<h4>opencda.core.common.v2x_manager<a class="headerlink" href="#opencda-core-common-v2x-manager" title="Permalink to this headline">¶</a></h4>
+<p>Communication manager for cooperation.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">V2XManager(cav_world,</span> <span class="pre">config_yaml)</span></code>
+:   V2X Manager for platooning, cooperative perception and so on</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param config_yaml: configuration yaml file
+
+### Methods
+
+`add_platoon_blacklist(self, pmid)`
+:   Add an existing platoon to current blacklist
+    :param pmid: platoon id
+    :return:
+
+`get_platoon_front_rear(self)`
+:   Get the ego vehicle&#39;s front and rear cav in the platoon
+    :return:
+
+`get_platoon_manager(self)`
+:   Retrieve the platoon manager the cav belongs to and the corresponding id
+    :return:
+
+`get_platoon_status(self)`
+:   Retrive the FSM status for platooning application
+    :return:
+
+`in_platoon(self)`
+:   Check whether the vehicle is inside the platoon
+    :return: bool, flag indication whether in a platoon
+
+`match_platoon(self)`
+:   A naive way to find the best position to join a platoon
+    :return:
+
+`set_platoon(self, in_id, platooning_object=None, platooning_id=None, leader=False)`
+:   Set platooning status
+    :param platooning_object: platooning world that contains all platoon information todo: remove this later
+    :param platooning_id: platoon id the cav belongs to
+    :param in_id: the position in the platoon, etc. 0 represents leader and 1 represents the second position
+    :param leader: indicate whether this cav is a leader in platoon
+    :return:
+
+`set_platoon_front(self, vm)`
+:   Set the frontal vehicle to another vehicle
+    :param vm: vehicle manager
+    :return:
+
+`set_platoon_rear(self, vm)`
+:   Set the rear vehicle to another vehicle
+    :param vm:
+    :return:
+
+`set_platoon_status(self, status)`
+:   Set the cav to a different fsm status
+    :param status: fsm status
+    :return:
+
+`update_info(self, ego_pos, ego_spd)`
+:   Update all communication plugins with current localization info
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-common-vehicle-manager">
+<h4>opencda.core.common.vehicle_manager<a class="headerlink" href="#opencda-core-common-vehicle-manager" title="Permalink to this headline">¶</a></h4>
+<p>Basic class of CAV.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">VehicleManager(vehicle,</span> <span class="pre">config_yaml,</span> <span class="pre">application,</span> <span class="pre">carla_map,</span> <span class="pre">cav_world)</span></code>
+:   A class manager to embed different modules with vehicle together</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construction class
+:param vehicle: carla actor
+:param config_yaml: a dictionary that contains the parameters of the vehicle
+:param application: application category, support:[&#39;single&#39;,&#39;platoon&#39;] currently
+:param carla_map: Carla HD Map
+:param cav_world: CAV world object
+
+### Methods
+
+`destroy(self)`
+:   Destroy the actor vehicle
+    :return:
+
+`run_step(self, target_speed=None)`
+:   Execute one step of navigation.
+    :return:
+
+`set_destination(self, start_location, end_location, clean=False, end_reset=True)`
+:   Wrapper function to set global route
+    :param start_location:
+    :param end_location:
+    :param clean:
+    :param end_reset:
+    :return:
+
+`update_info(self)`
+:   Call perception and localization module to retrieve surrounding info an ego position.
+    :return:
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opencda-core-plan">
+<h3>opencda.core.plan<a class="headerlink" href="#opencda-core-plan" title="Permalink to this headline">¶</a></h3>
+<p>The main planing module for OpenCDA.</p>
+<section id="opencda-core-plan-behavior-agent">
+<h4>opencda.core.plan.behavior_agent<a class="headerlink" href="#opencda-core-plan-behavior-agent" title="Permalink to this headline">¶</a></h4>
+<p>This module implements an agent that roams around a track following random
+waypoints and avoiding other vehicles. The agent also responds to traffic lights,
+traffic signs, and has different possible configurations.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">BehaviorAgent(vehicle,</span> <span class="pre">carla_map,</span> <span class="pre">config_yaml)</span></code>
+:   A modulized version of BehaviorAgent</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param vehicle: carla actor
+:param config_yaml: a dictionary containing all initialization params
+provide customized function under customize/controller
+
+### Descendants
+
+* opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent
+
+### Methods
+
+`add_white_list(self, vm)`
+:   Add vehicle manager to
+    Args:
+        vm ():
+    
+    Returns:
+
+`car_following_manager(self, vehicle, distance, target_speed=None)`
+:   Module in charge of car-following behaviors when there&#39;s
+    someone in front of us.
+    
+        :param target_speed:
+        :param vehicle: car to follow
+        :param distance: distance from vehicle
+        :return control: carla.VehicleControl
+
+`collision_manager(self, rx, ry, ryaw, waypoint, adjacent_check=False)`
+:   This module is in charge of warning in case of a collision
+    :param adjacent_check: whether it is a check for adjacent lane
+    :param rx: x coordinates of plan path
+    :param ry: y coordinates of plan path
+    :param ryaw: yaw angle
+    :param waypoint: current waypoint of the agent
+    :return vehicle_state: True if there is a vehicle nearby, False if not
+    :return vehicle: nearby vehicle
+    :return distance: distance to nearby vehicle
+
+`get_local_planner(self)`
+:   return the local planner
+
+`lane_change_management(self)`
+:   Identify whether a potential hazard exits if operating lane change.
+    Returns:
+        bool: whether the lane change is dangerous
+
+`overtake_management(self, obstacle_vehicle)`
+:   Overtake behavior.
+    :param obstacle_vehicle: the vehicle
+    :return:
+
+`reroute(self, spawn_points)`
+:   This method implements re-routing for vehicles approaching its destination.
+    It finds a new target and computes another path to reach it.
+    
+        :param spawn_points: list of possible destinations for the agent
+
+`run_step(self, target_speed=None, collision_detector_enabled=True, lane_change_allowed=True)`
+:   Execute one step of navigation
+    :param collision_detector_enabled: whether to enable collision detection.
+    :param target_speed:  a manual order to achieve certain speed.
+    :param lane_change_allowed: whether lane change is allowed. This is passed from platoon behavior agent.
+    :return: control: carla.VehicleControl
+
+`set_destination(self, start_location, end_location, clean=False, end_reset=True, clean_history=False)`
+:   This method creates a list of waypoints from agent&#39;s position to destination location
+    based on the route returned by the global router.
+    
+        :param end_reset: indicates whether the new destination is a temporary destination
+        :param start_location: initial position
+        :param end_location: final position
+        :param clean: boolean to clean the waypoint queue
+        :param clean_history:
+
+`traffic_light_manager(self, waypoint)`
+:   This method is in charge of behaviors for red lights and stops.
+    
+    WARNING: What follows is a proxy to avoid having a car brake after running a yellow light.
+    This happens because the car is still under the influence of the semaphore,
+    even after passing it. So, the semaphore id is temporarely saved to
+    ignore it and go around this issue, until the car is near a new one.
+    
+        :param waypoint: current waypoint of the agent
+
+`update_information(self, ego_pos, ego_speed, objects)`
+:   Update the perception and localization information to the behavior agent.
+    Args:
+        ego_pos (carla.Transform): ego position from localization module.
+        ego_speed (float): km/h, ego speed.
+        objects (dictionary): Objects detection results from perception module.
+
+`white_list_match(self, obstacles)`
+:   Match the detected obstacles with the white list. Remove the obstacles that are in white list.
+    The white list contains all position of target platoon member for joining.
+    Args:
+        obstacles (list):  a list of carla.Vehicle or ObstacleVehicle
+    
+    Returns:
+        (list): the new list of obstacles.
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-plan-collision-check">
+<h4>opencda.core.plan.collision_check<a class="headerlink" href="#opencda-core-plan-collision-check" title="Permalink to this headline">¶</a></h4>
+<p>This module is used to check collision possibility.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">CollisionChecker(time_ahead=1.2,</span> <span class="pre">circle_radius=1.3,</span> <span class="pre">circle_offsets=None)</span></code>
+:   Construction method
+:param time_ahead: how many seconds we look ahead in advance for collision check
+:param circle_offsets: the offset between collision checking circle and the trajectory point
+:param circle_radius: The radius of the collision checking circle</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Methods
+
+`adjacent_lane_collision_check(self, ego_loc, target_wpt, overtake, world)`
+:   Generate a straight line in the adjacent lane for collision detection during
+    overtake/lane change. Todo: current version may not work well on curved lane
+    Args:
+        ego_loc (carla.Location): Ego Location.
+        target_wpt (carla.Waypoint): the check point in the adjacent at a far distance.
+        overtake (bool): indicate whether this is an overtake or normal lane change behavior.
+        world (carla.World): CARLA Simulation world, used to draw debug lines.
+    
+    Returns:
+        list: the x coordinates of the collision check line in the adjacent lane
+        list: the y coordinates of the collision check line in the adjacent lane
+        list: the yaw angle of the the collision check line in the adjacent lane
+
+`collision_circle_check(self, path_x, path_y, path_yaw, obstacle_vehicle, speed, adjacent_check=False)`
+:   Use circled collision check to see whether potential hazard on the forwarding path
+    :param adjacent_check: always give full path for adjacent lane check
+    :param speed: ego vehicle speed in m/s
+    :param path_yaw: a list of yaw angles
+    :param path_x: a list of x coordinates
+    :param path_y: a loist of y coordinates
+    :param obstacle_vehicle: potention hazard vehicle on the way
+    :return:
+
+`is_in_range(self, ego_pos, target_vehicle, candidate_vehicle, carla_map)`
+:   Check whether there is a obstacle vehicle between target_vehicle and ego_vehicle during back_joining
+    :param carla_map: carla map
+    :param ego_pos: Ego vehicle position
+    :param target_vehicle: The vehicle that is suppose to be catched
+    :param candidate_vehicle: The possible obstacle vehicle blocking the ego vehicle and target vehicle
+    :return:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-plan-drive-profile-plotting">
+<h4>opencda.core.plan.drive_profile_plotting<a class="headerlink" href="#opencda-core-plan-drive-profile-plotting" title="Permalink to this headline">¶</a></h4>
+<p>Tools to plot velocity, acceleration, curvation.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">draw_acceleration_profile_single_plot(acceleration)</span></code>
+:   Draw velocity profiles in a single plot
+:param acceleration:
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw_dist_gap_profile_singel_plot(gap_list)</span></code>
+:   Draw distance gap profiles in a single plot
+:param gap_list: time gap
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw_sub_plot(velocity_list,</span> <span class="pre">acceleration_list,</span> <span class="pre">time_gap_list,</span> <span class="pre">distance_gap_list)</span></code>
+:   This is a specific function that draws 4 in 1 images for trajectory following task
+:param velocity_list:
+:param distance_gap_list:
+:param time_gap_list:
+:param acceleration_list:
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw_time_gap_profile_singel_plot(gap_list)</span></code>
+:   Draw inter gap profiles in a single plot
+:param gap_list: time gap
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw_ttc_profile_single_plot(ttc_list)</span></code>
+:   Draw ttc.
+:param ttc_list: ttc
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw_velocity_profile_single_plot(velocity_list)</span></code>
+:   Draw velocity profiles in a single plot
+:param velocity_list:
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dump_data(data)</span></code>
+:   Dump data to json file
+:param data: dictionary containing all stats
+:return:</p>
+</section>
+<section id="opencda-core-plan-global-route-planner">
+<h4>opencda.core.plan.global_route_planner<a class="headerlink" href="#opencda-core-plan-global-route-planner" title="Permalink to this headline">¶</a></h4>
+<p>This module provides GlobalRoutePlanner implementation.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">GlobalRoutePlanner(dao)</span></code>
+:   This class provides a very high level route plan.
+Instantiate the class by passing a reference to
+A GlobalRoutePlannerDAO object.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Constructor
+
+### Methods
+
+`abstract_route_plan(self, origin, destination)`
+:   The following function generates the route plan based on
+    origin      : carla.Location object of the route&#39;s start position
+    destination : carla.Location object of the route&#39;s end position
+    return      : list of turn by turn navigation decisions as
+    agents.navigation.local_planner.RoadOption elements
+    Possible values are STRAIGHT, LEFT, RIGHT, LANEFOLLOW, VOID
+    CHANGELANELEFT, CHANGELANERIGHT
+
+`setup(self)`
+:   Performs initial server data lookup for detailed topology
+    and builds graph representation of the world map.
+
+`trace_route(self, origin, destination)`
+:   This method returns list of (carla.Waypoint, RoadOption)
+    from origin to destination
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-plan-global-route-planner-dao">
+<h4>opencda.core.plan.global_route_planner_dao<a class="headerlink" href="#opencda-core-plan-global-route-planner-dao" title="Permalink to this headline">¶</a></h4>
+<p>This module provides implementation for GlobalRoutePlannerDAO.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">GlobalRoutePlannerDAO(wmap,</span> <span class="pre">sampling_resolution)</span></code>
+:   This class is the data access layer for fetching data
+from the carla server instance for GlobalRoutePlanner</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Constructor method.
+
+    :param wmap: carla.world object
+    :param sampling_resolution: sampling distance between waypoints
+
+### Methods
+
+`get_resolution(self)`
+:   Accessor for self._sampling_resolution
+
+`get_topology(self)`
+:   Accessor for topology.
+    This function retrieves topology from the server as a list of
+    road segments as pairs of waypoint objects, and processes the
+    topology into a list of dictionary objects.
+    
+        :return topology: list of dictionary objects with the following attributes
+            entry   -   waypoint of entry point of road segment
+            entryxyz-   (x,y,z) of entry point of road segment
+            exit    -   waypoint of exit point of road segment
+            exitxyz -   (x,y,z) of exit point of road segment
+            path    -   list of waypoints separated by 1m from entry
+                        to exit
+
+`get_waypoint(self, location)`
+:   The method returns waypoint at given location
+    
+        :param location: vehicle location
+        :return waypoint: generated waypoint close to location
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-plan-local-planner-behavior">
+<h4>opencda.core.plan.local_planner_behavior<a class="headerlink" href="#opencda-core-plan-local-planner-behavior" title="Permalink to this headline">¶</a></h4>
+<p>This module contains a local planner to perform low-level waypoint following based on PID controllers.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">LocalPlanner(agent,</span> <span class="pre">carla_map,</span> <span class="pre">config_yaml)</span></code>
+:   LocalPlanner implements the basic behavior of following a trajectory
+of waypoints that is generated on-the-fly.
+The low-level motion of the vehicle is computed by using two PID controllers,
+one is used for the lateral control
+and the other for the longitudinal control (cruise speed).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>When multiple paths are available (intersections)
+this local planner makes a random choice.
+
+:param agent: agent that regulates the vehicle
+:param config_yaml: local planner configuration file
+
+### Methods
+
+`generate_path(self)`
+:   Generate the smooth path using cubic spline
+    :return: rx, ry, ryaw, rk: list of planned path points&#39; x,y coordinates, yaw angle and curvature
+
+`generate_trajectory(self, rx, ry, rk)`
+:   Sampling the generated path and assign speed to each point
+    :param rx: x coordinates of planning path
+    :param ry: y coordinates of planning path
+    :param rk: curvature of planning path
+    :param debug: whether to draw the whole plan path
+    :return:
+
+`get_trajetory(self)`
+:   Get the trajetory
+    :return:
+
+`pop_buffer(self, vehicle_transform)`
+:   Remove waypoints achieved
+    :return:
+
+`run_step(self, rx, ry, rk, target_speed=None, trajectory=None, following=False)`
+:   Execute one step of local planning which involves
+    running the longitudinal and lateral PID controllers to
+    follow the smooth waypoints trajectory.
+    
+        :param rx: generated path x coordinates
+        :param ry: generated path y coordinates
+        :param rk: generated path curvatures
+        :param following: whether the vehicle is under following status
+        :param trajectory: pre-generated trajectory only for following vehicles in the platooning
+        :param target_speed: desired speed
+        :return: next trajectory point&#39;s target speed and waypoint
+
+`set_global_plan(self, current_plan, clean=False)`
+:   Sets new global plan.
+    
+        :param clean:
+        :param current_plan: list of waypoints in the actual plan
+
+`update_information(self, ego_pos, ego_speed)`
+:   Update the ego position and speed for trajectory planner.
+    Args:
+        ego_pos (carla.Transform): Ego position from localization module.
+        ego_speed (float): Ego speed(km/h) from localization module.
+    
+    Returns:
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">RoadOption(value,</span> <span class="pre">names=None,</span> <span class="pre">*,</span> <span class="pre">module=None,</span> <span class="pre">qualname=None,</span> <span class="pre">type=None,</span> <span class="pre">start=1)</span></code>
+:   RoadOption represents the possible topological configurations
+when moving from a segment of lane to other.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Ancestors (in MRO)
+
+* enum.Enum
+
+### Class variables
+
+`CHANGELANELEFT`
+:
+
+`CHANGELANERIGHT`
+:
+
+`LANEFOLLOW`
+:
+
+`LEFT`
+:
+
+`RIGHT`
+:
+
+`STRAIGHT`
+:
+
+`VOID`
+:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-plan-planer-debug-helper">
+<h4>opencda.core.plan.planer_debug_helper<a class="headerlink" href="#opencda-core-plan-planer-debug-helper" title="Permalink to this headline">¶</a></h4>
+<p>Analysis + Visualization functions for planning.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">PlanDebugHelper(actor_id)</span></code>
+:   This class aims to save statistics for planner behaviour
+Attributes:
+speed_list (list): The list containing speed info(m/s) of all time-steps
+acc_list(list): The list containing acceleration info(m^2/s) of all time-steps
+ttc_list(list): The list containing ttc info(s) for all time-steps
+count(int): Used to count how many simulation steps have been executed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Descendants
+
+* opencda.core.application.platooning.platoon_debug_helper.PlatoonDebugHelper
+
+### Methods
+
+`evaluate(self)`
+:
+
+`update(self, ego_speed, ttc)`
+:   Update the speed info.
+    Args:
+        ego_speed(km/h): Ego speed.
+        ttc(s): time to collision.
+    Returns:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-plan-spline">
+<h4>opencda.core.plan.spline<a class="headerlink" href="#opencda-core-plan-spline" title="Permalink to this headline">¶</a></h4>
+<p>Cubic spline planner.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">calc_spline_course(x,</span> <span class="pre">y,</span> <span class="pre">ds=0.1)</span></code>
+:   Calculate the spline based on x,y location and delta time ds.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Spline(x,</span> <span class="pre">y)</span></code>
+:   Cubic Spline class</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Methods
+
+`calc(self, t)`
+:   Calc position
+    
+    if t is outside of the input x, return None
+
+`calcd(self, t)`
+:   Calc first derivative
+    
+    if t is outside of the input x, return None
+
+`calcdd(self, t)`
+:   Calc second derivative
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Spline2D(x,</span> <span class="pre">y)</span></code>
+:   2D Cubic Spline class</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Methods
+
+`calc_curvature(self, s)`
+:   calc curvature
+
+`calc_position(self, s)`
+:   calc position
+
+`calc_yaw(self, s)`
+:   calc yaw
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opencda-core-sensing">
+<h3>opencda.core.sensing<a class="headerlink" href="#opencda-core-sensing" title="Permalink to this headline">¶</a></h3>
+<p>This is the sensing stack module of the OpenCDA.</p>
+<section id="opencda-core-sensing-localization">
+<h4>opencda.core.sensing.localization.<a class="headerlink" href="#opencda-core-sensing-localization" title="Permalink to this headline">¶</a></h4>
+<p>The localization functions are implemented in this class.</p>
+<section id="opencda-core-senesing-localization-coordinate-transform">
+<h5>opencda.core.senesing.localization.coordinate_transform<a class="headerlink" href="#opencda-core-senesing-localization-coordinate-transform" title="Permalink to this headline">¶</a></h5>
+<p>Functions to transfer coordinates under different coordinate system.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">geo_to_transform(lat,</span> <span class="pre">lon,</span> <span class="pre">alt,</span> <span class="pre">lat_0,</span> <span class="pre">lon_0,</span> <span class="pre">alt_0)</span></code>
+:   Convert WG84 to ENU. The origin of the ENU should pass the geo reference.
+Note this function is a writen by reversing the official API transform_to_geo.
+:param lat: current latitude
+:param lon: current longitude
+:param alt: current altitude
+:param lat_0: geo_ref latitude
+:param lon_0: geo_ref longitude
+:param alt_0: geo_ref altitude
+:return:</p>
+</section>
+<section id="opencda-core-sensing-localization-extented-kalman-filter">
+<h5>opencda.core.sensing.localization.extented_kalman_filter<a class="headerlink" href="#opencda-core-sensing-localization-extented-kalman-filter" title="Permalink to this headline">¶</a></h5>
+<p>Use Extended Kalman Filter on GPS + IMU for better localization.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">ExtentedKalmanFilter(dt)</span></code>
+:   Kalman Filter implementation for gps + imu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+Args:
+    dt(float): unit time step for simulation.
+
+### Methods
+
+`jacob_f(self, x, u)`
+:   Jacobian of Motion Model motion model
+    x_{t+1} = x_t+v*dt*cos(yaw)
+    y_{t+1} = y_t+v*dt*sin(yaw)
+    yaw_{t+1} = yaw_t+omega*dt
+    v_{t+1} = v{t}
+    so
+    dx/dyaw = -v*dt*sin(yaw)
+    dx/dv = dt*cos(yaw)
+    dy/dyaw = v*dt*cos(yaw)
+    dy/dv = dt*sin(yaw)
+
+`motion_model(self, x, u)`
+:   Predict current position and yaw based on previous result.
+    X = F * X_prev + B * u
+    Args:
+        x (np.array): [x_prev, y_prev, yaw_prev, v_prev], shape: (4, 1).
+        u (np.array): [v_current, imu_yaw_rate], shape:(2, 1).
+    
+    Returns:
+      np.array: predicted state.
+
+`observation_model(self, x)`
+:   Project the state matrix to sensor measurement matrix.
+    Args:
+        x (np.array): [x, y, yaw, v], shape: (4. 1).
+    
+    Returns:
+        np.array: predicted measurement.
+
+`run_step(self, x, y, heading, velocity, yaw_rate_imu)`
+:   Apply EKF on current measurement and previous prediction
+    :param x: x(esu) coordinate from gnss sensor at current timestamp
+    :param y: y(esu) coordinate from gnss sensor at current timestamp
+    :param heading: heading direction at current timestamp
+    :param velocity: current speed
+    :param yaw_rate_imu: yaw rate rad/s from IMU sensor
+    :return: corrected x, y, heading, velocity
+
+`run_step_init(self, x, y, heading, velocity)`
+:   Initalization for states
+    :param x:
+    :param y:
+    :param heading:
+    :param velocity:
+    :return:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-sensing-localization-kalman-filter">
+<h5>opencda.core.sensing.localization.kalman_filter<a class="headerlink" href="#opencda-core-sensing-localization-kalman-filter" title="Permalink to this headline">¶</a></h5>
+<p>Use Kalman Filter on GPS + IMU for better localization. Reference: https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">KalmanFilter(dt)</span></code>
+:   Kalman Filter implementation for gps + imu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+Args:
+    dt(float): unit time step for simulation.
+
+### Methods
+
+`motion_model(self, x, u)`
+:   Predict current position and yaw based on previous result.
+    X = F * X_prev + B * u
+    Args:
+        x (np.array): [x_prev, y_prev, yaw_prev, v_prev], shape: (4, 1).
+        u (np.array): [v_current, imu_yaw_rate], shape:(2, 1).
+    
+    Returns:
+      np.array: predicted state.
+
+`observation_model(self, x)`
+:   Project the state matrix to sensor measurement matrix.
+    Args:
+        x (np.array): [x, y, yaw, v], shape: (4. 1).
+    
+    Returns:
+        np.array: predicted measurement.
+
+`run_step(self, x, y, heading, velocity, yaw_rate_imu)`
+:   Apply KF on current measurement and previous prediction
+    :param x: x(esu) coordinate from gnss sensor at current timestamp
+    :param y: y(esu) coordinate from gnss sensor at current timestamp
+    :param heading: heading direction at current timestamp
+    :param velocity: current speed
+    :param yaw_rate_imu: yaw rate rad/s from IMU sensor
+    :return: corrected x, y, heading
+
+`run_step_init(self, x, y, heading, velocity)`
+:   Initial state filling.
+    Args:
+        x ():
+        y ():
+        heading ():
+        velocity ():
+    
+    Returns:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-sensing-localization-localization-debug-helper">
+<h5>opencda.core.sensing.localization.localization_debug_helper<a class="headerlink" href="#opencda-core-sensing-localization-localization-debug-helper" title="Permalink to this headline">¶</a></h5>
+<p>Visualization tools for localization results.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">LocDebugHelper(config_yaml,</span> <span class="pre">actor_id)</span></code>
+:   This class aims to help users debugging their localization algorithms.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Users can apply this class to draw the x, y coordinate trajectory, yaw angle
+ and vehicle speed from GNSS raw measurements, Kalman filter(or any other filter),
+ and the groundtruth measurements. Error plotting is also enabled.
+
+Attributes:
+    show_animation (bool):
+    x_scale(float):
+    y_scale(float):
+
+Args:
+    config_yaml (dict):
+    actor_id(int):
+
+### Methods
+
+`evaluate(self)`
+:   Plot the localization related data points.
+    Args:
+    
+    Returns:
+
+`run_step(self, gnss_x, gnss_y, gnss_yaw, gnss_spd, filter_x, filter_y, filter_yaw, filter_spd, gt_x, gt_y, gt_yaw, gt_spd)`
+:   Run a single step for DebugHelper to save and animate(optional) the localization data.
+    Args:
+        gnss_x (float):
+        gnss_y (float):
+        gnss_yaw (float):
+        gnss_spd (float):
+        filter_x (float):
+        filter_y (float):
+        filter_yaw (float):
+        filter_spd (float):
+        gt_x (float):
+        gt_y (float):
+        gt_yaw (float):
+        gt_spd ()float:
+    
+    Returns:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-sensing-localization-localization-manager">
+<h5>opencda.core.sensing.localization.localization_manager<a class="headerlink" href="#opencda-core-sensing-localization-localization-manager" title="Permalink to this headline">¶</a></h5>
+<p>Manager class for localization module.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">GnssSensor(vehicle,</span> <span class="pre">config)</span></code>
+:   Class for gnss sensors</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param vehicle: carla actor
+:param config: gnss configuration
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ImuSensor(vehicle)</span></code>
+:   IMU Sensor</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+:param vehicle: Carla Actor
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">LocalizationManager(vehicle,</span> <span class="pre">config_yaml,</span> <span class="pre">carla_map)</span></code>
+:   The core class that manages localization estimation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construction class
+:param vehicle: carla actor
+:param config_yaml: configuration related to localization
+
+### Methods
+
+`add_heading_direction_noise(self, heading_direction)`
+:   Add synthetic noise to heading direction.
+    :param heading_direction: groundtruth heading_direction obtained from the server.
+    :return: heading direction with noise.
+
+`add_speed_noise(self, speed)`
+:   Add gaussian white noise to the current speed.
+    Args:
+        speed (float): m/s, current speed.
+    
+    Returns:
+        float: the speed with noise added.
+
+`destroy(self)`
+:   Destroy the sensors
+    :return:
+
+`get_ego_pos(self)`
+:   Retrieve ego vehicle position
+    :return: vehicle position
+
+`get_ego_spd(self)`
+:   Retrieve ego vehicle speed
+    :return:
+
+`localize(self)`
+:   Currently implemented in a naive way.
+    :return:
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opencda-core-sensing-perception">
+<h4>opencda.core.sensing.perception<a class="headerlink" href="#opencda-core-sensing-perception" title="Permalink to this headline">¶</a></h4>
+<p>The perception functions are implemented in this class.</p>
+<section id="opencda-core-senesing-perception-o3d-lidar-libs">
+<h5>opencda.core.senesing.perception.o3d_lidar_libs<a class="headerlink" href="#opencda-core-senesing-perception-o3d-lidar-libs" title="Permalink to this headline">¶</a></h5>
+<p>Utility functions for 3d lidar visualization and processing by utilizing open3d.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">o3d_camera_lidar_fusion(objects,</span> <span class="pre">yolo_bbx,</span> <span class="pre">lidar_3d,</span> <span class="pre">projected_lidar,</span> <span class="pre">lidar_sensor)</span></code>
+:   Utilize the 3D lidar points to extend the 2D bounding box from camera to 3D bounding box under world coordinates.
+Args:
+objects (dict): The dictionary contains all object detection result.
+yolo_bbx (torch.Tensor): Object detection bounding box at current photo from yolov5,
+shape:(n, [x1, y1, x2, y2, label]).
+lidar_3d (np.ndarray): Raw 3D lidar points in lidar coordinate system.
+projected_lidar (np.ndarray): 3D lidar points projected to the camera space.
+lidar_sensor (carla.Sensor): The lidar sensor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">objects</span><span class="p">:</span> <span class="nb">dict</span>
+        <span class="n">The</span> <span class="n">update</span> <span class="nb">object</span> <span class="n">dictionary</span> <span class="n">that</span> <span class="n">contains</span> <span class="mi">3</span><span class="n">d</span> <span class="n">bounding</span> <span class="n">boxes</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">o3d_pointcloud_encode(raw_data,</span> <span class="pre">point_cloud)</span></code>
+:   Encode the raw point cloud to Open3d PointCloud object.
+Args:
+raw_data (np.ndarray): Raw lidar points (N, (x, y, z, i)) obtained from lidar sensor.
+point_cloud (o3d.PointCloud):  Open3d PointCloud.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">o3d</span><span class="o">.</span><span class="n">PointCloud</span><span class="p">):</span> <span class="n">PointCloud</span> <span class="k">with</span> <span class="n">added</span> <span class="n">points</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">o3d_visualizer_init(actor_id)</span></code>
+:   Initialize the visualizer.
+Args:
+actor_id (int): Vehicle’s id.
+Returns:
+(o3d.visualizer): Initialize Open3d visualizer.</p>
+<p><code class="docutils literal notranslate"><span class="pre">o3d_visualizer_show(vis,</span> <span class="pre">count,</span> <span class="pre">point_cloud,</span> <span class="pre">objects)</span></code>
+:   Visualize the point cloud at runtime.
+Args:
+vis (o3d.Visualizer): Visualization interface.
+count (int): current step since simulation started.
+point_cloud (o3d.PointCLoud): Open3d point clouds.
+objects (dict): The dictionary containing objects.
+Returns:</p>
+</section>
+<section id="opencda-core-senesing-perception-obstacle-vehicle">
+<h5>opencda.core.senesing.perception.obstacle_vehicle<a class="headerlink" href="#opencda-core-senesing-perception-obstacle-vehicle" title="Permalink to this headline">¶</a></h5>
+<p>Obstacle vehicle class to save object detection results.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">is_vehicle_cococlass(label)</span></code>
+:   Check whether the label belongs to the vehicle class according to coco dataset.
+Args:
+label(int):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">is_vehicle</span><span class="p">:</span> <span class="nb">bool</span>
+        <span class="n">whether</span> <span class="n">this</span> <span class="n">label</span> <span class="n">belongs</span> <span class="n">to</span> <span class="n">the</span> <span class="n">vehicle</span> <span class="k">class</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">BoundingBox(corners)</span></code>
+:   Bounding box class for obstacle vehicle.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Construct</span> <span class="n">class</span><span class="o">.</span>
+<span class="n">Args</span><span class="p">:</span>
+    <span class="n">corners</span> <span class="p">(</span><span class="n">nd</span><span class="o">.</span><span class="n">nparray</span><span class="p">):</span> <span class="n">Eight</span> <span class="n">corners</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">shape</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ObstacleVehicle(corners,</span> <span class="pre">o3d_bbx,</span> <span class="pre">vehicle=None,</span> <span class="pre">lidar=None)</span></code>
+:   A class for obstacle vehicle. The attributes are designed to match with carla.Vehicle class</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class.
+Args:
+    corners (nd.nparray): Eight corners of the bounding box. shape:(8, 3).
+    o3d_bbx (open3d.AlignedBoundingBox): The bounding box object in Open3d. This is mainly used for
+    visualization.
+    vehicle(carla.Vehicle): carla.Vehicle object.
+    lidar(carla.sensor.lidar): lidar sensor.
+
+### Methods
+
+`get_location(self)`
+:
+
+`get_transform(self)`
+:
+
+`get_velocity(self)`
+:
+
+`set_vehicle(self, vehicle, lidar)`
+:   Assign the attributes from carla.Vehicle to ObstacleVehicle
+    Args:
+        vehicle(carla.Vehicle): carla.Vehicle object.
+        lidar(carla.sensor.lidar): lidar sensor, used to project world coordinates to sensor coordinates.
+    Returns:
+
+`set_velocity(self, velocity)`
+:   Set the velocity of the vehicle.
+    Args:
+        velocity(carla.Vector3D): velocity in 3d vector format.
+    
+    Returns:
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">StaticObstacle(corner,</span> <span class="pre">o3d_bbx)</span></code>
+:   Currently, we regard all static obstacles such as stop signs and traffic light as the same class.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Construct</span> <span class="n">class</span><span class="o">.</span>
+<span class="n">Args</span><span class="p">:</span>
+    <span class="n">corner</span> <span class="p">(</span><span class="n">nd</span><span class="o">.</span><span class="n">nparray</span><span class="p">):</span> <span class="n">Eight</span> <span class="n">corners</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">shape</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">o3d_bbx</span> <span class="p">(</span><span class="n">open3d</span><span class="o">.</span><span class="n">AlignedBoundingBox</span><span class="p">):</span> <span class="n">The</span> <span class="n">bounding</span> <span class="n">box</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">Open3d</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">mainly</span> <span class="n">used</span> <span class="k">for</span>
+    <span class="n">visualization</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-senesing-perception-perception-manager">
+<h5>opencda.core.senesing.perception.perception_manager<a class="headerlink" href="#opencda-core-senesing-perception-perception-manager" title="Permalink to this headline">¶</a></h5>
+<p>Manager class for the perception module.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">CameraSensor(vehicle,</span> <span class="pre">position='front')</span></code>
+:   Class for rgb camera.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Construct</span> <span class="n">class</span><span class="o">.</span>
+<span class="n">Args</span><span class="p">:</span>
+    <span class="n">vehicle</span> <span class="p">(</span><span class="n">carla</span><span class="o">.</span><span class="n">Vehicle</span><span class="p">):</span> <span class="n">Carla</span> <span class="n">actor</span><span class="o">.</span>
+    <span class="n">position</span> <span class="p">(</span><span class="n">string</span><span class="p">):</span> <span class="n">the</span> <span class="n">camera</span> <span class="n">mounted</span> <span class="n">position</span><span class="p">,</span> <span class="n">only</span> <span class="n">front</span><span class="p">,</span> <span class="n">left</span> <span class="ow">and</span> <span class="n">right</span> <span class="n">supported</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">LidarSensor(vehicle,</span> <span class="pre">config_yaml)</span></code>
+:   Lidar sensor manager.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Construct</span> <span class="n">class</span><span class="o">.</span>
+<span class="n">Args</span><span class="p">:</span>
+    <span class="n">vehicle</span> <span class="p">(</span><span class="n">carla</span><span class="o">.</span><span class="n">Vehicle</span><span class="p">):</span> <span class="n">The</span> <span class="n">attached</span> <span class="n">vehicle</span><span class="o">.</span>
+    <span class="n">config_yaml</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">Configuration</span> <span class="k">for</span> <span class="n">lidar</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">PerceptionManager(vehicle,</span> <span class="pre">config_yaml,</span> <span class="pre">ml_manager)</span></code>
+:   Perception manager mainly for object detection</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class.
+Args:
+    vehicle (carla.Actor): The carla vehicle.
+    config_yaml (dict):  The configuration yaml dictionary.
+    ml_manager(MlManager): Machine learning manager from CAV World.
+
+### Methods
+
+`activate_mode(self, objects)`
+:   Use Yolov5 + Lidar fusion to detect objects.
+    Args:
+        objects(dict): object dictionary
+    
+    Returns:
+        objects: dict
+            The updated object dictionary.
+
+`deactivate_mode(self, objects)`
+:   Obstacle detection under perception deactivation mode.
+    Args:
+        objects(dict): object dictionary
+    Returns:
+
+`destroy(self)`
+:   Destroy sensors.
+    Returns:
+
+`detect(self, ego_pos)`
+:   Detect surrounding objects. Currently only vehicle detection supported.
+    Args:
+        ego_pos (carla.Transform): Vehicle ego position
+    
+    Returns:
+        List of carla.Vehicle or ObstacleVehicle
+
+`dist(self, v)`
+:   A fast method to retrieve the obstable distance the ego vehicle from the server directly.
+    Args:
+        v (carla.vehicle):
+    
+    Returns:
+        float: distance
+
+`speed_retrieve(self, objects)`
+:   We don&#39;t implement any obstacle speed calculation algorithm. The speed will be retrieved from
+    the server directly.
+    Args:
+        objects(dict): The dictionary contains the objects.
+    
+    Returns:
+
+`visualize_3d_bbx_front_camera(self, objects, rgb_image)`
+:   Visualize the 3d bounding box on frontal camera image.
+    Args:
+        objects (dict): a dictionary containing all detected objects.
+        rgb_image (np.ndarray):camera image.
+    
+    Returns:
+</pre></div>
+</div>
+</section>
+<section id="opencda-core-senesing-perception-sensor-transformation">
+<h5>opencda.core.senesing.perception.sensor_transformation<a class="headerlink" href="#opencda-core-senesing-perception-sensor-transformation" title="Permalink to this headline">¶</a></h5>
+<p>Class that contains the transformations between world and different sensors.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Variables</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">VID_RANGE</span></code>
+:   Part 1: Camera Related Transformation</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">bbx_to_world(cords,</span> <span class="pre">vehicle)</span></code>
+:   Convert bounding box coordinate at vehicle reference to world reference.
+Args:
+cords (np.ndarray): Bounding box coordinates with 8 vertices.
+vehicle (carla.vehicle or ObstacleVehicle): vehicle object.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">bb_world_cords</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+        <span class="n">Bounding</span> <span class="n">box</span> <span class="n">coordinates</span> <span class="n">under</span> <span class="n">word</span> <span class="n">reference</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">create_bb_points(vehicle)</span></code>
+:   Extract the eight vertices of the bounding box from the vehicle.
+Args:
+vehicle (carla.Vehicle or ObstacleVehicle):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span> <span class="mi">3</span><span class="n">d</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">get_2d_bb(vehicle,</span> <span class="pre">sensor,</span> <span class="pre">senosr_transform)</span></code>
+:   Summarize 2D bounding box creation
+Args:
+vehicle (carla.vehicle or ObstacleVehicle): vehicle object.
+sensor (carla.sensor.camera.rgb): The CARLA sensor object.
+senosr_transform (carla.Transform): sensor position in the world</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span> <span class="mi">2</span><span class="n">d</span> <span class="n">bounding</span> <span class="n">box</span> <span class="ow">in</span> <span class="n">camera</span> <span class="n">image</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">get_bounding_box(vehicle,</span> <span class="pre">sensor,</span> <span class="pre">sensor_transform)</span></code>
+:   Get vehicle bounding box and project to sensor image
+Args:
+vehicle (carla.vehicle or ObstacleVehicle): vehicle object.
+sensor (carla.sensor.camera.rgb): The CARLA sensor object.
+sensor_transform (carla.Transform): sensor position in the world</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+     <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span> <span class="n">Bounding</span> <span class="n">box</span> <span class="n">coordinates</span> <span class="ow">in</span> <span class="n">sensor</span> <span class="n">image</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">get_camera_intrinsic(sensor)</span></code>
+:   Retrieve the camera intrinsic matrix
+Args:
+sensor (carla.sensor.camera.rgb): The CARLA sensor object.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span> <span class="mi">2</span><span class="n">D</span> <span class="n">intrinsic</span> <span class="n">matrix</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">p3d_to_p2d_bb(p3d_bb)</span></code>
+:   Draw 2D bounding box (4 vertices) from 3D bounding box (8 vertices) in image.
+2D bounding box is represented by two corner points
+Args:
+p3d_bb ():</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">project_lidar_to_camera(lidar,</span> <span class="pre">camera,</span> <span class="pre">point_cloud,</span> <span class="pre">rgb_image)</span></code>
+:   Project lidar to camera space.
+Args:
+lidar (carla.Sensor): Lidar sensor.
+camera (carla.Sensor): Camera seonsor.
+point_cloud (np.ndarray): cloud points, (x, y, z, intensity).
+rgb_image (np.ndarray): rgb image from camera.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span> <span class="n">new</span> <span class="n">rgb</span> <span class="n">image</span> <span class="k">with</span> <span class="n">lidar</span> <span class="n">points</span> <span class="n">projected</span><span class="o">.</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span> <span class="n">point</span> <span class="n">clouds</span> <span class="n">projected</span> <span class="n">to</span> <span class="n">camera</span> <span class="n">space</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sensor_to_world(cords,</span> <span class="pre">sensor_transform)</span></code>
+:   Project
+Args:
+cords (np.ndarray): Coordinates under sensor reference.
+sensor_transform (carla.Transform): sensor position in the world
+Returns:
+world_cords: np.ndarray
+Coordinates projected to world space.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vehicle_to_sensor(cords,</span> <span class="pre">vehicle,</span> <span class="pre">sensor_transform)</span></code>
+:   Transform coordinates from vehicle reference to sensor reference
+Args:
+cords (np.ndarray): Coordinates under vehicle reference, shape (4, n)
+vehicle (carla.vehicle or ObstacleVehicle): vehicle object.
+sensor_transform (carla.Transform): sensor position in the world, shape(3, 1)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span> <span class="n">Coordinates</span> <span class="ow">in</span> <span class="n">sensor</span> <span class="n">reference</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">world_to_sensor(cords,</span> <span class="pre">sensor_transform)</span></code>
+:   Transform coordinate from world reference to sensor reference.
+Args:
+cords (np.ndarray): Coordinates under world reference, shape:(4, n).
+sensor_transform (carla.Transform): sensor position in the world, shape:(3, 1).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">sensor_cords</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+        <span class="n">Coordinates</span> <span class="ow">in</span> <span class="n">sensor</span> <span class="n">reference</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">x_to_world_transformation(transform)</span></code>
+:   Get the transformation matrix from x(it can be vehicle or sensor) coordinates to world coordinate.
+Args:
+transform (carla.Transform): The transform that contains location and rotation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+        <span class="n">The</span> <span class="n">transformation</span> <span class="n">matrix</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="opencda-module-customize">
+<h2>OpenCDA Module: customize<a class="headerlink" href="#opencda-module-customize" title="Permalink to this headline">¶</a></h2>
+<p>This is the module that handles customized content (i.e., controllers, learning methods, etc.).</p>
+<section id="opencda-customize-ml-libs">
+<h3>opencda.customize.ml_libs<a class="headerlink" href="#opencda-customize-ml-libs" title="Permalink to this headline">¶</a></h3>
+<p>The manager class for machine learning libraries.</p>
+<section id="opencda-customize-ml-libs-ml-manager">
+<h4>opencda.customize.ml_libs.ml_manager<a class="headerlink" href="#opencda-customize-ml-libs-ml-manager" title="Permalink to this headline">¶</a></h4>
+<p>Since multiple CAV normally use the same ML/DL model, here we have this class to enable different
+CAVs share the same model to avoid duplicate memory consumption.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Variables</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">MLManager()</span></code>
+:   A class that should contain all the ML models you want to initialize.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construction class.
+
+### Methods
+
+`draw_2d_box(self, result, rgb_image, index)`
+:   Draw 2d bounding box based on the yolo detection.
+    Args:
+        result (yolo.Result):Detection result from yolo 5.
+        rgb_image (np.ndarray): Camera rgb image.
+        index(int): Indicate the index
+    
+    Returns:
+        (np.ndarray): camera image with bbx drawn.
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="opencda-module-scenario-testing">
+<h2>OpenCDA Module: scenario_testing<a class="headerlink" href="#opencda-module-scenario-testing" title="Permalink to this headline">¶</a></h2>
+<p>This is the module that regulates all the scenario related python scripts, utility functions and configuration files.
+Scenario defination scripts locate at this directory.</p>
+<section id="config-yaml">
+<h3>config_yaml<a class="headerlink" href="#config-yaml" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Directory</font></strong></p></li>
+</ul>
+<p>This is the directory that contains configuration files for each scenario.</p>
+</section>
+<section id="opencda-scenario-testing-evaluations">
+<h3>opencda.scenario_testing.evaluations<a class="headerlink" href="#opencda-scenario-testing-evaluations" title="Permalink to this headline">¶</a></h3>
+<p>Class for scenario evalution functions.</p>
+<section id="opencda-scenario-testing-evaluations-evaluate-manager">
+<h4>opencda.scenario_testing.evaluations.evaluate_manager<a class="headerlink" href="#opencda-scenario-testing-evaluations-evaluate-manager" title="Permalink to this headline">¶</a></h4>
+<p>The manager class for scenario evaluation.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Class</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">EvaluationManager(cav_world)</span></code>
+:   Evaluation manager to manage the analysis of the results for different modules.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Construct class
+Args:
+    cav_world (opencda.CavWorld): The CavWorld object that contains all CAVs&#39; information
+
+### Methods
+
+`evaluate(self)`
+:   Evaluate performance of all modules by plotting and writing the statistics into the log file.
+    Returns:
+
+`kinematics_eval(self, log_file)`
+:   vehicle kinematics related evaluation.
+    Args:
+        log_file (File): The log file to write the data.
+    
+    Returns:
+
+`localization_eval(self, log_file)`
+:   Localization module evaluation.
+    Args:
+        log_file (File): The log file to write the data.
+    
+    Returns:
+
+`platooning_eval(self, log_file)`
+:   Platooning evaluation.
+    Args:
+        log_file (File): The log file to write the data.
+    
+    Returns:
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h4>opencda.scenario_testing.evaluations.evaluate_manager<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Utility functions for evaluation.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">lprint(logfile,</span> <span class="pre">*argv)</span></code>
+:   Save string to log file.
+Args:
+logfile (File): The log file path.
+*argv (string or number): the string that needs to be saved into the log file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="opencda-scenario-testing-utils">
+<h3>opencda.scenario_testing.utils<a class="headerlink" href="#opencda-scenario-testing-utils" title="Permalink to this headline">¶</a></h3>
+<p>Module for scenario related utility functions.</p>
+<section id="opencda-scenario-testing-utils-customized-map-api">
+<h4>opencda.scenario_testing.utils.customized_map_api<a class="headerlink" href="#opencda-scenario-testing-utils-customized-map-api" title="Permalink to this headline">¶</a></h4>
+<p>Loading world from customized map</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">load_customized_world(xodr_path,</span> <span class="pre">client)</span></code>
+:   Load .xodr file and return the carla world object
+:param xodr_path: path to the xodr file
+:param client: created client
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">spawn_helper_2lanefree(carla_map,</span> <span class="pre">coefficient)</span></code>
+:   A helper function to locate the valid spawn point on the merge lane.
+:param carla_map: the 2lanefreeway map
+:param coefficient: a single scalar indicating where is the spawn point, eg. 0.5 represents the spawn position
+is in the middle of the merge lane
+:return: carla transform</p>
+<p><code class="docutils literal notranslate"><span class="pre">spawn_helper_2lanefree_complete(carla_map,</span> <span class="pre">coefficient)</span></code>
+:   A helper function to locate the valid spawn point on the merge lane.
+:param carla_map: the 2lanefreeway map
+:param coefficient: a single scalar indicating where is the spawn point, eg. 0.5 represents the spawn position
+is in the middle of the merge lane
+:return: carla transform</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Classes</font></strong>
+<code class="docutils literal notranslate"><span class="pre">bcolors()</span></code>
+:</p></li>
+</ul>
+</section>
+</section>
+<section id="class-variables">
+<h3>Class variables<a class="headerlink" href="#class-variables" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">BOLD</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ENDC</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">FAIL</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">HEADER</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">OKBLUE</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">OKCYAN</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">OKGREEN</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">UNDERLINE</span></code>
+:</p>
+<p><code class="docutils literal notranslate"><span class="pre">WARNING</span></code>
+:</p>
+<section id="opencda-scenario-testing-utils-sim-api">
+<h4>opencda.scenario_testing.utils.sim_api<a class="headerlink" href="#opencda-scenario-testing-utils-sim-api" title="Permalink to this headline">¶</a></h4>
+<p>Simulation API for create simulation world, vehicle manager and so on.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">car_blueprint_filter(blueprints)</span></code>
+:   Filter out the uncommon vehicles
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">createPlatoonManagers(world,</span> <span class="pre">carla_map,</span> <span class="pre">scenario_params,</span> <span class="pre">apply_ml,</span> <span class="pre">map_helper=None)</span></code>
+:   Create Platooning Managers based on given params.
+Args:
+world (carla.World): World from CARLA simulator.
+carla_map (carla.Map): Map obtained from CARLA server.
+scenario_params (dict): Platoon paramters.
+apply_ml (bool): whether ml/dl model is included. Pytorch/sklearn required to install if set to true.
+map_helper (function): Specific function to convert certain parameters to spawn position in certain map.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Returns</span><span class="p">:</span>
+    <span class="n">platoon_list</span> <span class="nb">list</span> <span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">cav_world</span> <span class="p">(</span><span class="n">carla</span><span class="o">.</span><span class="n">World</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">createSimulationWorld(simulation_config,</span> <span class="pre">xodr_path=None,</span> <span class="pre">town=None)</span></code>
+:   Create client and simulation world
+:param simulation_config: configuration dictionary for simulation
+:param xodr_path: optional, used only when customized map needed
+:param town: default town name if not using customized map, eg. ‘Town06’
+:return: client, simulation world, origin setting</p>
+<p><code class="docutils literal notranslate"><span class="pre">createTrafficManager(client,</span> <span class="pre">world,</span> <span class="pre">traffic_config)</span></code>
+:   Create background traffic
+:param client:
+:param world:
+:param traffic_config:
+:return:</p>
+<p><code class="docutils literal notranslate"><span class="pre">createVehicleManager(world,</span> <span class="pre">scenario_params,</span> <span class="pre">application,</span> <span class="pre">cav_world,</span> <span class="pre">carla_map,</span> <span class="pre">map_helper=None)</span></code>
+:   Create single CAV manager
+:param world: simulation world
+:param scenario_params: scenario configuration
+:param application: the application purpose, a list, eg. [’single’]
+:param cav_world: object containing all cav info
+:param carla_map: carla HD Map
+:param map_helper: A function used for conveniently set the spawn position depending on different maps
+:return: a list of vehicle managers</p>
+<p><code class="docutils literal notranslate"><span class="pre">destroyActors(world)</span></code>
+:   Destroy all actors in the world
+:param world:
+:return:</p>
+</section>
+<section id="opencda-scenario-testing-utils-yaml-utils">
+<h4>opencda.scenario_testing.utils.yaml_utils<a class="headerlink" href="#opencda-scenario-testing-utils-yaml-utils" title="Permalink to this headline">¶</a></h4>
+<p>Used to load and write yaml files.</p>
+<ul class="simple">
+<li><p><strong><font color="#f8805a">Functions</font></strong></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">load_yaml(file)</span></code>
+:   load yaml file and return a dictionary
+:param file: yaml file path
+:return: a dictionary that contains defined parameters</p>
+<hr class="docutils" />
+<p><strong>Note:</strong>
+The current OpenCDA Module is developed specificlly for OpenCDA version 1.0, please refer to the corresponding software version.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

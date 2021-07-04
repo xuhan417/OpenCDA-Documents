@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.core.sensing.localization package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.core.sensing.perception package" href="opencda.core.sensing.perception.html" />
+    <link rel="prev" title="opencda.core.sensing package" href="opencda.core.sensing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.html">opencda.core package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.sensing.html">opencda.core.sensing package</a> &raquo;</li>
+        
+      <li>opencda.core.sensing.localization package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.core.sensing.localization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-core-sensing-localization-package">
+<h1>opencda.core.sensing.localization package<a class="headerlink" href="#opencda-core-sensing-localization-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.core.sensing.localization.coordinate_transform">
+<span id="opencda-core-sensing-localization-coordinate-transform-module"></span><h2>opencda.core.sensing.localization.coordinate_transform module<a class="headerlink" href="#module-opencda.core.sensing.localization.coordinate_transform" title="Permalink to this headline">¶</a></h2>
+<p>Functions to transfer coordinates under different coordinate system</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.coordinate_transform.geo_to_transform">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.localization.coordinate_transform.</span></span><span class="sig-name descname"><span class="pre">geo_to_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.coordinate_transform.geo_to_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert WG84 to ENU. The origin of the ENU should pass the geo reference.
+Note this function is a writen by reversing the official API transform_to_geo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-lat</strong> (<em>float</em>) – current latitude.</p></li>
+<li><p><strong>-lon</strong> (<em>float</em>) – current longitude.</p></li>
+<li><p><strong>-alt</strong> (<em>float</em>) – current altitude.</p></li>
+<li><p><strong>-lat_0</strong> (<em>float</em>) – geo_ref latitude.</p></li>
+<li><p><strong>-lon_0</strong> (<em>float</em>) – geo_ref longitude.</p></li>
+<li><p><strong>-alt_0</strong> (<em>float</em>) – geo_ref altitude.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The transformed x coordinate.
+-y (float): The transformed y coordinate.
+-z (float): The transformed z coordinate.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-x (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.localization.kalman_filter">
+<span id="opencda-core-sensing-localization-kalman-filter-module"></span><h2>opencda.core.sensing.localization.kalman_filter module<a class="headerlink" href="#module-opencda.core.sensing.localization.kalman_filter" title="Permalink to this headline">¶</a></h2>
+<p>Use Kalman Filter on GPS + IMU for better localization.
+Reference: <a class="reference external" href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/">https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.kalman_filter.KalmanFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.localization.kalman_filter.</span></span><span class="sig-name descname"><span class="pre">KalmanFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.kalman_filter.KalmanFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Kalman Filter implementation for gps and imu.</p>
+<p>Parameters
+-dt : float</p>
+<blockquote>
+<div><p>The step time for kalman filter calculation.</p>
+</div></blockquote>
+<p>Attributes
+-Q : numpy.array</p>
+<blockquote>
+<div><p>predict state covariance.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-R<span class="classifier">numpy.array</span></dt><dd><p>Observation x,y position covariance.</p>
+</dd>
+<dt>-time_step<span class="classifier">float</span></dt><dd><p>The step time for kalman filter calculation.</p>
+</dd>
+<dt>-xEst<span class="classifier">numpy.array</span></dt><dd><p>Estimated x values.</p>
+</dd>
+<dt>-PEst<span class="classifier">numpy.array</span></dt><dd><p>The estimated P values.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.kalman_filter.KalmanFilter.motion_model">
+<span class="sig-name descname"><span class="pre">motion_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.kalman_filter.KalmanFilter.motion_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict current position and yaw based on previous result (X = F * X_prev + B * u).
+:param -x: (4, 1).
+:type -x: np.array
+:param -u: [v_current, imu_yaw_rate], shape:(2, 1).
+:type -u: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>predicted state.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-x (np.array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.kalman_filter.KalmanFilter.observation_model">
+<span class="sig-name descname"><span class="pre">observation_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.kalman_filter.KalmanFilter.observation_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project the state matrix to sensor measurement matrix.
+:param -x: [x, y, yaw, v], shape: (4. 1).
+:type -x: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>predicted measurement.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-z (np.array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.kalman_filter.KalmanFilter.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_rate_imu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.kalman_filter.KalmanFilter.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply KF on current measurement and previous prediction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-x</strong> (<em>float</em>) – x(esu) coordinate from gnss sensor at current timestamp.</p></li>
+<li><p><strong>-y</strong> (<em>float</em>) – y(esu) coordinate from gnss sensor at current timestamp.</p></li>
+<li><p><strong>-heading</strong> (<em>float</em>) – heading direction at current timestamp.</p></li>
+<li><p><strong>-velocity</strong> (<em>float</em>) – current speed.</p></li>
+<li><p><strong>-yaw_rate_imu</strong> (<em>float</em>) – yaw rate rad/s from IMU sensor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The corrected x, y, heading, and velocity information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-Xest (np.array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.kalman_filter.KalmanFilter.run_step_init">
+<span class="sig-name descname"><span class="pre">run_step_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.kalman_filter.KalmanFilter.run_step_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial state filling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-x</strong> (<em>float</em>) – The x coordinate.</p></li>
+<li><p><strong>-y</strong> (<em>float</em>) – The y coordinate.</p></li>
+<li><p><strong>-heading</strong> (<em>float</em>) – The heading direction.</p></li>
+<li><p><strong>-velocity</strong> (<em>flaot</em>) – The velocity speed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.localization.localization_debug_helper">
+<span id="opencda-core-sensing-localization-localization-debug-helper-module"></span><h2>opencda.core.sensing.localization.localization_debug_helper module<a class="headerlink" href="#module-opencda.core.sensing.localization.localization_debug_helper" title="Permalink to this headline">¶</a></h2>
+<p>Visualization tools for localization</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_debug_helper.LocDebugHelper">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.localization.localization_debug_helper.</span></span><span class="sig-name descname"><span class="pre">LocDebugHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actor_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_debug_helper.LocDebugHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class aims to help users debugging their localization algorithms.
+Users can apply this class to draw the x, y coordinate trajectory, yaw angle</p>
+<blockquote>
+<div><p>and vehicle speed from GNSS raw measurements, Kalman filter(or any other filter),
+and the groundtruth measurements. Error plotting is also enabled.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Attributes</dt><dd><dl class="simple">
+<dt>show_animation<span class="classifier">boolean</span></dt><dd><p>Indicator of whether to visulize animtion.</p>
+</dd>
+<dt>x_scale<span class="classifier">float</span></dt><dd><p>The scale of x coordinates.</p>
+</dd>
+<dt>y_scale<span class="classifier">float</span></dt><dd><p>The scale of y coordinates.</p>
+</dd>
+<dt>gnss_x<span class="classifier">list</span></dt><dd><p>The list of recorded gnss x coordinates.</p>
+</dd>
+<dt>gnss_y<span class="classifier">list</span></dt><dd><p>The list of recorded gnss y coordinates.</p>
+</dd>
+<dt>gnss_yaw<span class="classifier">list</span></dt><dd><p>The list of recorded gnss yaw angles.</p>
+</dd>
+<dt>gnss_speed<span class="classifier">list</span></dt><dd><p>The list of recorded gnss speed values.</p>
+</dd>
+<dt>filter_x<span class="classifier">list</span></dt><dd><p>The list of filtered x coordinates.</p>
+</dd>
+<dt>filter_y<span class="classifier">list</span></dt><dd><p>The list of filtered y coordinates.</p>
+</dd>
+<dt>filter_yaw<span class="classifier">list</span></dt><dd><p>The list of filtered yaw angles.</p>
+</dd>
+<dt>filter_speed<span class="classifier">list</span></dt><dd><p>The list of filtered speed values.</p>
+</dd>
+<dt>gt_x<span class="classifier">list</span></dt><dd><p>The list of ground truth x coordinates.</p>
+</dd>
+<dt>gt_y<span class="classifier">list</span></dt><dd><p>The list of ground truth y coordinates.</p>
+</dd>
+<dt>gt_yaw<span class="classifier">list</span></dt><dd><p>The list of ground truth yaw angles.</p>
+</dd>
+<dt>gt_speed<span class="classifier">list</span></dt><dd><p>The list of ground truth speed values.</p>
+</dd>
+<dt>hxEst<span class="classifier">list</span></dt><dd><p>The filtered x y coordinates.</p>
+</dd>
+<dt>hTrue<span class="classifier">list</span></dt><dd><p>The true x y coordinates.</p>
+</dd>
+<dt>hz<span class="classifier">list</span></dt><dd><p>The gnss detected x y coordinates.</p>
+</dd>
+<dt>actor_id<span class="classifier">int</span></dt><dd><p>The list of ground truth speed values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_debug_helper.LocDebugHelper.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_debug_helper.LocDebugHelper.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the localization related data points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The plot of localization related figures.
+-perform_txt(txt file): The localization related datas saved as text file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-figures(matplotlib.pyplot.plot)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_debug_helper.LocDebugHelper.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gnss_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gnss_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gnss_yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gnss_spd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_spd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gt_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gt_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gt_yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gt_spd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_debug_helper.LocDebugHelper.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a single step for DebugHelper to save and animate(optional) the localization data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-gnss_x</strong> (<em>float</em>) – GNSS detected x coordinate.</p></li>
+<li><p><strong>-gnss_y</strong> (<em>float</em>) – GNSS detected y coordinate.</p></li>
+<li><p><strong>-gnss_yaw</strong> (<em>float</em>) – GNSS detected yaw angle.</p></li>
+<li><p><strong>-gnss_spd</strong> (<em>float</em>) – GNSS detected speed value.</p></li>
+<li><p><strong>-filter_x</strong> (<em>float</em>) – Filtered x coordinates.</p></li>
+<li><p><strong>-filter_y</strong> (<em>float</em>) – Filtered y coordinates.</p></li>
+<li><p><strong>-filter_yaw</strong> (<em>float</em>) – Filtered yaw angle.</p></li>
+<li><p><strong>-filter_spd</strong> (<em>float</em>) – Filtered speed value.</p></li>
+<li><p><strong>-gt_x</strong> (<em>float</em>) – The ground truth x coordinate.</p></li>
+<li><p><strong>-gt_y</strong> (<em>float</em>) – The ground truth y coordinate.</p></li>
+<li><p><strong>-gt_yaw</strong> (<em>float</em>) – The ground truth yaw angle.</p></li>
+<li><p><strong>-gt_spd</strong> (<em>float</em>) – The ground truth speed value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.localization.localization_manager">
+<span id="opencda-core-sensing-localization-localization-manager-module"></span><h2>opencda.core.sensing.localization.localization_manager module<a class="headerlink" href="#module-opencda.core.sensing.localization.localization_manager" title="Permalink to this headline">¶</a></h2>
+<p>Localization module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.GnssSensor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.localization.localization_manager.</span></span><span class="sig-name descname"><span class="pre">GnssSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.GnssSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The default GNSS sensor module.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn our gnss and imu sensor.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config<span class="classifier">dict</span></dt><dd><p>The configuration dictionary of the localization module.</p>
+</dd>
+</dl>
+<p>Attributes
+-world : carla.world</p>
+<blockquote>
+<div><p>The caral world of the current vehicle.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-blueprint<span class="classifier">carla.blueprint</span></dt><dd><p>The current blueprint of the sensor actor.</p>
+</dd>
+<dt>-weak_self<span class="classifier">opencda Object</span></dt><dd><p>A weak reference point to avoid circular reference.</p>
+</dd>
+<dt>-sensor<span class="classifier">CARLA actor</span></dt><dd><p>The current sensor actors that will be attach to the vehicles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.ImuSensor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.localization.localization_manager.</span></span><span class="sig-name descname"><span class="pre">ImuSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.ImuSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Default ImuSensor module.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn our gnss and imu sensor.</p>
+</div></blockquote>
+<p>Attributes
+-world : carla.world</p>
+<blockquote>
+<div><p>The caral world of the current vehicle.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-blueprint<span class="classifier">carla.blueprint</span></dt><dd><p>The current blueprint of the sensor actor.</p>
+</dd>
+<dt>-weak_self<span class="classifier">opencda Object</span></dt><dd><p>A weak reference point to avoid circular reference.</p>
+</dd>
+<dt>-sensor<span class="classifier">CARLA actor</span></dt><dd><p>The current sensor actors that will be attach to the vehicles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.localization.localization_manager.</span></span><span class="sig-name descname"><span class="pre">LocalizationManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Default localization module.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn our gnss and imu sensor.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config_yaml<span class="classifier">dict</span></dt><dd><p>The configuration dictionary of the localization module.</p>
+</dd>
+<dt>-carla_map<span class="classifier">carla.Map</span></dt><dd><p>The carla HDMap. We need this to find the map origin to
+convert wg84 to enu coordinate system.</p>
+</dd>
+</dl>
+<p>Attributes
+-gnss : opencda object</p>
+<blockquote>
+<div><p>GNSS sensor manager for spawning gnss sensor and listen to the data
+transmission.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-ImuSensor<span class="classifier">opencda object</span></dt><dd><p>Imu sensor manager for spawning gnss sensor and listen to the data
+transmission.</p>
+</dd>
+<dt>-kf<span class="classifier">opencda object</span></dt><dd><p>The filter used to fuse different sensors.</p>
+</dd>
+<dt>-debug_helper<span class="classifier">opencda object</span></dt><dd><p>The debug helper is used to visualize the accuracy of
+the localization and provide evaluation functions.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager.add_heading_direction_noise">
+<span class="sig-name descname"><span class="pre">add_heading_direction_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">heading_direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager.add_heading_direction_noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add synthetic noise to heading direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-heading_direction</strong> (<em>float</em>) – groundtruth heading_direction obtained from the server.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>heading direction with noise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-heading_direction (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager.add_speed_noise">
+<span class="sig-name descname"><span class="pre">add_speed_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager.add_speed_noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add gaussian white noise to the current speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-speed</strong> (<em>float</em>) – m/s, current speed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the speed with noise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-speed (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the sensors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager.get_ego_pos">
+<span class="sig-name descname"><span class="pre">get_ego_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager.get_ego_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve ego vehicle position</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager.get_ego_spd">
+<span class="sig-name descname"><span class="pre">get_ego_spd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager.get_ego_spd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve ego vehicle speed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.localization.localization_manager.LocalizationManager.localize">
+<span class="sig-name descname"><span class="pre">localize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.localization.localization_manager.LocalizationManager.localize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Currently implemented in a naive way.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.localization">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.core.sensing.localization" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.core.sensing.perception.html" class="btn btn-neutral float-right" title="opencda.core.sensing.perception package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.core.sensing.html" class="btn btn-neutral float-left" title="opencda.core.sensing package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

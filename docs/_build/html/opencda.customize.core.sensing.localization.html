@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.customize.core.sensing.localization package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.customize.ml_libs package" href="opencda.customize.ml_libs.html" />
+    <link rel="prev" title="opencda.customize.core.sensing package" href="opencda.customize.core.sensing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.customize.html">opencda.customize package</a> &raquo;</li>
+        
+          <li><a href="opencda.customize.core.html">opencda.customize.core package</a> &raquo;</li>
+        
+          <li><a href="opencda.customize.core.sensing.html">opencda.customize.core.sensing package</a> &raquo;</li>
+        
+      <li>opencda.customize.core.sensing.localization package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.customize.core.sensing.localization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-customize-core-sensing-localization-package">
+<h1>opencda.customize.core.sensing.localization package<a class="headerlink" href="#opencda-customize-core-sensing-localization-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.customize.core.sensing.localization.extented_kalman_filter">
+<span id="opencda-customize-core-sensing-localization-extented-kalman-filter-module"></span><h2>opencda.customize.core.sensing.localization.extented_kalman_filter module<a class="headerlink" href="#module-opencda.customize.core.sensing.localization.extented_kalman_filter" title="Permalink to this headline">¶</a></h2>
+<p>Use Extended Kalman Filter on GPS + IMU for better localization.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.customize.core.sensing.localization.extented_kalman_filter.</span></span><span class="sig-name descname"><span class="pre">ExtentedKalmanFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Extended Kalman Filter implementation for gps and imu.</p>
+<p>Parameters
+-dt : float</p>
+<blockquote>
+<div><p>The step time for kalman filter calculation.</p>
+</div></blockquote>
+<p>Attributes
+-Q : numpy.array</p>
+<blockquote>
+<div><p>predict state covariance.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-R<span class="classifier">numpy.array</span></dt><dd><p>Observation x,y position covariance.</p>
+</dd>
+<dt>-time_step<span class="classifier">float</span></dt><dd><p>The step time for kalman filter calculation.</p>
+</dd>
+<dt>-xEst<span class="classifier">numpy.array</span></dt><dd><p>Estimated x values.</p>
+</dd>
+<dt>-PEst<span class="classifier">numpy.array</span></dt><dd><p>The estimated P values.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.jacob_f">
+<span class="sig-name descname"><span class="pre">jacob_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.jacob_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jacobian of Motion Model motion model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-x</strong> (<em>np.array</em>) – Input X array.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Jacobian of Motion Model motion model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-jF (np.array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.motion_model">
+<span class="sig-name descname"><span class="pre">motion_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.motion_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict current position and yaw based on previous result (X = F * X_prev + B * u).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-x</strong> (<em>np.array</em>) – [x_prev, y_prev, yaw_prev, v_prev], shape: (4, 1).</p></li>
+<li><p><strong>-u</strong> (<em>np.array</em>) – [v_current, imu_yaw_rate], shape:(2, 1).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predicted state.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>x (np.array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.observation_model">
+<span class="sig-name descname"><span class="pre">observation_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.observation_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project the state.array to sensor measurement.array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-x</strong> (<em>np.array</em>) – [x, y, yaw, v], shape: (4. 1).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predicted measurement.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-z (np.array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_rate_imu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply EKF on current measurement and previous prediction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-x</strong> (<em>float</em>) – x(esu) coordinate from gnss sensor at current timestamp.</p></li>
+<li><p><strong>-y</strong> (<em>float</em>) – y(esu) coordinate from gnss sensor at current timestamp.</p></li>
+<li><p><strong>-heading</strong> (<em>float</em>) – heading direction at current timestamp.</p></li>
+<li><p><strong>-velocity</strong> (<em>float</em>) – current speed.</p></li>
+<li><p><strong>-yaw_rate_imu</strong> (<em>float</em>) – yaw rate rad/s from IMU sensor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The corrected x, y, heading, and velocity information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>xEST (np.array)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.run_step_init">
+<span class="sig-name descname"><span class="pre">run_step_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.extented_kalman_filter.ExtentedKalmanFilter.run_step_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initalization for states.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-x</strong> (<em>float</em>) – The X coordinate.</p></li>
+<li><p><strong>-y</strong> (<em>float</em>) – Tehe y coordinate.</p></li>
+<li><p><strong>-heading</strong> (<em>float</em>) – The heading direction.</p></li>
+<li><p><strong>-velocity</strong> (<em>float</em>) – The velocity.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.customize.core.sensing.localization.localization_manager">
+<span id="opencda-customize-core-sensing-localization-localization-manager-module"></span><h2>opencda.customize.core.sensing.localization.localization_manager module<a class="headerlink" href="#module-opencda.customize.core.sensing.localization.localization_manager" title="Permalink to this headline">¶</a></h2>
+<p>Customized Localization Module.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.customize.core.sensing.localization.localization_manager.CustomizedLocalizationManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.customize.core.sensing.localization.localization_manager.</span></span><span class="sig-name descname"><span class="pre">CustomizedLocalizationManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.customize.core.sensing.localization.localization_manager.CustomizedLocalizationManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="opencda.core.sensing.localization.html#opencda.core.sensing.localization.localization_manager.LocalizationManager" title="opencda.core.sensing.localization.localization_manager.LocalizationManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">opencda.core.sensing.localization.localization_manager.LocalizationManager</span></code></a></p>
+<p>Customized Localization module to replace the default module.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn our gnss and imu sensor.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config_yaml: dict</dt><dd><p>The configuration dictionary of the localization module.</p>
+</dd>
+<dt>-carla_map: carla.Map</dt><dd><p>The carla HDMap. We need this to find the map origin to convert wg84 to enu coordinate system.</p>
+</dd>
+</dl>
+<p>Attributes
+-kf : opencda object</p>
+<blockquote>
+<div><p>The filter used to fuse different sensors.</p>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="module-opencda.customize.core.sensing.localization">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.customize.core.sensing.localization" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.customize.ml_libs.html" class="btn btn-neutral float-right" title="opencda.customize.ml_libs package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.customize.core.sensing.html" class="btn btn-neutral float-left" title="opencda.customize.core.sensing package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

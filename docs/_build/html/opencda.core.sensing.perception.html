@@ -1,0 +1,833 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.core.sensing.perception package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.customize package" href="opencda.customize.html" />
+    <link rel="prev" title="opencda.core.sensing.localization package" href="opencda.core.sensing.localization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.html">opencda.core package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.sensing.html">opencda.core.sensing package</a> &raquo;</li>
+        
+      <li>opencda.core.sensing.perception package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.core.sensing.perception.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-core-sensing-perception-package">
+<h1>opencda.core.sensing.perception package<a class="headerlink" href="#opencda-core-sensing-perception-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.core.sensing.perception.o3d_lidar_libs">
+<span id="opencda-core-sensing-perception-o3d-lidar-libs-module"></span><h2>opencda.core.sensing.perception.o3d_lidar_libs module<a class="headerlink" href="#module-opencda.core.sensing.perception.o3d_lidar_libs" title="Permalink to this headline">¶</a></h2>
+<p>Utility functions for 3d lidar visualization and processing by utilizing open3d.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.o3d_lidar_libs.o3d_camera_lidar_fusion">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.o3d_lidar_libs.</span></span><span class="sig-name descname"><span class="pre">o3d_camera_lidar_fusion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yolo_bbx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lidar_3d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_lidar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lidar_sensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.o3d_lidar_libs.o3d_camera_lidar_fusion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utilize the 3D lidar points to extend the 2D bounding box from camera to 3D bounding box under world coordinates.
+:param -objects: The dictionary contains all object detection result.
+:type -objects: dict
+:param -yolo_bbx: Object detection bounding box at current photo from yolov5,</p>
+<blockquote>
+<div><p>shape:(n, [x1, y1, x2, y2, label]).</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-lidar_3d</strong> (<em>np.ndarray</em>) – Raw 3D lidar points in lidar coordinate system.</p></li>
+<li><p><strong>-projected_lidar</strong> (<em>np.ndarray</em>) – 3D lidar points projected to the camera space.</p></li>
+<li><p><strong>-lidar_sensor</strong> (<em>carla.Sensor</em>) – The lidar sensor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The update object dictionary that contains 3d bounding boxes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-objects (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.o3d_lidar_libs.o3d_pointcloud_encode">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.o3d_lidar_libs.</span></span><span class="sig-name descname"><span class="pre">o3d_pointcloud_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_cloud</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.o3d_lidar_libs.o3d_pointcloud_encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode the raw point cloud to Open3d PointCloud object.
+:param -raw_data: Raw lidar points (N, (x, y, z, i)) obtained from lidar sensor.
+:type -raw_data: np.ndarray
+:param -point_cloud: Open3d PointCloud.
+:type -point_cloud: o3d.PointCloud</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.o3d_lidar_libs.o3d_visualizer_init">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.o3d_lidar_libs.</span></span><span class="sig-name descname"><span class="pre">o3d_visualizer_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actor_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.o3d_lidar_libs.o3d_visualizer_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the visualizer.
+:param -actor_id: Vehicle’s id.
+:type -actor_id: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initialize Open3d visualizer.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-vis (o3d.visualizer)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.o3d_lidar_libs.o3d_visualizer_show">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.o3d_lidar_libs.</span></span><span class="sig-name descname"><span class="pre">o3d_visualizer_show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_cloud</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.o3d_lidar_libs.o3d_visualizer_show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualize the point cloud at runtime.
+:param -vis: Visualization interface.
+:type -vis: o3d.Visualizer
+:param -count: current step since simulation started.
+:type -count: int
+:param -point_cloud: Open3d point clouds.
+:type -point_cloud: o3d.PointCLoud
+:param -objects: The dictionary containing objects.
+:type -objects: dict</p>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.perception.obstacle_vehicle">
+<span id="opencda-core-sensing-perception-obstacle-vehicle-module"></span><h2>opencda.core.sensing.perception.obstacle_vehicle module<a class="headerlink" href="#module-opencda.core.sensing.perception.obstacle_vehicle" title="Permalink to this headline">¶</a></h2>
+<p>Obstacle vehicle class to save object detection.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.BoundingBox">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.obstacle_vehicle.</span></span><span class="sig-name descname"><span class="pre">BoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corners</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.BoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Bounding box class for obstacle vehicle.</p>
+<p>Params:
+-corners : nd.nparray</p>
+<blockquote>
+<div><p>Eight corners of the bounding box. (shape:(8, 3))</p>
+</div></blockquote>
+<p>Attributes:
+-location : carla.location</p>
+<blockquote>
+<div><p>The location of the object.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-extent<span class="classifier">carla.vector3D</span></dt><dd><p>The extent of  the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.obstacle_vehicle.</span></span><span class="sig-name descname"><span class="pre">ObstacleVehicle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corners</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o3d_bbx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vehicle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lidar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for obstacle vehicle. The attributes are designed to match with carla.Vehicle class.</p>
+<p>Parameters:
+-corners : nd.nparray</p>
+<blockquote>
+<div><p>Eight corners of the bounding box. shape:(8, 3).</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-o3d_bbx<span class="classifier">pen3d.AlignedBoundingBox</span></dt><dd><p>The bounding box object in Open3d. This is mainly used forvisualization.</p>
+</dd>
+<dt>-vehicle<span class="classifier">carla.Vehicle</span></dt><dd><p>The carla.Vehicle object.</p>
+</dd>
+<dt>-lidar<span class="classifier">carla.sensor.lidar</span></dt><dd><p>The lidar sensor.</p>
+</dd>
+</dl>
+<p>Attributes:
+-bounding_box : BoundingBox</p>
+<blockquote>
+<div><p>Bounding box of the osbject vehicle.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-location<span class="classifier">carla.location</span></dt><dd><p>Location of the object.</p>
+</dd>
+<dt>-velocty<span class="classifier">carla.Vector3D vehicle.</span></dt><dd><p>Velocity of the object vehicle.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.get_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the location of the object vehicle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.get_transform">
+<span class="sig-name descname"><span class="pre">get_transform</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.get_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the transform of the object vehicle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.get_velocity">
+<span class="sig-name descname"><span class="pre">get_velocity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.get_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the velocity of the object vehicle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.set_vehicle">
+<span class="sig-name descname"><span class="pre">set_vehicle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lidar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.set_vehicle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign the attributes from carla.Vehicle to ObstacleVehicle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-vehicle</strong> (<em>carla.Vehicle</em>) – The carla.Vehicle object.</p></li>
+<li><p><strong>-lidar</strong> (<em>carla.sensor.lidar</em>) – The lidar sensor, used to project world coordinates to sensor coordinates.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.set_velocity">
+<span class="sig-name descname"><span class="pre">set_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.ObstacleVehicle.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the velocity of the vehicle.
+:param -velocity: The target velocity in 3d vector format.
+:type -velocity: carla.Vector3D</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.StaticObstacle">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.obstacle_vehicle.</span></span><span class="sig-name descname"><span class="pre">StaticObstacle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o3d_bbx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.StaticObstacle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The general class for obstacles. Currently, we regard all static obstacles such as stop signs and traffic light as the same class.</p>
+<p>Parameters
+-corner : nd.nparray</p>
+<blockquote>
+<div><p>Eight corners of the bounding box (shape:(8, 3)).</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-o3d_bbx<span class="classifier">open3d.AlignedBoundingBox</span></dt><dd><p>The bounding box object in Open3d. This is mainly used for visualization.</p>
+</dd>
+</dl>
+<p>Attributes
+-bounding_box : BoundingBox</p>
+<blockquote>
+<div><p>Bounding box of the osbject vehicle.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.obstacle_vehicle.is_vehicle_cococlass">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.obstacle_vehicle.</span></span><span class="sig-name descname"><span class="pre">is_vehicle_cococlass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.obstacle_vehicle.is_vehicle_cococlass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the label belongs to the vehicle class according to coco dataset.
+:param -label: The lable of the detecting object.
+:type -label: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether this label belongs to the vehicle class</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-is_vehicle(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.perception.perception_manager">
+<span id="opencda-core-sensing-perception-perception-manager-module"></span><h2>opencda.core.sensing.perception.perception_manager module<a class="headerlink" href="#module-opencda.core.sensing.perception.perception_manager" title="Permalink to this headline">¶</a></h2>
+<p>Perception module</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.CameraSensor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.perception_manager.</span></span><span class="sig-name descname"><span class="pre">CameraSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'front'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.CameraSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for rgb camera.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn sensors.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-position<span class="classifier">string</span></dt><dd><p>Indicates the sensor is a front or rear camera. option: front, left, right.</p>
+</dd>
+</dl>
+<p>Attributes
+-image : np.ndarray</p>
+<blockquote>
+<div><p>Current received image.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-sensor<span class="classifier">CARLA actor</span></dt><dd><p>The current sensor actors that will be attach to the vehicles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.LidarSensor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.perception_manager.</span></span><span class="sig-name descname"><span class="pre">LidarSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.LidarSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Lidar sensor manager.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn sensors.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config_yaml<span class="classifier">dict</span></dt><dd><p>Configuration for lidar sensor.</p>
+</dd>
+</dl>
+<p>Attributes
+-o3d_pointcloud : o3d.PointCloud</p>
+<blockquote>
+<div><p>Recieved point cloud saved in o3d.PointCloud format.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-sensor<span class="classifier">CARLA actor</span></dt><dd><p>The current sensor actors that will be attach to the vehicles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.perception_manager.</span></span><span class="sig-name descname"><span class="pre">PerceptionManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ml_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Default perception module. Currenly only used to detect vehicles.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn sensors.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config_yaml<span class="classifier">dict</span></dt><dd><p>Configuration for perception.</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><dl class="simple">
+<dt>ml_manager: opencda object</dt><dd><p>Ml manager includes all loaded trained perception models.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Attributes
+-ml_manager : opencda object</p>
+<blockquote>
+<div><p>weak reference of the ML Manager.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-activate<span class="classifier">bool</span></dt><dd><p>Whether perception algorithms are activated. If not, load object
+coordinates directly from the server.</p>
+</dd>
+<dt>-lidar: opencda object</dt><dd><p>Lidar sensor manager.</p>
+</dd>
+<dt>-rgb_camera: opencda object</dt><dd><p>Camera manager.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.activate_mode">
+<span class="sig-name descname"><span class="pre">activate_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.activate_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Yolov5 + Lidar fusion to detect objects.
+:param objects: object dictionary
+:type objects: dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>dict</dt><dd><p>The updated object dictionary.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.deactivate_mode">
+<span class="sig-name descname"><span class="pre">deactivate_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.deactivate_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obstacle detection under perception deactivation mode.
+:param objects: object dictionary
+:type objects: dict</p>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy sensors.
+Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.detect">
+<span class="sig-name descname"><span class="pre">detect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect surrounding objects. Currently only vehicle detection supported.
+:param ego_pos: Vehicle ego position
+:type ego_pos: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of carla.Vehicle or ObstacleVehicle</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.dist">
+<span class="sig-name descname"><span class="pre">dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>A fast method to retrieve the obstable distance the ego vehicle from the server directly.
+:param v:
+:type v: carla.vehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>distance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.speed_retrieve">
+<span class="sig-name descname"><span class="pre">speed_retrieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.speed_retrieve" title="Permalink to this definition">¶</a></dt>
+<dd><p>We don’t implement any obstacle speed calculation algorithm. The speed will be retrieved from
+the server directly.
+:param objects: The dictionary contains the objects.
+:type objects: dict</p>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.perception_manager.PerceptionManager.visualize_3d_bbx_front_camera">
+<span class="sig-name descname"><span class="pre">visualize_3d_bbx_front_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.perception_manager.PerceptionManager.visualize_3d_bbx_front_camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualize the 3d bounding box on frontal camera image.
+:param objects: a dictionary containing all detected objects.
+:type objects: dict
+:param rgb_image: camera image.
+:type rgb_image: np.ndarray</p>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.perception.sensor_transformation">
+<span id="opencda-core-sensing-perception-sensor-transformation-module"></span><h2>opencda.core.sensing.perception.sensor_transformation module<a class="headerlink" href="#module-opencda.core.sensing.perception.sensor_transformation" title="Permalink to this headline">¶</a></h2>
+<p>This script contains the transformations between world and different sensors.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.bbx_to_world">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">bbx_to_world</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.bbx_to_world" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert bounding box coordinate at vehicle reference to world reference.
+:param -cords: Bounding box coordinates with 8 vertices, shape (n, 4).
+:type -cords: np.ndarray
+:param -vehicle: vehicle object.
+:type -vehicle: carla.vehicle or ObstacleVehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Bounding box coordinates under word reference.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-bb_world_cords (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.create_bb_points">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">create_bb_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.create_bb_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the eight vertices of the bounding box from the vehicle.
+:param -vehicle: The object vehicle.
+:type -vehicle: carla.Vehicle or ObstacleVehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>3d bounding box.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>bbx(np.ndarray)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.get_2d_bb">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">get_2d_bb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">senosr_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.get_2d_bb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Summarize 2D bounding box creation
+:param -vehicle: vehicle object.
+:type -vehicle: carla.vehicle or ObstacleVehicle
+:param -sensor: The CARLA sensor object.
+:type -sensor: carla.sensor.camera.rgb
+:param -senosr_transform: sensor position in the world
+:type -senosr_transform: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>2d bounding box in camera image.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-p2d_bb (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.get_bounding_box">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">get_bounding_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.get_bounding_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get vehicle bounding box and project to sensor image.
+:param -vehicle: vehicle object.
+:type -vehicle: carla.vehicle or ObstacleVehicle
+:param -camera: The CARLA sensor object.
+:type -camera: carla.sensor.camera.rgb
+:param -sensor_transform: sensor position in the world
+:type -sensor_transform: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Bounding box coordinates in sensor image.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-camera_bbox (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.get_camera_intrinsic">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">get_camera_intrinsic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.get_camera_intrinsic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the camera intrinsic matrix
+:param -sensor: The CARLA sensor object.
+:type -sensor: carla.sensor.camera.rgb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The 2D intrinsic matrix.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-matrix_k (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.p3d_to_p2d_bb">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">p3d_to_p2d_bb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p3d_bb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.p3d_to_p2d_bb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw 2D bounding box (4 vertices) from 3D bounding box (8 vertices) in image.
+2D bounding box is represented by two corner points
+:param -p3d_bb: The objective 3D bounding box.
+:type -p3d_bb: np.array</p>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.project_lidar_to_camera">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">project_lidar_to_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lidar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_cloud</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.project_lidar_to_camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project lidar to camera space.
+:param -lidar: Lidar sensor.
+:type -lidar: carla.Sensor
+:param -camera: Camera seonsor.
+:type -camera: carla.Sensor
+:param -point_cloud: cloud points, (x, y, z, intensity).
+:type -point_cloud: np.ndarray
+:param -rgb_image: rgb image from camera.
+:type -rgb_image: np.ndarray</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>new rgb image with lidar points projected.
+-points_2d (np.ndarray): point clouds projected to camera space.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-rgb_image (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.sensor_to_world">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">sensor_to_world</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.sensor_to_world" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project
+:param -cords: Coordinates under sensor reference.
+:type -cords: np.ndarray
+:param -sensor_transform: sensor position in the world
+:type -sensor_transform: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Coordinates projected to world space.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-world_cords (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.vehicle_to_sensor">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">vehicle_to_sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.vehicle_to_sensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform coordinates from vehicle reference to sensor reference
+:param -cords: Coordinates under vehicle reference, shape (n, 4).
+:type -cords: np.ndarray
+:param -vehicle: vehicle object.
+:type -vehicle: carla.vehicle or ObstacleVehicle
+:param -sensor_transform: sensor position in the world, shape(3, 1).
+:type -sensor_transform: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Coordinates in sensor reference, shape(4, n).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-(np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.world_to_sensor">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">world_to_sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.world_to_sensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform coordinate from world reference to sensor reference.
+:param -cords: Coordinates under world reference, shape:(4, n).
+:type -cords: np.ndarray
+:param -sensor_transform: sensor position in the world, shape:(3, 1).
+:type -sensor_transform: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Coordinates in sensor reference.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-sensor_cords(np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.sensing.perception.sensor_transformation.x_to_world_transformation">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.sensing.perception.sensor_transformation.</span></span><span class="sig-name descname"><span class="pre">x_to_world_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.sensing.perception.sensor_transformation.x_to_world_transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the transformation matrix from x(it can be vehicle or sensor) coordinates to world coordinate.
+:param -transform: The transform that contains location and rotation.
+:type -transform: carla.Transform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The transformation matrix</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-matrix (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.sensing.perception">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.core.sensing.perception" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.customize.html" class="btn btn-neutral float-right" title="opencda.customize package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.core.sensing.localization.html" class="btn btn-neutral float-left" title="opencda.core.sensing.localization package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

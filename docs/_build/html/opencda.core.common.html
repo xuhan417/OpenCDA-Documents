@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.core.common package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.core.plan package" href="opencda.core.plan.html" />
+    <link rel="prev" title="opencda.core.application.platooning package" href="opencda.core.application.platooning.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.html">opencda.core package</a> &raquo;</li>
+        
+      <li>opencda.core.common package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.core.common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-core-common-package">
+<h1>opencda.core.common package<a class="headerlink" href="#opencda-core-common-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.core.common.cav_world">
+<span id="opencda-core-common-cav-world-module"></span><h2>opencda.core.common.cav_world module<a class="headerlink" href="#module-opencda.core.common.cav_world" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.common.cav_world.CavWorld">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.common.cav_world.</span></span><span class="sig-name descname"><span class="pre">CavWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apply_ml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.cav_world.CavWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A customized world object to save all CDA vehicle information and shared ML models.</p>
+<p>Parameters
+-apply_ml : boolean</p>
+<blockquote>
+<div><p>whether apply ml/dl models in this simulation, please make sure
+you have install torch/sklearn before setting this to True.</p>
+</div></blockquote>
+<p>Attributes
+-vehicle_id_set : set</p>
+<blockquote>
+<div><p>A set that stores vehicle IDs.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-_vehicle_manager_dict<span class="classifier">dict</span></dt><dd><p>A dictionary that stores vehicle managers.</p>
+</dd>
+<dt>-_platooning_dict<span class="classifier">dict</span></dt><dd><p>A dictionary that stores platooning managers.</p>
+</dd>
+<dt>-ml_manager<span class="classifier">opencda object.</span></dt><dd><p>The machine learning manager class.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.cav_world.CavWorld.get_platoon_dict">
+<span class="sig-name descname"><span class="pre">get_platoon_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.cav_world.CavWorld.get_platoon_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return existing platoons.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.cav_world.CavWorld.get_vehicle_managers">
+<span class="sig-name descname"><span class="pre">get_vehicle_managers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.cav_world.CavWorld.get_vehicle_managers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return vehicle manager dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.cav_world.CavWorld.locate_vehicle_manager">
+<span class="sig-name descname"><span class="pre">locate_vehicle_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.cav_world.CavWorld.locate_vehicle_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locate the vehicle manager based on the given location.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-loc (carla.Location): vehicle location.</p>
+</dd>
+<dt>Returns</dt><dd><p>-target_vm (vehicle_manager): The vehicle manager at the give location.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.cav_world.CavWorld.update_platooning">
+<span class="sig-name descname"><span class="pre">update_platooning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">platooning_manger</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.cav_world.CavWorld.update_platooning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add created platooning.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-platooning_manger (opencda object): The platooning manager class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.cav_world.CavWorld.update_vehicle_manager">
+<span class="sig-name descname"><span class="pre">update_vehicle_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.cav_world.CavWorld.update_vehicle_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update created CAV manager to the world.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-vehicle_manager (opencda object): The vehicle manager class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.common.misc">
+<span id="opencda-core-common-misc-module"></span><h2>opencda.core.common.misc module<a class="headerlink" href="#module-opencda.core.common.misc" title="Permalink to this headline">¶</a></h2>
+<p>Module with auxiliary functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.cal_distance_angle">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">cal_distance_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.cal_distance_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the vehicle current relative distance to target location.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-target_location (carla.location): The target location to calcualte distance.
+-current_location (carla.location): The current location as origin for distance calculation.
+-orientation (carla.rotation): orientation of the reference object.</p>
+</dd>
+<dt>Returns</dt><dd><p>-distance (float): The measured distance from current location to target location.
+-d_angle (float): The measureed rotation (angle) fron current location to target location.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.compute_distance">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">compute_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.compute_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Euclidean distance between 3D points.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-location_1 (3D points): Start point of the measurement.
+-location_2 (3D points): End point of the measurement.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.compute_magnitude_angle">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">compute_magnitude_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.compute_magnitude_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute relative angle and distance between a target_location and a current_location.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-target_location (carla.location): location of the target object.
+-current_location (carla.location): location of the reference object.
+-orientation (carla.rotation): orientation of the reference object.</p>
+</dd>
+<dt>Returns</dt><dd><p>-compute result (tuple): A tuple composed by the distance to the object and the angle between both objects(i.e., (dist, angle)).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.distance_vehicle">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">distance_vehicle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vehicle_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.distance_vehicle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the 2D distance from a waypoint to a vehicle</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-waypoint (carla.waypoint): actual waypoint
+-vehicle_transform (carla.transform): transform of the target vehicle</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.draw_trajetory_points">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">draw_trajetory_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">world</span></em>, <em class="sig-param"><span class="pre">waypoints</span></em>, <em class="sig-param"><span class="pre">z=0.25</span></em>, <em class="sig-param"><span class="pre">color=&lt;carla.libcarla.Color</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">lt=5</span></em>, <em class="sig-param"><span class="pre">size=0.1</span></em>, <em class="sig-param"><span class="pre">arrow_size=0.1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.draw_trajetory_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a list of trajetory points</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-size (float): Time step between updating visulized waypoint (dfault=0.1).
+-lt (int): Number of waypoints being visulized (dfault=5).
+-color (carla.color): The trajectory color (default=carla.Color(255, 0, 0)).
+-world (carla.world): The simulation world.
+-waypoints (list): The waypoints of the current plan.
+-z (float): The height of the visulized waypoint (dfault=0.25).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.draw_waypoints">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">draw_waypoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">world</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waypoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.draw_waypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a list of waypoints at a certain height given in z.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-world: carla.world object
+-waypoints: list or iterable container with the waypoints to draw
+-z: height in meters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.get_acc">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">get_acc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.get_acc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute acceleration of a vehicle.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-meters (boolean): whether to use m/s^2 (True) or km/h^2 (False).
+-vehicle (carla.vehicle): the vehicle for which speed is calculated.</p>
+</dd>
+<dt>Returns</dt><dd><p>-acceleration (flaot): The vehicle speed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.get_speed">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">get_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.get_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute speed of a vehicle in Km/h.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-meters (boolean): whether to use m/s (True) or km/h (False).
+-vehicle (carla.vehicle): the vehicle for which speed is calculated.</p>
+</dd>
+<dt>Returns</dt><dd><p>-speed (flaot): The vehicle speed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.is_within_distance">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">is_within_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_angle_th_up</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_angle_th_low</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.is_within_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a target object is within a certain distance from a reference object.
+A vehicle in front would be something around 0 deg, while one behind around 180 deg.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-target_location (carla.location): location of the target object.
+-current_location (carla.location): location of the reference object.
+-orientation (carla.rotation): orientation of the reference object.
+-max_distance (float): maximum allowed distance.
+-d_angle_th_up (carla.rotation): upper thereshold for angle.
+-d_angle_th_low (carla.rotation): low thereshold for angle (optional, default is 0).</p>
+</dd>
+<dt>Returns</dt><dd><ul class="simple">
+<li><p>detect result (boolean): True if target object is within max_distance ahead of the reference object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.is_within_distance_ahead">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">is_within_distance_ahead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.is_within_distance_ahead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a target object is within a certain distance in front of a reference object.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-target_transform (carla.transform): location of the target object.
+-current_transform (carla.transform): location of the reference object.
+-orientation (carla.rotation): orientation of the reference object.
+-max_distance (float): maximum allowed distance.</p>
+</dd>
+<dt>Returns</dt><dd><p>-detection result (boolen): True if target object is within max_distance ahead of the reference object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.positive">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">positive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.positive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the given number if positive, else 0</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opencda.core.common.misc.vector">
+<span class="sig-prename descclassname"><span class="pre">opencda.core.common.misc.</span></span><span class="sig-name descname"><span class="pre">vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.misc.vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit vector from location_1 to location_2.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-location_1 (carla.location): Start location of the vector.
+-location_2 (carla.location): End location of the vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.common.v2x_manager">
+<span id="opencda-core-common-v2x-manager-module"></span><h2>opencda.core.common.v2x_manager module<a class="headerlink" href="#module-opencda.core.common.v2x_manager" title="Permalink to this headline">¶</a></h2>
+<p>Communication manager for cooperation</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.common.v2x_manager.</span></span><span class="sig-name descname"><span class="pre">V2XManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cav_world</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>V2X Manager for platooning, cooperative perception and so on.</p>
+<p>Parameters
+-cav_world : opencda object</p>
+<blockquote>
+<div><p>CAV world.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config_yaml<span class="classifier">dict</span></dt><dd><p>The configuration dictionary of the v2x module.</p>
+</dd>
+</dl>
+<p>Attributes
+-_recieved_buffer : dict</p>
+<blockquote>
+<div><p>A buffer for receive data.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-platooning_plugin<span class="classifier">opencda object</span></dt><dd><p>The platooning plugin for communication during platooning.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.add_platoon_blacklist">
+<span class="sig-name descname"><span class="pre">add_platoon_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pmid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.add_platoon_blacklist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an existing platoon to current blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pmid</strong> (<em>-</em>) – The target platoon manager ID.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.get_platoon_front_rear">
+<span class="sig-name descname"><span class="pre">get_platoon_front_rear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.get_platoon_front_rear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ego vehicle’s front and rear cav in the platoon</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.get_platoon_manager">
+<span class="sig-name descname"><span class="pre">get_platoon_manager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.get_platoon_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the platoon manager the cav belongs to and the corresponding id
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.get_platoon_status">
+<span class="sig-name descname"><span class="pre">get_platoon_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.get_platoon_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrive the FSM status for platooning application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.in_platoon">
+<span class="sig-name descname"><span class="pre">in_platoon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.in_platoon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the vehicle is inside the platoon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>detection result</strong> (<em>-</em>) – Flag indication whether in a platoon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.match_platoon">
+<span class="sig-name descname"><span class="pre">match_platoon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.match_platoon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A naive way to find the best position to join a platoon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.set_platoon">
+<span class="sig-name descname"><span class="pre">set_platoon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platooning_object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platooning_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.set_platoon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set platooning status</p>
+<p>Args
+-platooning_object (platoon object): platooning world that contains all platoon information todo: remove this later.
+-platooning_id (int): platoon id the cav belongs to.
+-in_id (int): the position in the platoon, etc. 0 represents leader and 1 represents the second position.
+-leader (boolean): indicate whether this cav is a leader in platoon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.set_platoon_front">
+<span class="sig-name descname"><span class="pre">set_platoon_front</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.set_platoon_front" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the frontal vehicle to another vehicle</p>
+<dl class="simple">
+<dt>Args</dt><dd><ul class="simple">
+<li><p>vm (vehicle manager):The target vehicle manager.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.set_platoon_rear">
+<span class="sig-name descname"><span class="pre">set_platoon_rear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.set_platoon_rear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the rear vehicle to another vehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vm</strong> (<em>-</em>) – The target vehicle manager.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.set_platoon_status">
+<span class="sig-name descname"><span class="pre">set_platoon_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.set_platoon_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the cav to a different fsm status.</p>
+<dl class="simple">
+<dt>Args</dt><dd><p>-status (string): fsm status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.v2x_manager.V2XManager.update_info">
+<span class="sig-name descname"><span class="pre">update_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_spd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.v2x_manager.V2XManager.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update all communication plugins with current localization info.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.common.vehicle_manager">
+<span id="opencda-core-common-vehicle-manager-module"></span><h2>opencda.core.common.vehicle_manager module<a class="headerlink" href="#module-opencda.core.common.vehicle_manager" title="Permalink to this headline">¶</a></h2>
+<p>Basic class of CAV</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.common.vehicle_manager.VehicleManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.common.vehicle_manager.</span></span><span class="sig-name descname"><span class="pre">VehicleManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">application</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cav_world</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.vehicle_manager.VehicleManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class manager to embed different modules with vehicle together.</p>
+<p>Parameters
+-vehicle : carla.Vehicle</p>
+<blockquote>
+<div><p>The carla.Vehicle. We need this class to spawn our gnss and imu sensor.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-config<span class="classifier">dict</span></dt><dd><p>The configuration dictionary of the localization module.</p>
+</dd>
+<dt>-application<span class="classifier">list</span></dt><dd><p>The application category, currently support:[‘single’,’platoon’].</p>
+</dd>
+<dt>-carla_map<span class="classifier">carla.Map</span></dt><dd><p>The CARLA simulation map.</p>
+</dd>
+<dt>-cav_world<span class="classifier">opencda object</span></dt><dd><p>CAV World.</p>
+</dd>
+</dl>
+<p>Attributes
+-v2x_manager : opencda object</p>
+<blockquote>
+<div><p>The current V2X manageer.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-localizer<span class="classifier">opencda object</span></dt><dd><p>The current localization manageer.</p>
+</dd>
+<dt>-perception_manager<span class="classifier">opencda object</span></dt><dd><p>The current V2X perception manageer.</p>
+</dd>
+<dt>-agent<span class="classifier">opencda object</span></dt><dd><p>The current carla agent that handles the basic control of ego vehicle.</p>
+</dd>
+<dt>-controller<span class="classifier">opencda object</span></dt><dd><p>The current control manager.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.vehicle_manager.VehicleManager.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.vehicle_manager.VehicleManager.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the actor vehicle</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.vehicle_manager.VehicleManager.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.vehicle_manager.VehicleManager.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute one step of navigation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.vehicle_manager.VehicleManager.set_destination">
+<span class="sig-name descname"><span class="pre">set_destination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.vehicle_manager.VehicleManager.set_destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to set global route</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-start_location</strong> (<em>carla.location</em>) – The start location of the current task.</p></li>
+<li><p><strong>-end_location</strong> (<em>carla.location</em>) – The destination location of the current task.</p></li>
+<li><p><strong>-clean</strong> (<em>boolean</em>) – Indicator of whether clean waypoint queue.</p></li>
+<li><p><strong>-end_reset</strong> (<em>boolean</em>) – Indicator of whether reset the end location.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.common.vehicle_manager.VehicleManager.update_info">
+<span class="sig-name descname"><span class="pre">update_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.common.vehicle_manager.VehicleManager.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call perception and localization module to retrieve surrounding info an ego position.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.common">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.core.common" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.core.plan.html" class="btn btn-neutral float-right" title="opencda.core.plan package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.core.application.platooning.html" class="btn btn-neutral float-left" title="opencda.core.application.platooning package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

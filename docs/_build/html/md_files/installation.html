@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OpenCDA Installation &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quick start" href="getstarted.html" />
+    <link rel="prev" title="Why OpenCDA?" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenCDA Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-installation">Local Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carla-installation-0-9-11-required">1. CARLA Installation(0.9.11 required)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#debian-carla-installation">1.1 Debian CARLA installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#package-installation">1.2 Package installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-from-source">1.3 Build From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2. OpenCDA Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-pytorch-and-yolov5-optional">3. Install Pytorch and Yolov5(Optional)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>OpenCDA Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/md_files/installation.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-installation">
+<h1>OpenCDA Installation<a class="headerlink" href="#opencda-installation" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="#requirements">System/Hardware Requirements</a></strong></p></li>
+<li><p><strong><a class="reference external" href="#local-installation">Local Installation</a></strong></p>
+<ul>
+<li><p><a class="reference external" href="#carla-installation">1,CARLA installation</a></p>
+<ul>
+<li><p><a class="reference external" href="#1-debian-carla-installation">1.1 Debian CARLA installation</a></p></li>
+<li><p><a class="reference external" href="#2-package-installation">1.2 Package installation</a></p></li>
+<li><p><a class="reference external" href="#3-build-from-source">1.3 Build from source</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#opencda-installation">2. Install OpenCDA</a></p></li>
+<li><p><a class="reference external" href="#">3. Install Pytorch and Yolov5(Optional)</a></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>To get started, the following requirements should be fulfilled.</p>
+<ul class="simple">
+<li><p><strong>System requirements.</strong> Any 64-bits OS should run OpenCDA. We highly recommends Ubuntu  16.04/18.04/20.04.</p></li>
+<li><p><strong>Adequate GPU.</strong> CARLA is a realistic simulation platform based on Unity, which requires at least a 3GB GPU for smooth scene rendering, though 8GB is recommended.</p></li>
+<li><p><strong>Disk Space.</strong> Estimate 30GB of space is recommended to install CARLA.</p></li>
+<li><p><strong>Python</strong> Python3,7 or higher version is required for full functions.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="local-installation">
+<h2>Local Installation<a class="headerlink" href="#local-installation" title="Permalink to this headline">¶</a></h2>
+<p>To get OpenCDA v0.1 running with complete functionality, you will need four things: CARLA, OpenCDA, and
+Pytorch(optional). Pytorch is required only when you want to activate the perception module, otherwise OpenCDA
+will retrieve all perception information from the simulation server directly.</p>
+<section id="carla-installation-0-9-11-required">
+<h3>1. CARLA Installation(0.9.11 required)<a class="headerlink" href="#carla-installation-0-9-11-required" title="Permalink to this headline">¶</a></h3>
+<p>There are three different  ways to install the CARLA simulator and either way is fine for using OpenCDA. <br>
+** Note: If you want to use the customized highway map with full assets(.fbx, .xml and .xodr) in OpenCDA,
+you have to build from source. Visit CARLA’s tutorial <a class="reference external" href="https://carla.readthedocs.io/en/latest/tuto_A_add_map_overview/">ADD a new map</a> for more information.</p>
+<section id="debian-carla-installation">
+<h4>1.1 Debian CARLA installation<a class="headerlink" href="#debian-carla-installation" title="Permalink to this headline">¶</a></h4>
+<p>Set up the Debian repository in the system.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
+   sudo add-apt-repository <span class="s2">&quot;deb [arch=amd64] http://dist.carla.org/carla </span><span class="k">$(</span>lsb_release -sc<span class="k">)</span><span class="s2"> main&quot;</span>
+</pre></div>
+</div>
+<p>Install CARLA and check for the installation in the <code class="docutils literal notranslate"><span class="pre">/opt/</span></code> folder.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   sudo apt-get update <span class="c1"># Update the Debian package index</span>
+   sudo apt-get install carla-simulator <span class="c1"># Install the latest CARLA version, or update the current installation</span>
+   <span class="nb">cd</span> /opt/carla-simulator <span class="c1"># Open the folder where CARLA is installed</span>
+</pre></div>
+</div>
+<p>This repository contains CARLA 0.9.11 and later versions. To install a specific version add the version tag to the installation command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   sudo apt-get install carla-simulator<span class="o">=</span><span class="m">0</span>.9.11
+</pre></div>
+</div>
+</section>
+<section id="package-installation">
+<h4>1.2 Package installation<a class="headerlink" href="#package-installation" title="Permalink to this headline">¶</a></h4>
+<div class="build-buttons">
+<p>
+<a href="https://github.com/carla-simulator/carla/releases/tag/0.9.11" target="_blank" class="btn btn-neutral" title="Go to the latest CARLA release">
+<span class="icon icon-github"></span> CARLA 0.9.11 Package</a>
+</p>
+</div><p>OpenCDA is only tested at 0.9.11 and thus we highly recommend to use this version.
+To insall CARLA as a precompiled package, download and extract the release file. It contains a precompiled version of the simulator, the Python API module and some scripts to be used as examples. <br>
+** Note: The  AdditionalMaps_0.9.11.tar.gz also need to be downloaded and extract to the CARLA repo to support
+scenario testings in Town06.</p>
+</section>
+<section id="build-from-source">
+<h4>1.3 Build From Source<a class="headerlink" href="#build-from-source" title="Permalink to this headline">¶</a></h4>
+<p>For advanced CARLA usage that involves extensive customizations, <a class="reference external" href="https://carla.readthedocs.io/en/latest/build_linux/">Build CARLA from Source</a> is also supported by OpenCDA. Though source build in
+Windows OS is supported by CARLA, Ubuntu is the preferred OS as the OpenCDA was developoed in Ubuntu 18.04.</p>
+<p>** Note: OpenCDA do not require CARLA source build. However, customized map with building/lane/traffic light/road surface materials assets  in CARLA  require source build.
+Visit CARLA’s tutorial [”ADD a new map”](`CARLA Tutorials (assets). &lt;https://carla.readthedocs.io/en/latest/tuto_A_add_map_overview/) for more information.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h3>2. OpenCDA Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>First, download OpenCDA github to your local folder if you haven’t done it yet.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ucla-mobility/OpenCDA.git
+<span class="nb">cd</span> OpenCDA
+</pre></div>
+</div>
+<p>Make sure you are in the root dir of OpenCDA, and next let’s install the dependencies. <strong>We highly
+recommend use conda environment to install.</strong></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
+conda activate opencda
+python setup.py develop
+</pre></div>
+</div>
+<p>If conda install failed,  install through pip</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -r requirement.txt
+</pre></div>
+</div>
+<p>After dependencies are installed, we need to install the CARLA PythonAPI package into the conda environment.
+You can do this by running this script:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">CARLA_HOME</span><span class="o">=</span>/path/to/your/CARLA_ROOT
+<span class="c1"># remember to set CARLA_HOME first to point to your carla repo</span>
+. setup.sh
+</pre></div>
+</div>
+<p>If everything works correctly, you will see a cache folder is created in your OpenCDA root dir, and inside the cache folder
+you will see an egg file and its unzipped folder. Then install this CARLA egg into your conda environment.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -e cahce/carla-0.9.11-py3.7-linux-x86_64
+python -c <span class="s2">&quot;import carla&quot;</span> <span class="c1"># check whether carla is installed correctly.</span>
+</pre></div>
+</div>
+<p>**Note: If you are using Python other than 3.7 and CARLA rather than 0.9.11, then you have to change the setup.sh to your
+carla version’s egg file or manually installed carla to your conda environment.</p>
+</section>
+<section id="install-pytorch-and-yolov5-optional">
+<h3>3. Install Pytorch and Yolov5(Optional)<a class="headerlink" href="#install-pytorch-and-yolov5-optional" title="Permalink to this headline">¶</a></h3>
+<p>This section is only needed for the users who want to test perception algorithms. By default, OpenCDA does not require
+pytorch installed and it retrieves the object positions from the server directly. Once perception module is activated,
+then OpenCDA will use yolov5 with pytorch to run object detection. <br>
+To install pytorch based on your GPU and cuda version, go to the official pytorch website and install with conda command. Make
+sure you install pytorch &gt;= 1.7.0</p>
+<div class="build-buttons">
+<p>
+<a href="https://pytorch.org/" target="_blank" class="btn btn-neutral" title="Pytorch">
+<span class="icon icon-github"></span>Pytorch Official Website</a>
+</p>
+</div><p>After pytorch installation, install the requirements for Yolov5. <br></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -qr https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt  <span class="c1"># install dependencies</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="getstarted.html" class="btn btn-neutral float-right" title="Quick start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Why OpenCDA?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

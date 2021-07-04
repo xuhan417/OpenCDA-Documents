@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.core.actuation package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.core.application package" href="opencda.core.application.html" />
+    <link rel="prev" title="opencda.core package" href="opencda.core.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.html">opencda.core package</a> &raquo;</li>
+        
+      <li>opencda.core.actuation package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.core.actuation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-core-actuation-package">
+<h1>opencda.core.actuation package<a class="headerlink" href="#opencda-core-actuation-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.core.actuation.control_manager">
+<span id="opencda-core-actuation-control-manager-module"></span><h2>opencda.core.actuation.control_manager module<a class="headerlink" href="#module-opencda.core.actuation.control_manager" title="Permalink to this headline">¶</a></h2>
+<p>Controller interface</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.actuation.control_manager.ControlManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.actuation.control_manager.</span></span><span class="sig-name descname"><span class="pre">ControlManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.control_manager.ControlManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Controller manager that is used to choose and call different controller’s functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>control_config</strong> (<em>dict</em>) – The configuration dictionary of the control manager module.</p></li>
+<li><p><strong>Attributes</strong> – </p></li>
+<li><p><strong>controller</strong> (<em>opencda object.</em>) – The controller object of the OpenCDA framwork.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.control_manager.ControlManager.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.control_manager.ControlManager.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute current controller step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.control_manager.ControlManager.update_info">
+<span class="sig-name descname"><span class="pre">update_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.control_manager.ControlManager.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update ego vehicle information for controller.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.actuation.pid_controller">
+<span id="opencda-core-actuation-pid-controller-module"></span><h2>opencda.core.actuation.pid_controller module<a class="headerlink" href="#module-opencda.core.actuation.pid_controller" title="Permalink to this headline">¶</a></h2>
+<p>PID Control Class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.actuation.pid_controller.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>PID Controller implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>dict</em>) – The configuration dictionary parsed from yaml file.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller._lon_ebuffer">
+<span class="sig-name descname"><span class="pre">_lon_ebuffer</span></span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller._lon_ebuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A deque buffer that stores longitudinal control errors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>deque</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller._lat_ebuffer">
+<span class="sig-name descname"><span class="pre">_lat_ebuffer</span></span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller._lat_ebuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A deque buffer that stores latitudinal control errors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>deque</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.current_transform">
+<span class="sig-name descname"><span class="pre">current_transform</span></span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.current_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current ego vehicle transformation in CARLA world.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>carla.transform</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.current_speed">
+<span class="sig-name descname"><span class="pre">current_speed</span></span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.current_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current ego vehicle speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.past_steering">
+<span class="sig-name descname"><span class="pre">past_steering</span></span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.past_steering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sterring angle from previous control step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.dynamic_pid">
+<span class="sig-name descname"><span class="pre">dynamic_pid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.dynamic_pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute kp, kd, ki based on current speed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.lat_run_step">
+<span class="sig-name descname"><span class="pre">lat_run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.lat_run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the throttle command based on current speed and target speed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target_location</strong> (<em>carla.location</em>) – Target location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>current_steering</strong> (<em>float</em>)</p></li>
+<li><p><em>Desired steering angle value for the current step to</em></p></li>
+<li><p><em>achieve target location.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.lon_run_step">
+<span class="sig-name descname"><span class="pre">lon_run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.lon_run_step" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target_speed</strong> (<em>float</em>) – Target speed of the ego vehicle.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>acceleration</strong> – Desired acceleration value for the current step
+to achieve target speed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute one step of control invoking both lateral and longitudinal
+PID controllers to reach a target waypoint at a given target_speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_speed</strong> (<em>float</em>) – Target speed of the ego vehicle.</p></li>
+<li><p><strong>waypoint</strong> (<em>carla.loaction</em>) – Target location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>control</strong> – Desired vehicle control command for the current step.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>carla.VehicleControl</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.actuation.pid_controller.Controller.update_info">
+<span class="sig-name descname"><span class="pre">update_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_spd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.actuation.pid_controller.Controller.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update ego position and speed to controller.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ego_pos</strong> (<em>carla.location</em>) – Position of the ego vehicle.</p></li>
+<li><p><strong>ego_spd</strong> (<em>float</em>) – Speed of the ego vehicle</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.actuation">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.core.actuation" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.core.application.html" class="btn btn-neutral float-right" title="opencda.core.application package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.core.html" class="btn btn-neutral float-left" title="opencda.core package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

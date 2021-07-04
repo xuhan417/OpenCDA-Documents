@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OpenCDA Yaml Rule &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>OpenCDA Yaml Rule</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/md_files/yaml_define.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-yaml-rule">
+<h1>OpenCDA Yaml Rule<a class="headerlink" href="#opencda-yaml-rule" title="Permalink to this headline">¶</a></h1>
+<p>To construct a scenario testing in OpenCDA, users have to first write a yml file to
+define the simulation parameters. Below we demonstrate an example in <code class="docutils literal notranslate"><span class="pre">platoon_2lanefree_carla</span></code> scenario.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># platoon_2lanefree_carla.yaml</span>
+<span class="nt">world</span><span class="p">:</span>  <span class="c1"># define the CARLA server setting</span>
+  <span class="nt">sync_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> <span class="c1"># whether to use sync mode</span>
+  <span class="nt">client_port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2000</span> <span class="c1"># client port to connect to the server</span>
+  <span class="nt">fixed_delta_seconds</span><span class="p">:</span> <span class="nl">&amp;delta</span> <span class="l l-Scalar l-Scalar-Plain">0.05</span> <span class="c1"># fixed time step </span>
+
+<span class="nt">vehicle_base</span><span class="p">:</span> <span class="nl">&amp;vehicle_base</span> <span class="c1"># define cav default parameters</span>
+  <span class="nt">sensing</span><span class="p">:</span> <span class="nl">&amp;base_sensing</span> <span class="c1"># define sensing parameters</span>
+    <span class="nt">perception</span><span class="p">:</span> <span class="nl">&amp;base_perception</span> <span class="c1"># define perception related settings</span>
+    <span class="nt">localization</span><span class="p">:</span> <span class="nl">&amp;base_localize</span> <span class="c1"># define localization related settings</span>
+  <span class="nt">behavior</span><span class="p">:</span> <span class="nl">&amp;base_behavior</span> <span class="c1"># define planning related parameters</span>
+  <span class="nt">controller</span><span class="p">:</span> <span class="nl">&amp;base_controller</span> <span class="c1"># define controller</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pid_controller</span> <span class="c1"># define the type of controller</span>
+    <span class="nt">args</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>  <span class="c1"># define the detailed parmaters of the controller</span>
+  <span class="nt">v2x</span><span class="p">:</span> <span class="nl">&amp;base_v2x</span> <span class="c1"># define v2x configuration</span>
+
+<span class="nt">carla_traffic_manager</span><span class="p">:</span> <span class="c1"># define the background traffic controled by carla.TrafficManager</span>
+  <span class="nt">global_speed_perc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-100</span> <span class="c1"># define the default speed of traffic flow</span>
+  <span class="nt">auto_lane_change</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span> <span class="c1"># whether lane change is allowed in the traffic flow</span>
+  <span class="nt">...</span><span class="p">:</span> <span class="c1"># some other parameters</span>
+  <span class="nt">vehicle_list</span><span class="p">:</span> <span class="c1"># define all human drive vehicles&#39; position and individual speed</span>
+    <span class="p p-Indicator">-</span> <span class="nt">spawn_position</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">x</span><span class="p p-Indicator">,</span><span class="nv">y</span><span class="p p-Indicator">,</span><span class="nv">z</span><span class="p p-Indicator">,</span><span class="nv">pitch</span><span class="p p-Indicator">,</span><span class="nv">yaw</span><span class="p p-Indicator">,</span><span class="nv">roll</span><span class="p p-Indicator">]</span>
+      <span class="nt">vehicle_speed_perc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-200</span> <span class="c1"># this speed will overwrite the default traffic flow speed</span>
+    
+<span class="nt">platoon_base</span><span class="p">:</span> <span class="nl">&amp;platoon_base</span> <span class="c1"># define the platoon default characteristics</span>
+  <span class="nt">max_capacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+  <span class="nt">inter_gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.6</span> <span class="c1"># desired time gap</span>
+  <span class="nt">open_gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.5</span> <span class="c1"># desired open gap during cut-in join</span>
+  <span class="nt">warm_up_speed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">55</span> <span class="c1"># required minimum speed before cooperative merging</span>
+
+
+<span class="nt">scenario</span><span class="p">:</span> <span class="c1"># define each cav&#39;s spawn position, driving task, and parameters</span>
+  <span class="nt">platoon_list</span><span class="p">:</span> <span class="c1"># define the platoons</span>
+    <span class="p p-Indicator">-</span> <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*platoon_base</span> <span class="c1"># the first platoon will take the default platoon parameters</span>
+      <span class="nt">destination</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">x</span><span class="p p-Indicator">,</span> <span class="nv">y</span><span class="p p-Indicator">,</span> <span class="nv">z</span><span class="p p-Indicator">]</span> <span class="c1"># platoon destination</span>
+      <span class="nt">members</span><span class="p">:</span> <span class="c1"># define the first platoon&#39;s members</span>
+       <span class="p p-Indicator">-</span> <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*vehicle_base</span> <span class="c1"># the platoon leader(a cav) will take the default cav parameters</span>
+       <span class=" -Error"> </span><span class="nt">spawn_position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+        <span class="nt">behavior</span><span class="p">:</span>
+          <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*base_behavior</span>
+          <span class="nt">max_speed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span> <span class="c1"># overwrite the default target speed defined in &amp;vehicle_base</span>
+        <span class="nt">platoon</span><span class="p">:</span> <span class="nv">*platoon_base</span> <span class="c1"># add a new category &#39;platoon&#39; to the origin vehicle parameters</span>
+        <span class="p p-Indicator">-</span> <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*vehicle_base</span> <span class="c1"># the second platoon mameber(a cav)</span>
+          <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="nt">single_cav_list</span><span class="p">:</span> <span class="c1"># define the cavs that are not in any platoon and aim to search and join one.</span>
+       <span class="p p-Indicator">-</span> <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*vehicle_base</span>
+         <span class="nt">spawn_position</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">x</span><span class="p p-Indicator">,</span><span class="nv">y</span><span class="p p-Indicator">,</span><span class="nv">z</span><span class="p p-Indicator">,</span><span class="nv">pitch</span><span class="p p-Indicator">,</span><span class="nv">yaw</span><span class="p p-Indicator">,</span><span class="nv">roll</span><span class="p p-Indicator">]</span>
+         <span class="nt">destination</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">x</span><span class="p p-Indicator">,</span> <span class="nv">y</span><span class="p p-Indicator">,</span> <span class="nv">z</span><span class="p p-Indicator">]</span>
+         <span class="nt">sensing</span><span class="p">:</span> <span class="nl">&amp;base_sensing</span> <span class="c1"># point to default sensing setting</span>
+           <span class="nt">...</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span> <span class="c1"># overwrite the default sensing parameters for this cav</span>
+  
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

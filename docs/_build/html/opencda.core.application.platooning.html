@@ -1,0 +1,974 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda.core.application.platooning package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.core.common package" href="opencda.core.common.html" />
+    <link rel="prev" title="opencda.core.application package" href="opencda.core.application.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opencda.html">opencda package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opencda.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.html#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="opencda.html">opencda package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.html">opencda.core package</a> &raquo;</li>
+        
+          <li><a href="opencda.core.application.html">opencda.core.application package</a> &raquo;</li>
+        
+      <li>opencda.core.application.platooning package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.core.application.platooning.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-core-application-platooning-package">
+<h1>opencda.core.application.platooning package<a class="headerlink" href="#opencda-core-application-platooning-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.core.application.platooning.fsm">
+<span id="opencda-core-application-platooning-fsm-module"></span><h2>opencda.core.application.platooning.fsm module<a class="headerlink" href="#module-opencda.core.application.platooning.fsm" title="Permalink to this headline">¶</a></h2>
+<p>Finite State Machine</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.application.platooning.fsm.</span></span><span class="sig-name descname"><span class="pre">FSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>The finite state machine class for platooning. These classes are used to indicate
+the current status of the CAV during platooning.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.SEARCHING">
+<span class="sig-name descname"><span class="pre">SEARCHING</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.SEARCHING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The vehicle is not in any platoon and currently searching one to join.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.OPEN_GAP">
+<span class="sig-name descname"><span class="pre">OPEN_GAP</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.OPEN_GAP" title="Permalink to this definition">¶</a></dt>
+<dd><p>The platoon member is increasing the gap for other vehicle to merge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.MOVE_TO_POINT">
+<span class="sig-name descname"><span class="pre">MOVE_TO_POINT</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.MOVE_TO_POINT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The merging vehicle is moving to the meeting points for joining.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.JOINING">
+<span class="sig-name descname"><span class="pre">JOINING</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.JOINING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The merging vehicle is operating the joining maneuver(lane change).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.MAINTINING">
+<span class="sig-name descname"><span class="pre">MAINTINING</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.MAINTINING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The platoon member is following the leader and maintain the time gap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.BACK_JOINING">
+<span class="sig-name descname"><span class="pre">BACK_JOINING</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.BACK_JOINING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The merging vehicle is in back-join state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.CUT_IN_TO_BACK">
+<span class="sig-name descname"><span class="pre">CUT_IN_TO_BACK</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.CUT_IN_TO_BACK" title="Permalink to this definition">¶</a></dt>
+<dd><p>The merging vehicle abandons cut-in-join and switch to back join.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.JOINING_FINISHED">
+<span class="sig-name descname"><span class="pre">JOINING_FINISHED</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.JOINING_FINISHED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate the joining finished and the vehicle will switch to maintaining state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.LEADING_MODE">
+<span class="sig-name descname"><span class="pre">LEADING_MODE</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.LEADING_MODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The vehicle is the platoon leader.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.ABONDON">
+<span class="sig-name descname"><span class="pre">ABONDON</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.ABONDON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current joining is abandoned.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.DISABLE">
+<span class="sig-name descname"><span class="pre">DISABLE</span></span><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.DISABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>V2X is not available and thus won’t join any platoon.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">ABONDON</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10</span></em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">BACK_JOINING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">CUT_IN_TO_BACK</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">DISABLE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11</span></em><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.fsm.FSM.FRONT_JOINING">
+<span class="sig-name descname"><span class="pre">FRONT_JOINING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em><a class="headerlink" href="#opencda.core.application.platooning.fsm.FSM.FRONT_JOINING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">JOINING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">JOINING_FINISHED</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8</span></em><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">LEADING_MODE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9</span></em><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">MAINTINING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">MOVE_TO_POINT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">OPEN_GAP</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">SEARCHING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.application.platooning.platoon_behavior_agent">
+<span id="opencda-core-application-platooning-platoon-behavior-agent-module"></span><h2>opencda.core.application.platooning.platoon_behavior_agent module<a class="headerlink" href="#module-opencda.core.application.platooning.platoon_behavior_agent" title="Permalink to this headline">¶</a></h2>
+<p>Behavior manager for platooning specifically</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.application.platooning.platoon_behavior_agent.</span></span><span class="sig-name descname"><span class="pre">PlatooningBehaviorAgent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vehicle_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2x_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">behavior_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platoon_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carla_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="opencda.core.plan.html#opencda.core.plan.behavior_agent.BehaviorAgent" title="opencda.core.plan.behavior_agent.BehaviorAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">opencda.core.plan.behavior_agent.BehaviorAgent</span></code></a></p>
+<p>Platoon behavior agent that inherits the single vehicle behavior agent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vehicle</strong> (<em>carla.Vehicle</em>) – The carla vehicle.</p></li>
+<li><p><strong>vehicle_manager</strong> (<em>opencda object</em>) – The vehicle manager, used when joining platoon finished.</p></li>
+<li><p><strong>v2x_manager</strong> (<em>opencda object</em>) – Used to received and deliver information.</p></li>
+<li><p><strong>behavior_yaml</strong> (<em>dict</em>) – The configuration dictionary for BehaviorAgent.</p></li>
+<li><p><strong>platoon_yaml</strong> (<em>dict.</em>) – The configuration dictionary for platoon behavior.</p></li>
+<li><p><strong>carla_map</strong> (<em>carla.Map</em>) – The HD Map used in the simulation.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.vehicle_manager">
+<span class="sig-name descname"><span class="pre">vehicle_manager</span></span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.vehicle_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>The weak reference of the vehicle manager, used when joining platoon finished.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>opencda object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.v2x_manager">
+<span class="sig-name descname"><span class="pre">v2x_manager</span></span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.v2x_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>The weak reference of the v2x_manager</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>opencda object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.debug_helper">
+<span class="sig-name descname"><span class="pre">debug_helper</span></span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.debug_helper" title="Permalink to this definition">¶</a></dt>
+<dd><p>A debug helper used to record the driving performance during platooning.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>opencda Object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.inter_gap">
+<span class="sig-name descname"><span class="pre">inter_gap</span></span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.inter_gap" title="Permalink to this definition">¶</a></dt>
+<dd><p>The desired time gap between each platoon member.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.calculate_gap">
+<span class="sig-name descname"><span class="pre">calculate_gap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.calculate_gap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the current vehicle and frontal vehicle’s time/distance gap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-distance</strong> (<em>float</em>) – distance between the ego vehicle and frontal vehicle</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.joining_finish_manager">
+<span class="sig-name descname"><span class="pre">joining_finish_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insert_vehicle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'front'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.joining_finish_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a joining is finish to update the platoon manager list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>insert_vehicle</strong> (<em>string</em>) – Indicate use the front or rear vehicle index to update the platoon manager list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.platooning_following_manager">
+<span class="sig-name descname"><span class="pre">platooning_following_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter_gap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.platooning_following_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Car following behavior in platooning with gap regulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inter_gap</strong> (<em>-</em>) – the gap designed for platooning</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.platooning_merge_management">
+<span class="sig-name descname"><span class="pre">platooning_merge_management</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frontal_vehicle_vm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.platooning_merge_management" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge the vehicle into the platooning.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>frontal_vehicle_vm</strong> (<em>opencda object</em>) – The vehivlel manager of the front vehicle.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>target_speed</strong> (<em>float</em>) – The target speed for ego vehicle.</p></li>
+<li><p><strong>target_waypoint</strong> (<em>carla.waypoint</em>) – The target waaypoint for ego vehcile.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_detector_enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lane_change_allowed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a single step for navigation under platooning agent. Finite state machine is used to switch between
+different platooning states.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_speed</strong> (<em>float</em>) – Target speed in km/h</p></li>
+<li><p><strong>collision_detector_enabled</strong> (<em>bool</em>) – Whether collision detection enabled.</p></li>
+<li><p><strong>lane_change_allowed</strong> (<em>bool</em>) – Whether lane change is allowed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_back_joining">
+<span class="sig-name descname"><span class="pre">run_step_back_joining</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_back_joining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-joining Algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>control command</strong> (<em>opencda object</em>) – Control command for bacj joining.</p></li>
+<li><p><strong>back join status</strong> (<em>enum</em>) – FSM back joining status.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_cut_in_joining">
+<span class="sig-name descname"><span class="pre">run_step_cut_in_joining</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_cut_in_joining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the vehicle has been joined successfully.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_cut_in_move2point">
+<span class="sig-name descname"><span class="pre">run_step_cut_in_move2point</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_cut_in_move2point" title="Permalink to this definition">¶</a></dt>
+<dd><p>The vehicle is trying to get to the move in point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_speed</strong> (<em>float</em>) – The target speed for ego vehile.</p></li>
+<li><p><strong>target_waypoint</strong> (<em>carla.waypoint</em>) – The waypoint for ego vehile.</p></li>
+<li><p><strong>FSM state</strong> (<em>next</em>) – The next finite state machine state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_front_joining">
+<span class="sig-name descname"><span class="pre">run_step_front_joining</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_front_joining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Front-joining algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>control command</strong> (<em>opencda object</em>) – Control command for bacj joining.</p></li>
+<li><p><strong>back join status</strong> (<em>enum</em>) – FSM back joining status.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_maintaining">
+<span class="sig-name descname"><span class="pre">run_step_maintaining</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_maintaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Next step behavior planning for speed maintaining.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_open_gap">
+<span class="sig-name descname"><span class="pre">run_step_open_gap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.run_step_open_gap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open gap for cut-in vehicle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.update_information">
+<span class="sig-name descname"><span class="pre">update_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_behavior_agent.PlatooningBehaviorAgent.update_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the perception and localization information to the behavior agent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ego_pos</strong> (<em>carla.Transform</em>) – ego position from localization module.</p></li>
+<li><p><strong>ego_speed</strong> (<em>float</em>) – km/h, ego speed.</p></li>
+<li><p><strong>objects</strong> (<em>dictionary</em>) – Objects detection results from perception module.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.application.platooning.platoon_debug_helper">
+<span id="opencda-core-application-platooning-platoon-debug-helper-module"></span><h2>opencda.core.application.platooning.platoon_debug_helper module<a class="headerlink" href="#module-opencda.core.application.platooning.platoon_debug_helper" title="Permalink to this headline">¶</a></h2>
+<p>Analysis + visualization functions for platooning</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_debug_helper.PlatoonDebugHelper">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.application.platooning.platoon_debug_helper.</span></span><span class="sig-name descname"><span class="pre">PlatoonDebugHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actor_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_debug_helper.PlatoonDebugHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="opencda.core.plan.html#opencda.core.plan.planer_debug_helper.PlanDebugHelper" title="opencda.core.plan.planer_debug_helper.PlanDebugHelper"><code class="xref py py-class docutils literal notranslate"><span class="pre">opencda.core.plan.planer_debug_helper.PlanDebugHelper</span></code></a></p>
+<p>This class aims to save statistics for platoon behaviour</p>
+<p>Parameters
+-actor_id : int</p>
+<blockquote>
+<div><p>The actor ID of the selected vehcile.</p>
+</div></blockquote>
+<p>Attributes
+-time_gap_list : list</p>
+<blockquote>
+<div><p>The list containing intra-time-gap(s) of all time-steps.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-dist_gap_list<span class="classifier">list</span></dt><dd><p>The list containing distance gap(s) of all time-steps.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platoon_debug_helper.PlatoonDebugHelper.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ttc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platoon_debug_helper.PlatoonDebugHelper.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the platoon related vehicle information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-ego_speed</strong> (<em>float</em>) – Ego vehcile speed.</p></li>
+<li><p><strong>-ttc</strong> (<em>flaot</em>) – Ego vehicle time-to-collision.</p></li>
+<li><p><strong>-time_gap</strong> (<em>float</em>) – Ego vehicle time gap with the front vehicle.</p></li>
+<li><p><strong>-dist_gap</strong> (<em>float</em>) – Ego vehicle distance gap with front vehicle.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.application.platooning.platooning_manager">
+<span id="opencda-core-application-platooning-platooning-manager-module"></span><h2>opencda.core.application.platooning.platooning_manager module<a class="headerlink" href="#module-opencda.core.application.platooning.platooning_manager" title="Permalink to this headline">¶</a></h2>
+<p>Platooning Manager</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.application.platooning.platooning_manager.</span></span><span class="sig-name descname"><span class="pre">PlatooningManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_yaml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cav_world</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Platoon manager. Used to manage all vehicle managers inside the platoon.</p>
+<p>Parameters
+-config_yaml : dict</p>
+<blockquote>
+<div><p>The configuration dictionary for platoon.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-cav_world<span class="classifier">opencda object</span></dt><dd><p>CAV world that stores all CAV information.</p>
+</dd>
+</dl>
+<p>Attributes
+-pmid : int</p>
+<blockquote>
+<div><p>The  platooning manager ID.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-vehicle_manager_list<span class="classifier">list</span></dt><dd><p>A list of all vehciel managers within the platoon.</p>
+</dd>
+<dt>-destination<span class="classifier">carla.location</span></dt><dd><p>The destiantion of the current plan.</p>
+</dd>
+<dt>-center_loc<span class="classifier">carla.location</span></dt><dd><p>The center location of the platoon.</p>
+</dd>
+<dt>-leader_target_speed<span class="classifier">float</span></dt><dd><p>The speed of the leader vehicle.</p>
+</dd>
+<dt>-origin_leader_target_speed<span class="classifier">float</span></dt><dd><p>The original planned target speed of the platoon leader.</p>
+</dd>
+<dt>-recover_speed_counter<span class="classifier">int</span></dt><dd><p>The counter that record the number of speed recovery attempts.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.add_member">
+<span class="sig-name descname"><span class="pre">add_member</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.add_member" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add memeber to the current platooning</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-leader</strong> (<em>boolean</em>) – Indicator of whether this cav is a leader.</p></li>
+<li><p><strong>-vehicle_manager</strong> (<em>opencda object</em>) – The vehicle manager class.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.cal_center_loc">
+<span class="sig-name descname"><span class="pre">cal_center_loc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.cal_center_loc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate and update center location of the platoon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy platoon vehicles actors inside simulation world.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to save all members’ statistics.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.reset_speed">
+<span class="sig-name descname"><span class="pre">reset_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.reset_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>After joining request accepted for certain steps, the platoon will return to the origin speed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.response_joining_request">
+<span class="sig-name descname"><span class="pre">response_joining_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_loc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.response_joining_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identify whether to accept the joining request based on capacity.
+:param -request_loc: request vehicle location.
+:type -request_loc: carla.Location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Indicator of whether the joining request is accepted.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>-response (boolean)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run one control step for each vehicles.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.set_destination">
+<span class="sig-name descname"><span class="pre">set_destination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.set_destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set desination of the vehicle managers in the platoon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.set_lead">
+<span class="sig-name descname"><span class="pre">set_lead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.set_lead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the leader of the platooning</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-vehicle_manager</strong> (<em>opencda object</em>) – The vehicle manager class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.set_member">
+<span class="sig-name descname"><span class="pre">set_member</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lead</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.set_member" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set member at specific index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-lead</strong> (<em>boolean</em>) – Indicator of whether this cav is a leader.</p></li>
+<li><p><strong>-vehicle_manager</strong> (<em>opencda object</em>) – The vehicle manager class.</p></li>
+<li><p><strong>-index</strong> (<em>int</em>) – The platoon index of the current vehicle.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.update_information">
+<span class="sig-name descname"><span class="pre">update_information</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.update_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update CAV world information for every member in the list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_manager.PlatooningManager.update_member_order">
+<span class="sig-name descname"><span class="pre">update_member_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_manager.PlatooningManager.update_member_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the members’ front and rear vehicle.
+This should be called whenever new member added to the platoon list.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.application.platooning.platooning_plugin">
+<span id="opencda-core-application-platooning-platooning-plugin-module"></span><h2>opencda.core.application.platooning.platooning_plugin module<a class="headerlink" href="#module-opencda.core.application.platooning.platooning_plugin" title="Permalink to this headline">¶</a></h2>
+<p>Platooning plugin for communication and track FSM</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.core.application.platooning.platooning_plugin.</span></span><span class="sig-name descname"><span class="pre">PlatooningPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cda_enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Platooning plugin inside the V2X manager.</p>
+<p>Parameters
+-search_range : float</p>
+<blockquote>
+<div><p>The search range of the communication equipment.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-cda_enabled<span class="classifier">boolean</span></dt><dd><p>Whether connectivity is supported.</p>
+</dd>
+</dl>
+<p>Attributes
+-leader : boolean</p>
+<blockquote>
+<div><p>Boolean indicator of the platoon leader status.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-platooning_object<span class="classifier">opencda object</span></dt><dd><p>The current platoon object.</p>
+</dd>
+<dt>-platooning_id<span class="classifier">int</span></dt><dd><p>The current platoon ID.</p>
+</dd>
+<dt>-in_id<span class="classifier">int</span></dt><dd><p>The position in the platoon.</p>
+</dd>
+<dt>-status<span class="classifier">enum</span></dt><dd><p>The current platooning status.</p>
+</dd>
+<dt>-ego_pos<span class="classifier">carla.transformation</span></dt><dd><p>The current position (i.e., location and rotation) of the ego vehicle.</p>
+</dd>
+<dt>-ego_spd<span class="classifier">float</span></dt><dd><p>The current speed(km/h) of the ego vehicle.</p>
+</dd>
+<dt>-platooning_blacklist<span class="classifier">list</span></dt><dd><p>The platoon in the black list won’t be considered again.</p>
+</dd>
+<dt>-front_vehicle<span class="classifier">opencda object</span></dt><dd><p>The front vehicle manager of the ego vehicle.</p>
+</dd>
+<dt>-rear_vechile<span class="classifier">opencda object</span></dt><dd><p>The rear vehicle manager of the ego vehicle.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.match_platoon">
+<span class="sig-name descname"><span class="pre">match_platoon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cav_world</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.match_platoon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A naive way to find the best position to join a platoon</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-cav_world</strong> (<em>carla.world</em>) – Current simulation world.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The boolean indicator of matching result.
+-min_index (int): The minimum index inside the selected platoon.
+-platoon_vehicle_list (list): The list of platoon vehicle memebers.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-(boolean)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset to the origin status.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.search_platoon">
+<span class="sig-name descname"><span class="pre">search_platoon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cav_world</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.search_platoon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search platoon candidate in the range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-ego_pos</strong> (<em>carla.transformation</em>) – Current position of the ego vehicle.</p></li>
+<li><p><strong>-cav_world</strong> (<em>carla.world</em>) – Current simulation world.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Platoon manager ID.
+-pm (opencda object): Platoon manager ID.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-pmid (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.set_platoon">
+<span class="sig-name descname"><span class="pre">set_platoon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platooning_object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platooning_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.set_platoon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set platooning status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-in_id</strong> (<em>int</em>) – Inner platoon ID of the vehicle.</p></li>
+<li><p><strong>-platooning_object</strong> (<em>opencda object</em>) – The current platoon object.</p></li>
+<li><p><strong>-platooning_id</strong> (<em>int</em>) – The current platoon ID.</p></li>
+<li><p><strong>-leader</strong> (<em>boolean</em>) – Boolean indicator of the platoon leader status.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.set_status">
+<span class="sig-name descname"><span class="pre">set_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.set_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set FSM status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-status</strong> (<em>string</em>) – The current platooning status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.update_info">
+<span class="sig-name descname"><span class="pre">update_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ego_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ego_spd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.core.application.platooning.platooning_plugin.PlatooningPlugin.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the ego position and speed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-heading_direction</strong> – groundtruth heading_direction obtained from the server.</p></li>
+<li><p><strong>-dummy_variable</strong> – dummy variable to test multiple return/args.</p></li>
+<li><p><strong>-dummy_variable</strong> – dummy variable to test multiple return/args.</p></li>
+<li><p><strong>-dummy_variable</strong> – dummy variable to test multiple return/args.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>heading direction with noise.
+-dummy_variable: dummy variable to test multiple return/args.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-heading_direction</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.core.application.platooning">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda.core.application.platooning" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.core.common.html" class="btn btn-neutral float-right" title="opencda.core.common package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="opencda.core.application.html" class="btn btn-neutral float-left" title="opencda.core.application package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

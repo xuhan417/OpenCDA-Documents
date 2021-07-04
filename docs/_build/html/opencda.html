@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>opencda package &mdash; OpenCDA 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opencda.co_simulation package" href="opencda.co_simulation.html" />
+    <link rel="prev" title="Python API" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenCDA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html">Why OpenCDA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#major-components">Major Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#features-in-current-version">Features in current version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/introduction.html#planned-features-in-the-next-version">Planned features in the next version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/installation.html">OpenCDA Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/getstarted.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_files/tutorial.html">OpenCDA Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">opencda package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.html">opencda.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-opencda.opencda_carla">opencda.opencda_carla module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-opencda.version">opencda.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-opencda">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenCDA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+      <li>opencda package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/opencda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="opencda-package">
+<h1>opencda package<a class="headerlink" href="#opencda-package" title="Permalink to this headline">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="opencda.co_simulation.html">opencda.co_simulation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="opencda.co_simulation.html#module-opencda.co_simulation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="opencda.core.html">opencda.core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="opencda.core.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="opencda.core.actuation.html">opencda.core.actuation package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.actuation.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.actuation.html#module-opencda.core.actuation.control_manager">opencda.core.actuation.control_manager module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.actuation.html#module-opencda.core.actuation.pid_controller">opencda.core.actuation.pid_controller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.actuation.html#module-opencda.core.actuation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.core.application.html">opencda.core.application package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.application.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.application.html#module-opencda.core.application">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.core.common.html">opencda.core.common package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.common.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.common.html#module-opencda.core.common.cav_world">opencda.core.common.cav_world module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.common.html#module-opencda.core.common.misc">opencda.core.common.misc module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.common.html#module-opencda.core.common.v2x_manager">opencda.core.common.v2x_manager module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.common.html#module-opencda.core.common.vehicle_manager">opencda.core.common.vehicle_manager module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.common.html#module-opencda.core.common">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.core.plan.html">opencda.core.plan package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.behavior_agent">opencda.core.plan.behavior_agent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.collision_check">opencda.core.plan.collision_check module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.drive_profile_plotting">opencda.core.plan.drive_profile_plotting module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.global_route_planner">opencda.core.plan.global_route_planner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.global_route_planner_dao">opencda.core.plan.global_route_planner_dao module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.local_planner_behavior">opencda.core.plan.local_planner_behavior module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.planer_debug_helper">opencda.core.plan.planer_debug_helper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan.spline">opencda.core.plan.spline module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.plan.html#module-opencda.core.plan">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.core.sensing.html">opencda.core.sensing package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.sensing.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.core.sensing.html#module-opencda.core.sensing">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.core.html#module-opencda.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="opencda.customize.html">opencda.customize package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="opencda.customize.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="opencda.customize.core.html">opencda.customize.core package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.core.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.core.html#module-opencda.customize.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.customize.ml_libs.html">opencda.customize.ml_libs package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.ml_libs.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.ml_libs.html#module-opencda.customize.ml_libs.ml_manager">opencda.customize.ml_libs.ml_manager module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.customize.ml_libs.html#module-opencda.customize.ml_libs">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.customize.html#module-opencda.customize">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="opencda.scenario_testing.html">opencda.scenario_testing package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="opencda.scenario_testing.config_yaml.html">opencda.scenario_testing.config_yaml package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.config_yaml.html#module-opencda.scenario_testing.config_yaml">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.scenario_testing.evaluations.html">opencda.scenario_testing.evaluations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.evaluations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.evaluations.html#module-opencda.scenario_testing.evaluations.evaluate_manager">opencda.scenario_testing.evaluations.evaluate_manager module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.evaluations.html#module-opencda.scenario_testing.evaluations.utils">opencda.scenario_testing.evaluations.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.evaluations.html#module-opencda.scenario_testing.evaluations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opencda.scenario_testing.utils.html">opencda.scenario_testing.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.utils.html#module-opencda.scenario_testing.utils.customized_map_api">opencda.scenario_testing.utils.customized_map_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.utils.html#module-opencda.scenario_testing.utils.sim_api">opencda.scenario_testing.utils.sim_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.utils.html#module-opencda.scenario_testing.utils.yaml_utils">opencda.scenario_testing.utils.yaml_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opencda.scenario_testing.utils.html#module-opencda.scenario_testing.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing.platoon_joining_2lanefree_carla">opencda.scenario_testing.platoon_joining_2lanefree_carla module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing.platoon_joining_2lanefreecomplete_carla">opencda.scenario_testing.platoon_joining_2lanefreecomplete_carla module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing.platoon_joining_town06_carla">opencda.scenario_testing.platoon_joining_town06_carla module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing.platoon_stability_2lanefree_carla">opencda.scenario_testing.platoon_stability_2lanefree_carla module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing.single_2lanefree_carla">opencda.scenario_testing.single_2lanefree_carla module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing.single_town06_carla">opencda.scenario_testing.single_town06_carla module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opencda.scenario_testing.html#module-opencda.scenario_testing">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-opencda.opencda_carla">
+<span id="opencda-opencda-carla-module"></span><h2>opencda.opencda_carla module<a class="headerlink" href="#module-opencda.opencda_carla" title="Permalink to this headline">¶</a></h2>
+<p>Used to reduce the dependency on CARLA api by mocking them in the same structure.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Location">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.opencda_carla.</span></span><span class="sig-name descname"><span class="pre">Location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opencda.opencda_carla.Vector3D" title="opencda.opencda_carla.Vector3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">opencda.opencda_carla.Vector3D</span></code></a></p>
+<p>Stores a 3D location, and provides useful helper methods.</p>
+<p>Parameters
+-x : float</p>
+<blockquote>
+<div><p>The value of the first axis.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-y<span class="classifier">float</span></dt><dd><p>The value of the second axis.</p>
+</dd>
+<dt>-z<span class="classifier">float</span></dt><dd><p>The value of the third axis.</p>
+</dd>
+</dl>
+<p>Attributes
+- x: float</p>
+<blockquote>
+<div><p>The value of the first axis.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>y: float</dt><dd><p>The value of the second axis.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>z: float</dt><dd><p>The value of the third axis.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Location.from_simulator_location">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_simulator_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Location.from_simulator_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a pylot Location from a simulator location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-location</strong> (<em>carla.location</em>) – An instance of a simulator location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A pylot location.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-class (class.Location)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Rotation">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.opencda_carla.</span></span><span class="sig-name descname"><span class="pre">Rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Used to represent the rotation of an actor or obstacle.</p>
+<p>Rotations are applied in the order: Roll (X), Pitch (Y), Yaw (Z).
+A 90-degree “Roll” maps the positive Z-axis to the positive Y-axis.
+A 90-degree “Pitch” maps the positive X-axis to the positive Z-axis.
+A 90-degree “Yaw” maps the positive X-axis to the positive Y-axis.</p>
+<p>Parameters:
+-pitch: float</p>
+<blockquote>
+<div><p>Rotation about Y-axis.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-yaw: float</dt><dd><p>Rotation about Z-axis.</p>
+</dd>
+<dt>-roll: float</dt><dd><p>Rotation about X-axis.</p>
+</dd>
+</dl>
+<p>Attributes:
+-pitch: float</p>
+<blockquote>
+<div><p>Rotation about Y-axis.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-yaw: float</dt><dd><p>Rotation about Z-axis.</p>
+</dd>
+<dt>-roll: float</dt><dd><p>Rotation about X-axis.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Rotation.from_simulator_rotation">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_simulator_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Rotation.from_simulator_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a pylot Rotation from a simulator rotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-rotation</strong> (<em>carla.Rotation</em>) – An instance of a simulator rotation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A pylot rotation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-class (class.Rotation)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Transform">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.opencda_carla.</span></span><span class="sig-name descname"><span class="pre">Transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#opencda.opencda_carla.Location" title="opencda.opencda_carla.Location"><span class="pre">opencda.opencda_carla.Location</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#opencda.opencda_carla.Rotation" title="opencda.opencda_carla.Rotation"><span class="pre">opencda.opencda_carla.Rotation</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that stores the location and rotation of an obstacle.</p>
+<p>It can be created from a simulator transform, defines helper functions
+needed in Pylot, and makes the simulator transform serializable.</p>
+<p>A transform object is instantiated with either a location and a rotation,
+or using a matrix.</p>
+<p>Args:
+-location : class.Location</p>
+<blockquote>
+<div><p>The location of the object represented by the transform.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-rotation<span class="classifier">class.Rotation</span></dt><dd><p>The rotation  (in degrees) of the object represented by the transform.</p>
+</dd>
+</dl>
+<p>Attributes:
+-location : class.Location</p>
+<blockquote>
+<div><p>The location of the object represented by the transform.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-rotation<span class="classifier">class.Rotation</span></dt><dd><p>The rotation (in degrees) of the object represented by the transform.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Transform.from_simulator_transform">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_simulator_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Transform.from_simulator_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a pylot transform from a simulator transform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-transform</strong> (<em>carla.transform</em>) – A simulator transform.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of a pylot transform.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-class (class.Transform)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Vector3D">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">opencda.opencda_carla.</span></span><span class="sig-name descname"><span class="pre">Vector3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Vector3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a 3D vector and provides useful helper functions.</p>
+<p>Parameters
+-x : float</p>
+<blockquote>
+<div><p>The value of the first axis.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>-y<span class="classifier">float</span></dt><dd><p>The value of the second axis.</p>
+</dd>
+<dt>-z<span class="classifier">float</span></dt><dd><p>The value of the third axis.</p>
+</dd>
+</dl>
+<p>Attributes
+- x: float</p>
+<blockquote>
+<div><p>The value of the first axis.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>y: float</dt><dd><p>The value of the second axis.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>z: float</dt><dd><p>The value of the third axis.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="opencda.opencda_carla.Vector3D.from_simulator_vector">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_simulator_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opencda.opencda_carla.Vector3D.from_simulator_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a pylot Vector3D from a simulator 3D vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>-vector</strong> (<em>carla.Vector3D</em>) – An instance of a simulator 3D vector.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A pylot 3D vector.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>-class (class.Vector3D)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opencda.version">
+<span id="opencda-version-module"></span><h2>opencda.version module<a class="headerlink" href="#module-opencda.version" title="Permalink to this headline">¶</a></h2>
+<p>Specifies the current version number of OpenCDA.</p>
+</section>
+<section id="module-opencda">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opencda" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="opencda.co_simulation.html" class="btn btn-neutral float-right" title="opencda.co_simulation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="Python API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, R.S. Xu, X. Han.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
